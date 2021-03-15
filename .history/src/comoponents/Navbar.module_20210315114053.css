@@ -32,23 +32,11 @@ opacity: 0.7;
     margin-right: 20px;
     -webkit-box-shadow: 1px 2px 22px -4px #2b0329;
     box-shadow: 1px 2px 22px -4px #2b0329;
-    opacity: 0.7;
-}
-
-.navigation li:hover {
-opacity: 1;
-background-color: #2b0329;
-border: 1px solid #2b0329
 }
 .navigation li a{ 
     text-decoration: none;
     color: #ff69b4;
     font-weight: 500;
-}
-.navigation li a:hover {
-    text-decoration: none;
-    color: #f8dada;
-    font-weight: 600;
 }
 .navigation li:hover{ 
     opacity: 2;
