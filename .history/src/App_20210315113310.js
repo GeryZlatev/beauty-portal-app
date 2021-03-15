@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import { Fragment } from 'react';
-import imageOne from './media/imageOne.jpg';
+import imageOne from '../media/imageOne.jpg';
 import './App.css';
 import Navbar from './comoponents/Navbar';
 

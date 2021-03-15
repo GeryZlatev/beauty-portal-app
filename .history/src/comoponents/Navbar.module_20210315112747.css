@@ -6,8 +6,8 @@
     padding-bottom: 15px;
     background-color: #fff5ee;
     justify-content: flex-end;
-    -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 2px 22px -4px rgba(43,3,41,0); 
-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 1px 2px 22px -4px rgba(43,3,41,0);
+    -webkit-box-shadow: 1px 2px 22px -4px #2B0329; 
+    box-shadow: 1px 2px 22px -4px #2B0329;
 }
 .navigation{
     max-width: 50%;

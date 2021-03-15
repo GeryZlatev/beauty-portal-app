@@ -8,9 +8,9 @@ function App() {
   return (
     <Fragment>
     <Navbar />
-      <div className="image-wrapper">
-      <img src={imageOne}  alt="beauty woman"/>
-      </div>
+                    <div className="image-wrapper">
+<img src={imageOne} className={ style.image} alt="beauty woman"/>
+                </div>
     </Fragment>
 
   );
