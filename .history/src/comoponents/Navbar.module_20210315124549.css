@@ -5,8 +5,7 @@
     padding-top: 10px;
     padding-bottom: 15px;
     background-color: #fff5ee;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: flex-end;
 background: rgb(208,255,255);
 background: linear-gradient(164deg, rgba(208,255,255,1) 12%, rgba(143,143,205,1) 67%);
 opacity: 0.7;
@@ -35,13 +34,12 @@ opacity: 0.7;
     -webkit-box-shadow: 1px 2px 22px -4px #2b0329;
     box-shadow: 1px 2px 22px -4px #2b0329;
     opacity: 0.7;
-    max-height: 25px;
 }
 
 .navigation li:hover {
 opacity: 1;
-background: rgb(122,137,236);
-background: linear-gradient(164deg, rgba(122,137,236,1) 12%, rgba(24,24,27,1) 67%);
+background-color: #2b0329;
+border: 1px solid #2b0329
 }
 .navigation li a{ 
     text-decoration: none;
@@ -49,23 +47,16 @@ background: linear-gradient(164deg, rgba(122,137,236,1) 12%, rgba(24,24,27,1) 67
     font-weight: 500;
 }
 .navigation li a:hover {
-    text-decoration: none; 
+    text-decoration: none;
     color: #f8dada;
-background: rgb(122,137,236);
-background: linear-gradient(164deg, rgba(122,137,236,1) 12%, rgba(24,24,27,1) 67%);
-    font-weight: 500;
+    font-weight: 600;
 }
 .navigation li:hover{ 
-    opacity: 1;
+    opacity: 2;
 }
 
 .logoWrapper {
-    max-width: 25%;
-    max-height: 80px;
+    max-width: 30%;
     display: inline;
     z-index: 5;
-}
-
-.logoWrapper img {
-    max-width: 100%;
 }

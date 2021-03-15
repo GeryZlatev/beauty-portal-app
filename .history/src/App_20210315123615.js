@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import { Fragment } from 'react';
-import slider from './media/slider.jpg';
+import slider from './media/slider-main-alt-optimized';
 import './App.css';
 import Navbar from './comoponents/Navbar';
 

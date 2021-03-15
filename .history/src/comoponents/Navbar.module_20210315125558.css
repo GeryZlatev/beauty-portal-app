@@ -60,8 +60,8 @@ background: linear-gradient(164deg, rgba(122,137,236,1) 12%, rgba(24,24,27,1) 67
 }
 
 .logoWrapper {
-    max-width: 25%;
-    max-height: 80px;
+    max-width: 30%;
+    max-height: 100px;
     display: inline;
     z-index: 5;
 }

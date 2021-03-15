@@ -12,7 +12,7 @@ class Navbar extends Component {
         return (
             <Fragment>
                 <nav className={style.navigationbar}>
-                    <div className={style.logoWrapper}>
+                    <div className={style.logo-wrapper}>
                         <img src={ logo} alt="Beauty Portal Logo"/>
                     </div>
                     

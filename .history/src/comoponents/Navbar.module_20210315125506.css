@@ -6,7 +6,6 @@
     padding-bottom: 15px;
     background-color: #fff5ee;
     justify-content: space-between;
-    align-items: flex-start;
 background: rgb(208,255,255);
 background: linear-gradient(164deg, rgba(208,255,255,1) 12%, rgba(143,143,205,1) 67%);
 opacity: 0.7;
@@ -60,8 +59,8 @@ background: linear-gradient(164deg, rgba(122,137,236,1) 12%, rgba(24,24,27,1) 67
 }
 
 .logoWrapper {
-    max-width: 25%;
-    max-height: 80px;
+    max-width: 30%;
+    max-height: 100px;
     display: inline;
     z-index: 5;
 }
