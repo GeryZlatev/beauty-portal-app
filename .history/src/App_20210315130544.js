@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import { Fragment } from 'react';
+import { Fragment } from 'react';
 import slider from './media/slider.jpg';
 import style from './App.module.css';
 import Navbar from './comoponents/Navbar';

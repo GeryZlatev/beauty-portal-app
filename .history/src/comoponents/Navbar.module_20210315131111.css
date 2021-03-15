@@ -12,7 +12,7 @@
     align-items: flex-start;
 background: rgb(159,166,212);
 background: linear-gradient(164deg, rgba(159,166,212,1) 12%, rgba(24,24,27,1) 67%);
-
+opacity: 0.7;
 
 }
 
@@ -28,30 +28,33 @@ background: linear-gradient(164deg, rgba(159,166,212,1) 12%, rgba(24,24,27,1) 67
 .navigation li{ 
     list-style-type: none;
     cursor: pointer;
-    
+    border: 1px lightsteelblue;
     border-radius: 5px;
-    
+    background-color: lightsteelblue;
     padding: 4px 14px;
     text-transform: uppercase;
     margin-right: 20px;
+    -webkit-box-shadow: 1px 2px 22px -4px #2b0329;
+    box-shadow: 1px 2px 22px -4px #2b0329;
+    opacity: 0.7;
     max-height: 25px;
 }
 
 .navigation li:hover {
 opacity: 1;
-background: rgb(23,23,24);
-background: radial-gradient(circle, rgba(23,23,24,0.8365721288515406) 33%, rgba(144,167,203,1) 83%);
+background: rgb(122,137,236);
+background: linear-gradient(164deg, rgba(122,137,236,1) 12%, rgba(24,24,27,1) 67%);
 }
 .navigation li a{ 
     text-decoration: none;
-    color:lightsteelblue;
+    color:#2b0329;
     font-weight: 500;
 }
 .navigation li a:hover {
     text-decoration: none; 
     color: #f8dada;
-background: rgb(23,23,24);
-background: radial-gradient(circle, rgba(23,23,24,0.8365721288515406) 33%, rgba(144,167,203,1) 83%);
+background: rgb(122,137,236);
+background: linear-gradient(164deg, rgba(122,137,236,1) 12%, rgba(24,24,27,1) 67%);
     font-weight: 500;
 }
 .navigation li:hover{ 
