@@ -20,7 +20,7 @@ class Navbar extends Component {
                 </ul>
                 </nav>
                 <div className="imae-wrapper">
-<img src={imageOne} className={ style.image} alt="beauty woman"/>
+<img src={imageOne} className={ style.image}/>
                 </div>
             </Fragment>
 

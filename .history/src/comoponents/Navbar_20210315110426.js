@@ -3,9 +3,9 @@ import style from './Navbar.module.css';
 import imageOne from '../media/imageOne.jpg';
 
 class Navbar extends Component {
-    // constructor(props) {
-    //     super (props)
-    // }
+    constructor(props) {
+        super (props)
+    }
 
     render() {
         return (
@@ -13,14 +13,14 @@ class Navbar extends Component {
                 <nav className={style.navigationbar}>
                     
                 <ul className={style.navigation}>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/about">About us</a></li>
-                    <li><a href="/specialist">For Specialists</a></li>
-                    <li><a href="/patients">For Patients and Families</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">For Specialists</a></li>
+                    <li><a href="#">For Patients and Families</a></li>
                 </ul>
                 </nav>
                 <div className="imae-wrapper">
-<img src={imageOne} className={ style.image} alt="beauty woman"/>
+<img src={imageOne} className={ style.image}/>
                 </div>
             </Fragment>
 
