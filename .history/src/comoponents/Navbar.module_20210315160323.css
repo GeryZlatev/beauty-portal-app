@@ -13,8 +13,8 @@
     border-bottom: 1px solid burlywood;
 background: rgb(159,166,212);
 background: linear-gradient(164deg, rgba(159,166,212,1) 12%, rgba(24,24,27,1) 67%);
-/* -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37); 
-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37); */
+-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37); 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
 
 }
 
