@@ -9,8 +9,7 @@ import SearchBar from './comoponents/SearchBar';
 function App() {
   return (
     <div className={style.app}>
-      <Navbar />
-      <SearchBar />
+    <Navbar />
       <div className="image-wrapper">
       <img src={slider}  alt="beauty woman"/>
       </div>

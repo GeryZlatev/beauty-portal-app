@@ -1,0 +1,14 @@
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchBarContent{
+    display: flex;
+    justify-content: space-between;
+    min-width: 600px;
+}
+
+.searchBarContent li {
+    list-style: none;
+}

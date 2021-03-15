@@ -1,0 +1,24 @@
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top:burlywood;
+background: rgb(241,241,246);
+background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,1) 83%);
+
+}
+
+.searchBarContent{
+    display: flex;
+    justify-content: space-between;
+    min-width: 600px;
+}
+
+.searchBarContent li {
+    list-style: none;
+}
+
+.searchBarContent li a {
+    text-decoration: none;
+    color: black;
+}

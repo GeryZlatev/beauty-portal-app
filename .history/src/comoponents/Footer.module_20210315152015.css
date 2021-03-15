@@ -47,11 +47,6 @@ footer {
     color: black;
 }
 
-.portalList h5 a:hover{
-    color:crimson;
-    font-size: large;
-}
-
 .logo {
     max-width: 20%;
 }
@@ -62,7 +57,7 @@ footer {
 }
 
 .allRights {
+    display: inline-block;
     font-size: smaller;
-    float: right;
 
 }

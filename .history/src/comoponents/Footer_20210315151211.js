@@ -21,10 +21,13 @@ faFacebookSquare,
 faTwitterSquare
 );
 
+
+
 class Footer extends Component {
     // constructor(props) {
     //     super(props);
     // }
+
     render() {
         return (
             <Fragment>
@@ -60,18 +63,21 @@ class Footer extends Component {
                     <div className={style.portals}>
                         <ul className={style.portalList}>
                             <li>
-                                <h5><a href="">My Patient Portal</a></h5>
+                                <h5>My Patient Portal</h5>
                             </li>
                             <li>
-                                <h5><a href="">Doctor Login</a></h5>
+                                <h5>Doctor Login</h5>
                             </li>
                             <li>
-                                <h5><a href="">Staff information</a></h5>
+                                <h5>Staff information</h5>
                             </li>
                         </ul>
-                        <p className = {style.allRights}> &copy; 2021 All Rights Reserved | <a href="#"> Privacy Policy</a> </p>
+                         <p className = {style.allRights}> &copy; 2021 All Rights Reserved | <a href="#"> Privacy Policy</a> </p>
+
                     </div>
+                
                 </footer>
+
             </Fragment>
         )
     }

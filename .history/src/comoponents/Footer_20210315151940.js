@@ -21,10 +21,13 @@ faFacebookSquare,
 faTwitterSquare
 );
 
+
+
 class Footer extends Component {
     // constructor(props) {
     //     super(props);
     // }
+
     render() {
         return (
             <Fragment>
@@ -70,8 +73,11 @@ class Footer extends Component {
                             </li>
                         </ul>
                         <p className = {style.allRights}> &copy; 2021 All Rights Reserved | <a href="#"> Privacy Policy</a> </p>
+
                     </div>
+                
                 </footer>
+
             </Fragment>
         )
     }

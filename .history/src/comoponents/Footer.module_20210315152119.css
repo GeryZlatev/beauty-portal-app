@@ -62,7 +62,7 @@ footer {
 }
 
 .allRights {
+    display: inline-block;
     font-size: smaller;
-    float: right;
 
 }

@@ -42,16 +42,6 @@ footer {
     justify-content:space-between ;
 }
 
-.portalList h5 a {
-    text-decoration: none;
-    color: black;
-}
-
-.portalList h5 a:hover{
-    color:crimson;
-    font-size: large;
-}
-
 .logo {
     max-width: 20%;
 }
@@ -62,7 +52,8 @@ footer {
 }
 
 .allRights {
+    display: inline-block;
+    text-align: end;
     font-size: smaller;
-    float: right;
 
 }

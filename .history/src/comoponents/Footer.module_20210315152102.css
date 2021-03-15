@@ -48,7 +48,7 @@ footer {
 }
 
 .portalList h5 a:hover{
-    color:crimson;
+    color: brown;
     font-size: large;
 }
 
@@ -62,7 +62,7 @@ footer {
 }
 
 .allRights {
+    display: inline-block;
     font-size: smaller;
-    float: right;
 
 }
