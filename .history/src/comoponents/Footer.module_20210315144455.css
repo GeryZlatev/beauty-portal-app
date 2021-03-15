@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactsList {
+    display: flex;
+    max-width: 600px;
+    justify-content: space-between;
+}
+
+.socialMedia {
+    display: flex;
+}

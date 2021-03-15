@@ -46,11 +46,11 @@ class Footer extends Component {
                             <li>
                                 <h5>Connect With Us</h5>
                                 <ul className={style.socialMedia}>
-                                    <li className = {style.listItem}><a href="#"><FontAwesomeIcon icon={faFacebookSquare} /></a></li>
-                                    <li className = {style.listItem}><a href="#"><FontAwesomeIcon icon={faTwitterSquare} /></a></li>
-                                    <li className = {style.listItem}><a href= "#"><FontAwesomeIcon icon={ faInstagramSquare}/></a></li>
-                                    <li className = {style.listItem}><a href="#"><FontAwesomeIcon icon={ faLinkedin}/></a></li>
-                                    <li className = {style.listItem}><a href="#"><FontAwesomeIcon icon={ faYoutubeSquare}/></a></li>
+                                    <li className = {style.listItem}><a><FontAwesomeIcon icon={faFacebookSquare} /></a></li>
+                                    <li className = {style.listItem}><FontAwesomeIcon icon={faTwitterSquare} /></li>
+                                    <li className = {style.listItem}><FontAwesomeIcon icon={ faInstagramSquare}/></li>
+                                    <li className = {style.listItem}><FontAwesomeIcon icon={ faLinkedin}/></li>
+                                    <li className = {style.listItem}><FontAwesomeIcon icon={ faYoutubeSquare}/></li>
                                 </ul>
                             </li>
                         </ul>

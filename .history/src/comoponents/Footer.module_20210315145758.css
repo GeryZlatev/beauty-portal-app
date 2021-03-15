@@ -29,15 +29,5 @@ footer {
 
 .listItem a:hover {
     color: crimson;
-    font-size: 30px;
-}
-
-.portals {
-    min-width: 500px;
-}
-
-.portalList {
-    list-style: none;
-    display: flex;
-    justify-content:space-between ;
+    font-size: large;
 }
