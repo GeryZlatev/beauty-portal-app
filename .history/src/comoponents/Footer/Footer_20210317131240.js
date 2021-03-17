@@ -1,8 +1,9 @@
 import React, { Fragment, Component } from 'react';
-import style from './Footer.module.css';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import logo from '../../media/beautyportal_logo.png';
+import style from './Footer.module.css';
 
 
 import {

@@ -3,11 +3,11 @@
 import { Route, Link, NavLink, Redirect, Switch } from 'react-router-dom';
 import slider from './media/slider.jpg';
 import style from './App.module.css';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Navbar from './comoponents/Navbar';
+import Home from './comoponents/Home';
 import About from './components/About';
-import Footer from './components/Footer';
-import SearchBar from './components/SearchBar';
+import Footer from './comoponents/Footer';
+import SearchBar from './comoponents/SearchBar';
 
 function App() {
   return (

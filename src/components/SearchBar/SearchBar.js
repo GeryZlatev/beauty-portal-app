@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react';
+import { Link } from 'react-router-dom';
 import style from './SearchBar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -21,8 +22,8 @@ class SearchBar extends Component {
             <Fragment>
                 <div className={style.searchBar}>
                     <ul className={style.searchBarContent}>
-                        <li><a href="">Find a service...</a></li>
-                        <li><a href="">Find a doctor</a></li>
+                        <li><Link to="">Find a service...</Link></li>
+                        <li><Link to="">Find a doctor</Link></li>
                     </ul>
                 <form className={style.searchForm}>
                         <input type="text" placeholder="   Search..." name="search"></input>
