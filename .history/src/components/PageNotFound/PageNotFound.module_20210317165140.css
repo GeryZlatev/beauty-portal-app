@@ -1,0 +1,11 @@
+.pageNotFound {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imageWrapper {
+    border: 0.5px solid burlywood;
+    border-radius: 5px;
+    
+}

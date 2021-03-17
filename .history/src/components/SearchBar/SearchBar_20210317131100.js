@@ -22,8 +22,8 @@ class SearchBar extends Component {
             <Fragment>
                 <div className={style.searchBar}>
                     <ul className={style.searchBarContent}>
-                        <li><Link to="/services">Find a service...</Link></li>
-                        <li><Link to="/doctors">Find a doctor</Link></li>
+                        <li><Link to="">Find a service...</Link></li>
+                        <li><Link to="">Find a doctor</Link></li>
                     </ul>
                 <form className={style.searchForm}>
                         <input type="text" placeholder="   Search..." name="search"></input>

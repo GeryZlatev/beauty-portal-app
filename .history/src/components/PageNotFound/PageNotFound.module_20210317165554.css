@@ -1,0 +1,24 @@
+.pageNotFound {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imageWrapper {
+    border: 0.5px solid burlywood;
+    border-radius: 5px;
+
+}
+
+.content {
+    padding: 30px;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darksalmon;
+    font-weight: 100;
+    border: 1px solid wheat;
+    border-radius: 20px;
+    background: rgb(241,241,246);
+background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(238,228,213,1) 83%);
+
+}
