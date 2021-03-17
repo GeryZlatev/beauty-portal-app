@@ -21,8 +21,7 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
     list-style: none;
 }
 
-.searchBarContent li a, 
-.searchBarContent li button {
+.searchBarContent li a, .searchBarContent li button {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
@@ -32,9 +31,6 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
 .searchBarContent li button {
     border: none;
     background: none;
-    cursor: pointer;
-    font-size: 16px;
-    outline:none;
 }
 
 .searchForm {
