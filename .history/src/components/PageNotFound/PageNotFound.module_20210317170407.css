@@ -1,12 +1,10 @@
 .pageNotFound {
-    margin: 0 60px;
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
 
 .imageWrapper {
-    margin-top: 60px;
     border: 0.5px solid burlywood;
     border-radius: 5px;
         background: rgb(241,241,246);
@@ -15,15 +13,13 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
 }
 
 .content {
-    padding: 30px 90px;
+    padding: 30px;
     font-size: x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: darksalmon;
     font-weight: 100;
     border: 1px solid wheat;
     border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37); 
-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
 
 
 }

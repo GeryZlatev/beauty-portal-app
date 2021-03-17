@@ -1,7 +1,6 @@
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 30px 60px;
 }
 
 .contactsList {
