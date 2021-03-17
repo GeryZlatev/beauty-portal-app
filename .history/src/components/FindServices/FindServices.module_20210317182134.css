@@ -26,30 +26,11 @@
 }
 
 .aestheticDermatology {
-    background-color: #EC8AC4;
+    background-color: EC8AC4;
+    
     /* border: 1px solid; */
 }
 
-.laser {
-    background: #9190C7;
-}
-
-.agnes {
-    background: #6262A0;
-}
-
-.femilift {
-    background: #8568AF;
-}
-
-.cellulite {
-    background: #E6507D;
-}
-
-.aestheticDermatology a,
-.laser a,
-.agnes a,
-.femilift a,
-.cellulite, a {
+.aestheticDermatology a {
     color: white;
 }

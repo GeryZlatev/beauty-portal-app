@@ -24,7 +24,6 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/services" component={FindServices}/>
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route component={ PageNotFound }/>
       </Switch>

@@ -15,21 +15,21 @@ class FindServices extends Component {
         return (
             <Fragment>
                 <div className={style.menuWrapper}>
-                    <div className={style.aestheticDermatology}>
+                    <span className={style.aestheticDermatology, style.content}>
                         <Link to="aesthetic-dermatology">Aesthetic Dermatology</Link>
-                    </div>
-                    <div className={style.laser}>
+                    </span>
+                    <span className={style.laser, style.content}>
                         <Link to="/laser-therapies">Laser Therapies</Link>
-                    </div>
-                    <div className={style.agnes}>
+                    </span>
+                    <span className={style.agnes, style.content}>
                         <Link to="/agnes">Agnes</Link>
-                        </div>
-                    <div className={style.femilift}>
+                        </span>
+                    <span className={style.femilift, style.content}>
                         <Link to="/femi-lift">Femi Lift</Link>
-                        </div>
-                    <div className={style.cellulite}>
+                        </span>
+                    <span className={style.cellulite, style.content}>
                         <Link to="anti-cellulite">Anti-cellulite</Link>
-                        </div>
+                        </span>
                 </div>
             </Fragment>
         )

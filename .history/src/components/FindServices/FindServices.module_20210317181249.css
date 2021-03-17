@@ -1,0 +1,24 @@
+.menuWrapper {
+    max-width: 80%;
+    margin: 75px auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid burlywood;
+    padding: 40px;
+}
+
+.content {
+    flex: 1;
+    margin-right: 20px;
+    text-transform: uppercase;
+    border: 1px solid salmon;
+    
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.aestheticDermatology {
+    background-color: coral;
+}
