@@ -1,0 +1,11 @@
+.verticalLine {
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid burlywood;
+    background: rgb(241,241,246);
+background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,1) 83%);
+-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37); 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
+
+}
