@@ -28,7 +28,9 @@ const images = [
 class Home extends Component {
     constructor() {
         super();
-
+        this.state = {
+            infinite: false
+        }
     }
     render() {
         return <ImageGallery className="my-gallery"items={images}/>
