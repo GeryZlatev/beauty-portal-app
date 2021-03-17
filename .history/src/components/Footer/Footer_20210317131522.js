@@ -70,7 +70,7 @@ class Footer extends Component {
                                 <h5><Link to="">Staff information</Link></h5>
                             </li>
                         </ul>
-                        <p className = {style.allRights}> &copy; 2021 All Rights Reserved | <Link to="/privacy-policy"> Privacy Policy</Link> </p>
+                        <p className = {style.allRights}> &copy; 2021 All Rights Reserved | <Link href="#"> Privacy Policy</Link> </p>
                     </div>
                 </footer>
             </Fragment>

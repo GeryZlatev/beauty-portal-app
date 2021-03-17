@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,400;0,500;1,100&display=swap);
+
+.privacyPolicy {
+    max-width: 80%;
+    margin: 75px auto;
+}
+
+.privacyPolicy p {
+    font-weight: 200;
+}
+
+.privacyPolicy p ul {
+    font-weight: 200;
+}
+
+.privacyPolicyHeader {
+    margin: 0 auto;
+    color: darkslateblue;
+    font-weight: 100;
+}
