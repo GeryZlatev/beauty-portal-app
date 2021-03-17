@@ -9,20 +9,20 @@
 .aboutHeader{
     margin: 0 auto;
     color: darkslateblue;
-    font-weight: 200;
-    font-size: x-large;
+    font-weight: 100;
 }
 
-.content {
-    margin: 30px auto;
+.aboutContent {
+    margin: 0 auto;
     font-weight: 100;
-    font-size: large;
+    font-size:x-large;
     line-height: 1.6;
-    margin-bottom: 50px;
 }
 
 .author {
-    font-weight: 100;
-    color: #6262A0;
+    font-weight: bold;;
 }
 
+.content {
+    margin-bottom: 50px;
+}

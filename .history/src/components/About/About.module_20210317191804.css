@@ -9,7 +9,7 @@
 .aboutHeader{
     margin: 0 auto;
     color: darkslateblue;
-    font-weight: 200;
+    font-weight: 100;
     font-size: x-large;
 }
 
@@ -23,6 +23,5 @@
 
 .author {
     font-weight: 100;
-    color: #6262A0;
 }
 
