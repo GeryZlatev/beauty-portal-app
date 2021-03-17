@@ -1,0 +1,12 @@
+.advertisingWrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+.advertisingWrapper h1 {
+    font-family:'Courier New', Courier, monospace
+    text-transform: uppercase;
+    color: #5F5E6B;
+    margin: 50px auto;
+}

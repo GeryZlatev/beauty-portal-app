@@ -29,7 +29,6 @@ function App() {
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route component={ PageNotFound }/>
       </Switch>
-      <Advertising/>
       <VerticalLine/>
       <Footer/>
     </div>

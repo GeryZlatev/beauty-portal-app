@@ -1,0 +1,14 @@
+.advertisingWrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+.advertisingWrapper h1 {
+    margin: 50px auto;
+    
+    text-transform: uppercase;
+    color: #5F5E6B;
+    font-weight: 100;
+    
+}

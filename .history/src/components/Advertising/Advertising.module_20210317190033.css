@@ -1,0 +1,35 @@
+.advertisingWrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+.advertisingWrapper h1 {
+    margin: 50px auto;
+    text-transform: uppercase;
+    color: #5F5E6B;
+    font-weight: 200;
+    
+}
+
+.advertisingWrapper h2 {
+    margin: 50px auto;
+    color: white;
+    background: #8E8DC6;
+    padding: 20px 10px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.advertisingWrapper li {
+    list-style: none;
+}
+
+.fontAwesome {
+    font-size: 30px;
+    color: #8E8DC6;
+}
+
+.imageWrapper {
+    margin: 30px autho;
+}
