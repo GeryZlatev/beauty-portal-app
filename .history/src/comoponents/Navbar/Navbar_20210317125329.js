@@ -1,8 +1,7 @@
 import React, { Fragment, Component } from 'react';
-import { Link } from 'react-router-dom';
 import style from './Navbar.module.css';
 import logo from '../../media/beautyportal_logo.png';
-
+import { Link } from 'react-router-dom';
 
 
 class Navbar extends Component {
@@ -19,10 +18,10 @@ class Navbar extends Component {
                     </div>
                     
                 <ul className={style.navigation}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About us</Link></li>
-                    <li><Link to="/specialist">For Specialists</Link></li>
-                    <li><Link to="/patients">For Patients and Families</Link></li>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/specialist">For Specialists</a></li>
+                    <li><a href="/patients">For Patients and Families</a></li>
                 </ul>
                 </nav>
             </Fragment>
