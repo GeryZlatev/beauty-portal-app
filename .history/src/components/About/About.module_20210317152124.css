@@ -13,14 +13,9 @@
 
 .aboutContent {
     margin: 0 auto;
-    font-weight: 100;
-    font-size:x-large;
+    font-weight: 200;
 }
 
 .author {
     font-weight: bold;;
-}
-
-.content {
-    margin-bottom: 50px;
 }
