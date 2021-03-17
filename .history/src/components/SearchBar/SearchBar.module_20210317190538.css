@@ -22,12 +22,20 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
 }
 
 .searchBarContent li a {
+/* .searchBarContent li button { */
     text-decoration: none;
     text-transform: uppercase;
     color: black;
     font-weight: 400;
 }
 
+/* .searchBarContent li button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline:none;
+} */
 
 .searchForm {
     min-width: 600px;
