@@ -20,7 +20,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 class App extends Component{
   constructor(props) {
     super(props);
-    // Firebase.initializeApp(firebaseConfig);
+    Firebase.initializeApp(firebaseConfig);
   }
   render() {
     return (

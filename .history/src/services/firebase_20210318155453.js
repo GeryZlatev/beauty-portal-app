@@ -1,4 +1,4 @@
-import Firebase from 'firebase'
+import {} from 'firebase'
 
 var firebaseConfig = {
     apiKey: "AIzaSyCkMlcM3YkA2kohpOt6Rp-wJ_6TaNZdEkg",
@@ -10,4 +10,4 @@ var firebaseConfig = {
     appId: "1:154753023232:web:281fb52770f4c6f36747e5"
 };
   // Initialize Firebase
-Firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);

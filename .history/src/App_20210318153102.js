@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import Firebase from 'firebase';
-import firebaseConfig from './services/firebase';
 import style from './App.module.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -20,7 +19,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 class App extends Component{
   constructor(props) {
     super(props);
-    // Firebase.initializeApp(firebaseConfig);
+    Firebase.initializeApp(config);
   }
   render() {
     return (
