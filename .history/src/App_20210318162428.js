@@ -33,7 +33,6 @@ class App extends Component{
           <Route path="/about" component={About} />
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
-          <Route path="/patients/register" component={Register} />
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />
