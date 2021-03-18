@@ -9,7 +9,7 @@ class Navbar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoggedIn: false
+            isLoggedIn: true
         }
         this.renderLoginLinks = this.renderLoginLinks.bind(this);
         this.renderLogoutLink = this.renderLogoutLink.bind(this);

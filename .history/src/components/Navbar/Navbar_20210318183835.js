@@ -9,7 +9,7 @@ class Navbar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoggedIn: false
+            isLoggedIn: true
         }
         this.renderLoginLinks = this.renderLoginLinks.bind(this);
         this.renderLogoutLink = this.renderLogoutLink.bind(this);
@@ -46,7 +46,7 @@ class Navbar extends Component {
                     <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About us</Link></li>
                         {this.state.isLoggedIn
-                        ? this.renderLogoutLink() 
+                        ? this.renderLogoutLinks() 
                         : this.renderLoginLinks()}
                 </ul>
                 </nav>
