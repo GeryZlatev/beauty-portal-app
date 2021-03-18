@@ -1,5 +1,5 @@
 import { Route, Redirect, Switch } from 'react-router-dom';
-// import { auth } from './services/firebase';
+import { auth } from './services/firebase';
 import style from './App.module.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
