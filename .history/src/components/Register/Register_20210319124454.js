@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
 import firebase from '../../services/firebase';
 import style from './Register.module.css';
 
@@ -9,9 +8,9 @@ class Register extends Component {
         this.state = {
             email: '',
             password: '',
-            repeatPassword: '',
-            redirect: false,
+            repeatPassword: ''
         }
+
     }
     
     changeEmail = event => {
@@ -29,34 +28,29 @@ class Register extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         console.log(this.state);
-        //fetch and then (() => this.setState ({redirect: true}))
-        this.setState({email: '', password: '', repeatPassword: ''})
-    }
 
-    routeChange = () => {
-        let path = '/login';
-        this.props.history.push(path);
+
+        //fetch
+
+        this.setState({email: '', password: '', repeatPassword: ''})
+
     }
     render() {
         const {
             email,
             password,
-            repeatPassword,
-            redirect
+            repeatPassword
         } = this.state;
-
-        if (redirect) {
-            return <Redirect to='/patients/login'/>
-        }
         return (
             <div className={style["register-wrapper"]}>
-                <h3><span className={style["first-part"]}>Join us!</span><span className={ style["second-part"]}>Register now</span></h3>
+                <h3>Join us! Register now </h3>
                 <form onSubmit={this.handleSubmit}>
                     {/* <fieldset> */}
                     <label htmlFor="email">
-                    <p>Email:</p>   
+                    Email:   
                 <input type="text" value={email} onChange={this.changeEmail} />
-                </label>                
+                </label>
+                
                     <label htmlFor="password">
                         <p>Password:</p>
                 <input type="text" value={password} onChange={this.changePassword} />
@@ -64,15 +58,15 @@ class Register extends Component {
                     <label htmlFor="repeatPassword">
                         <p>Repeat password:</p>
                 <input type="text" value={repeatPassword} onChange={this.chanceRepeatPassword}/>
-                    </label>
+                </label>
+                        
+                    {/* </fieldset> */}
                     <input type="submit" value="Sign Up" />
-                </form>
-                                    <p>You already have an account..!?</p>
-                    <button className={style["loggin-button"]} onClick={this.routeChange}>Log in</button>
+            </form>
             </div>
         )
     }
 
 }
 
-export default withRouter(Register)
+export default Register

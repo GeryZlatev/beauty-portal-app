@@ -8,17 +8,7 @@
     margin: 20px auto;
 } */
 
-.register-wrapper {
-    border: 1px solid #f2f2f2;
-    max-width: 60%;
-    margin: 0 auto;
-background: rgb(241,241,246);
-background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,0.5) 83%);
-    
-}
-
-.register-wrapper label p,
-.register-wrapper p{
+.register-wrapper label p{
     max-width: 50%;
     display: block;
     justify-content: center;
@@ -26,13 +16,6 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
     font-size: x-large;
     font-weight: 200;
     color: #6262A0;
-    
-}
-
-.register-wrapper p {
-    font-size: 16px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .register-wrapper h3 {
@@ -46,29 +29,12 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
 .first-part,
 .second-part {
     border: 1px solid;
-    
-    padding: 5px 25px;
-}
-
-.first-part {
-    border: #6262A0;
-    background: #6262A0;
-    color: #f2f2f2;
-    margin-right: 0;
-    
-}
-
-.second-part {
-    border: #E6507D;
-    background: #E6507D;
-    color: #f2f2f2;
-    margin-right: 0;
+    margin: 0;
 }
 
 
 .register-wrapper input[type=text],
-.register-wrapper input[type=submit],
-.loggin-button {
+.register-wrapper input[type=submit] {
     width: 50%;
     padding: 12px 20px;
     margin: 20px auto;
@@ -89,15 +55,6 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
     color: antiquewhite;
     opacity: 0.7;
     font-size: 18px;
-    outline: none;
-}
-
-.loggin-button {
-    width: 10%;
-    padding: 8px 12px;
-    background: #EC8AC4;
-    border: 1px solid #EC8AC4;
-    color: #f2f2f2;
     outline: none;
 }
 

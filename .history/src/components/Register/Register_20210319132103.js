@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import firebase from '../../services/firebase';
 import style from './Register.module.css';
 
@@ -12,6 +12,7 @@ class Register extends Component {
             repeatPassword: '',
             redirect: false,
         }
+
     }
     
     changeEmail = event => {
@@ -29,13 +30,18 @@ class Register extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         console.log(this.state);
+
+
         //fetch and then (() => this.setState ({redirect: true}))
+
         this.setState({email: '', password: '', repeatPassword: ''})
+
     }
 
     routeChange = () => {
         let path = '/login';
-        this.props.history.push(path);
+        let history = useHistory();
+        history.push(path);
     }
     render() {
         const {
@@ -56,7 +62,8 @@ class Register extends Component {
                     <label htmlFor="email">
                     <p>Email:</p>   
                 <input type="text" value={email} onChange={this.changeEmail} />
-                </label>                
+                </label>
+                
                     <label htmlFor="password">
                         <p>Password:</p>
                 <input type="text" value={password} onChange={this.changePassword} />
@@ -65,6 +72,9 @@ class Register extends Component {
                         <p>Repeat password:</p>
                 <input type="text" value={repeatPassword} onChange={this.chanceRepeatPassword}/>
                     </label>
+
+                        
+                    {/* </fieldset> */}
                     <input type="submit" value="Sign Up" />
                 </form>
                                     <p>You already have an account..!?</p>
@@ -75,4 +85,4 @@ class Register extends Component {
 
 }
 
-export default withRouter(Register)
+export default Register
