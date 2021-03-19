@@ -1,5 +1,5 @@
 
-import React, { Fragment} from 'react';
+import React, { Fragment, Component } from 'react';
 import style from './About.module.css';
 
 const About = () => {

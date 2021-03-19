@@ -13,7 +13,7 @@ import VerticalLine from './components/VerticalLine';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
-
+import { config } from '@fortawesome/fontawesome-svg-core';
 
 
 
