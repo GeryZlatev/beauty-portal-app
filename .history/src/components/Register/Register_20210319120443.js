@@ -59,7 +59,7 @@ class Register extends Component {
                 </label>
                         
                     {/* </fieldset> */}
-                    <input type="submit" value="Sign Up" />
+                    <input type="submit" value="Sign" />
             </form>
             </div>
         )

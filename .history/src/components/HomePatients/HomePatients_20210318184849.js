@@ -23,10 +23,8 @@ class HomePatients extends Component {
             <Fragment>
                 {this.state.isLoggedIn
                     ? this.showLoggedUserUi()
-            : <Redirect to="/patients/register"/>}
+            : <Redirect />}
             </Fragment>
         )
     }
 }
-
-export default HomePatients;

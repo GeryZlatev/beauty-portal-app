@@ -44,16 +44,5 @@
 
 .register-wrapper input[type=submit] {
     width: 20%;
-    text-decoration: none;
-    background: #6262A0;
-    color: antiquewhite;
-    opacity: 0.7;
-    font-size: 18px;
-    outline: none;
 }
-
-.register-wrapper input[type=submit]:hover {
-    opacity: 1;
-}
-
 

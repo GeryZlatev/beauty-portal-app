@@ -29,7 +29,7 @@ class Register extends Component {
         event.preventDefault();
         console.log(this.state);
 
-
+        
         //fetch
 
     }
@@ -59,7 +59,7 @@ class Register extends Component {
                 </label>
                         
                     {/* </fieldset> */}
-                    <input type="submit" value="Sign Up" />
+                    <input type="submit" value="Submit" />
             </form>
             </div>
         )
