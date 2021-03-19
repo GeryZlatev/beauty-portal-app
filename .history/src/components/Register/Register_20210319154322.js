@@ -32,19 +32,15 @@ class Register extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         if (this.state.password !== this.state.repeatPassword) {
-            this.setState({ password: '', repeatPassword: '', error: 'Password mismatch!'});
+            this.setState({ password: '', repeatPassword: '', error: true});
             console.log('Passwords mismatch!');  
             return;
         }
-        
 
         auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
-                console.log(userCredential.user.uid);  
-            })
-            .catch((err) => {
+                console.log(userCredential.user.uid);
                 
-                console.log(err);
         })
         //fetch and then (() => this.setState ({redirect: true}))
         this.setState({ email: '', password: '', repeatPassword: '', redirect: true})
@@ -73,7 +69,7 @@ class Register extends Component {
                     <Input type="text" id="email" label="Email" value={email} onChange={ this.changeEmail}/>
                     <Input type="password"id="password" label="Password" value={password} onChange={ this.changePassword}/>
                     <Input type="password" id="repeatPassword" label="Repeat Password" value={repeatPassword} onChange={this.chanceRepeatPassword} />
-                    {this.state.error ? <Error error={this.state.error }/>: null}
+                    {this.state.error ? <Error>Passwords mismatch!</Error> : null}
                     <input type="submit" value="Sign Up" />
                 </form>
                     <p>You already have an account..!?</p>

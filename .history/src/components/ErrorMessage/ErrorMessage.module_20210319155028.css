@@ -1,0 +1,13 @@
+.error-wrapper {
+    max-width: 80%;
+    border: 1px solid #D41872;
+    background: #D41872;
+    border-radius: 5px;
+    color: aliceblue;
+    padding: 10px 20px;
+    margin: 5px auto;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    opacity: 0.4;
+}

@@ -13,7 +13,6 @@ class Register extends Component {
             password: '',
             repeatPassword: '',
             redirect: false,
-            error: false
         }
     }
     
@@ -32,19 +31,19 @@ class Register extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         if (this.state.password !== this.state.repeatPassword) {
-            this.setState({ password: '', repeatPassword: '', error: 'Password mismatch!'});
-            console.log('Passwords mismatch!');  
-            return;
+            this.setState({ password: '', repeatPassword: '' });
+            console.log('Passwords mismatch!');
+            return (
+                <Error>Passwords mismatch!</Error>
+            )
+            
+            
         }
-        
 
         auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
-                console.log(userCredential.user.uid);  
-            })
-            .catch((err) => {
+                console.log(userCredential.user.uid);
                 
-                console.log(err);
         })
         //fetch and then (() => this.setState ({redirect: true}))
         this.setState({ email: '', password: '', repeatPassword: '', redirect: true})
@@ -72,8 +71,7 @@ class Register extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <Input type="text" id="email" label="Email" value={email} onChange={ this.changeEmail}/>
                     <Input type="password"id="password" label="Password" value={password} onChange={ this.changePassword}/>
-                    <Input type="password" id="repeatPassword" label="Repeat Password" value={repeatPassword} onChange={this.chanceRepeatPassword} />
-                    {this.state.error ? <Error error={this.state.error }/>: null}
+                    <Input type="password" id="repeatPassword" label="Repeat Password" value={repeatPassword} onChange={ this.chanceRepeatPassword}/>
                     <input type="submit" value="Sign Up" />
                 </form>
                     <p>You already have an account..!?</p>

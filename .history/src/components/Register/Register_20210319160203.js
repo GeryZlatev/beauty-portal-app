@@ -36,15 +36,18 @@ class Register extends Component {
             console.log('Passwords mismatch!');  
             return;
         }
-        
+        let error;
 
         auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
             .then((userCredential) => {
                 console.log(userCredential.user.uid);  
             })
             .catch((err) => {
-                
+                error = err;
                 console.log(err);
+                this.componentDidMount = (err) => {
+                    this.setState({ error:err });
+                }
         })
         //fetch and then (() => this.setState ({redirect: true}))
         this.setState({ email: '', password: '', repeatPassword: '', redirect: true})

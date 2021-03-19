@@ -45,6 +45,9 @@ class Register extends Component {
             .catch((err) => {
                 
                 console.log(err);
+                this.componentWillUnmount = (err) => {
+                    this.setState({ error:err.message });
+                }
         })
         //fetch and then (() => this.setState ({redirect: true}))
         this.setState({ email: '', password: '', repeatPassword: '', redirect: true})
