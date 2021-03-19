@@ -62,10 +62,11 @@ footer {
     z-index: 5;
 }
 
-.allRights, .allRights a {
+.allRights {
     font-size: smaller;
     float: right;
-    color: crimson;
-    z-index: 5;
 }
 
+.allRights li {
+    color: red;
+}

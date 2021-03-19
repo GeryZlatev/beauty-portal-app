@@ -53,12 +53,25 @@ class Register extends Component {
             <div className={style["register-wrapper"]}>
                 <h3><span className={style["first-part"]}>Join us!</span><span className={ style["second-part"]}>Register now</span></h3>
                 <form onSubmit={this.handleSubmit}>
+                    {/* <fieldset> */}
+                    {/* <label htmlFor="email">
+                    <p>Email:</p>   
+                <input type="text" value={email} onChange={this.changeEmail} />
+                </label>                 */}
                     <Input id="email" label="Email" value={email} onChange={ this.changeEmail}/>
+                    {/* <label htmlFor="password">
+                        <p>Password:</p>
+                <input type="text" value={password} onChange={this.changePassword} />
+                </label> */}
                     <Input id="password" label="Password" value={password} onChange={ this.changePassword}/>
+                    {/* <label htmlFor="repeatPassword">
+                        <p>Repeat password:</p>
+                <input type="text" value={repeatPassword} onChange={this.chanceRepeatPassword}/>
+                    </label> */}
                     <Input id="repeatPassword" label="Repeat Password" value={repeatPassword} onChange={ this.chanceRepeatPassword}/>
                     <input type="submit" value="Sign Up" />
                 </form>
-                    <p>You already have an account..!?</p>
+                                    <p>You already have an account..!?</p>
                     <button className={style["loggin-button"]} onClick={this.routeChange}>Log in</button>
             </div>
         )
