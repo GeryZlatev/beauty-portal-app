@@ -36,13 +36,11 @@ class Register extends Component {
         }
 
         auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
-            .then((userCredential) => {
-                console.log(userCredential.user.uid);
-                
+            .then((res) => {
+                console.log(res)
         })
         //fetch and then (() => this.setState ({redirect: true}))
-        this.setState({ email: '', password: '', repeatPassword: '', redirect: true})
-        
+        this.setState({email: '', password: '', repeatPassword: ''})
     }
 
     routeChange = () => {

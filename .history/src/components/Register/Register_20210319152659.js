@@ -41,8 +41,8 @@ class Register extends Component {
                 
         })
         //fetch and then (() => this.setState ({redirect: true}))
-        this.setState({ email: '', password: '', repeatPassword: '', redirect: true})
-        
+        this.setState({ email: '', password: '', repeatPassword: '' })
+        <Redirect to="/login"/>
     }
 
     routeChange = () => {

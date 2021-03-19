@@ -36,13 +36,11 @@ class Register extends Component {
         }
 
         auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
-            .then((userCredential) => {
-                console.log(userCredential.user.uid);
-                
+            .then((res) => {
+                console.log(res)
         })
         //fetch and then (() => this.setState ({redirect: true}))
-        this.setState({ email: '', password: '', repeatPassword: '', redirect: true})
-        
+        this.setState({email: '', password: '', repeatPassword: ''})
     }
 
     routeChange = () => {
@@ -64,9 +62,9 @@ class Register extends Component {
             <div className={style["register-wrapper"]}>
                 <h3><span className={style["first-part"]}>Join us!</span><span className={ style["second-part"]}>Register now</span></h3>
                 <form onSubmit={this.handleSubmit}>
-                    <Input type="text" id="email" label="Email" value={email} onChange={ this.changeEmail}/>
-                    <Input type="password"id="password" label="Password" value={password} onChange={ this.changePassword}/>
-                    <Input type="password" id="repeatPassword" label="Repeat Password" value={repeatPassword} onChange={ this.chanceRepeatPassword}/>
+                    <Input id="email" label="Email" value={email} onChange={ this.changeEmail}/>
+                    <Input id="password" label="Password" value={password} onChange={ this.changePassword}/>
+                    <Input id="repeatPassword" label="Repeat Password" value={repeatPassword} onChange={ this.chanceRepeatPassword}/>
                     <input type="submit" value="Sign Up" />
                 </form>
                     <p>You already have an account..!?</p>
