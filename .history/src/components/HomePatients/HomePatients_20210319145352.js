@@ -19,9 +19,6 @@ class HomePatients extends Component {
                 <FindServices />
                 <div className={style["favorite-wrapper"]}>
                     <Favorite title="My Favorite service" description="Some Description"/>
-                    <Favorite title="My Favorite service" description="Some Description"/>
-                    <Favorite title="My Favorite service" description="Some Description"/>
-                    <Favorite title="My Favorite service" description="Some Description"/>
                 </div>
                 
             </Fragment>

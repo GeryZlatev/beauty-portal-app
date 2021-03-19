@@ -2,7 +2,6 @@ import React, { Fragment, Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import FindServices from '../FindServices';
 import Favorite from './Favorite';
-import style from './HomePatients.module.css';
 
 class HomePatients extends Component {
     constructor(props) {
@@ -17,13 +16,7 @@ class HomePatients extends Component {
         return (
             <Fragment>
                 <FindServices />
-                <div className={style["favorite-wrapper"]}>
-                    <Favorite title="My Favorite service" description="Some Description"/>
-                    <Favorite title="My Favorite service" description="Some Description"/>
-                    <Favorite title="My Favorite service" description="Some Description"/>
-                    <Favorite title="My Favorite service" description="Some Description"/>
-                </div>
-                
+                <Favorite/>
             </Fragment>
         )
     }

@@ -21,7 +21,6 @@ class HomePatients extends Component {
                     <Favorite title="My Favorite service" description="Some Description"/>
                     <Favorite title="My Favorite service" description="Some Description"/>
                     <Favorite title="My Favorite service" description="Some Description"/>
-                    <Favorite title="My Favorite service" description="Some Description"/>
                 </div>
                 
             </Fragment>

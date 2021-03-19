@@ -1,0 +1,23 @@
+.favorite-wrapper {
+    border: 1px solid #E6E6E6;
+    max-width: 30%;
+    background: rgb(241,241,246);
+background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,1) 83%);
+    
+}
+
+.image-wrapper {
+max-width: 100%
+
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.header-service {
+    color: #6262A0;
+    font-weight: 300;
+    text-align: center;
+}
