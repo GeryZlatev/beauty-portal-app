@@ -11,8 +11,6 @@ const Login = () => {
                 <Input type="password" name="password" placeholder="Password">Password</Input>
                 <input type="submit" value="Login" />
             </form>
-            <p>You do not have an account..!?</p>
-            <button className={style["register-button"]}>Register</button>
         </div>
     )
 }

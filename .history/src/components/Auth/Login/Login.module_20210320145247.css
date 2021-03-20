@@ -58,8 +58,7 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
 
 .login-wrapper input[type=submit] {
     margin-top: 50px;
-    margin-bottom: 50px;
-    width: 30%;
+    width: 20%;
     text-decoration: none;
     background: #6262A0;
     color: antiquewhite;
@@ -75,12 +74,10 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
 
 .register-button {
     margin: 10px auto;
-    display: block;
     width: 20%;
     padding: 8px 12px;
     background: #EC8AC4;
     border: 1px solid #EC8AC4;
-    border-radius: 5px;
     color: #f2f2f2;
     outline: none;
 }
