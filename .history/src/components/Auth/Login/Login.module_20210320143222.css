@@ -1,0 +1,63 @@
+.login-wrapper{ 
+border: 1px solid #f2f2f2;
+max-width: 60%;
+margin: 0 auto;
+background: rgb(241,241,246);
+background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,0.5) 83%);
+}
+
+
+.login-wrapper label p,
+.login-wrapper p{
+    max-width: 50%;
+    display: block;
+    justify-content: center;
+    margin: 10px auto;
+    font-size: x-large;
+    font-weight: 200;
+    color: #6262A0;
+    
+}
+
+.login-wrapper p {
+    font-size: 16px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-wrapper h3 {
+    max-width: 30%;
+    margin: 50px auto;
+    font-size: x-large;
+    font-weight: 200;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.login-wrapper input[type=email],
+.login-wrapper input[type=password],
+.login-wrapper input[type=submit] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 20px auto;
+    display: block;
+    justify-content: center;
+    border: 1px solid #6262A0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #6262A0;
+    font-size: small;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.login-wrapper input[type=submit] {
+    width: 20%;
+    text-decoration: none;
+    background: #6262A0;
+    color: antiquewhite;
+    opacity: 0.7;
+    font-size: 18px;
+    outline: none;
+}

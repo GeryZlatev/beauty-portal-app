@@ -107,7 +107,6 @@ const App = () => {
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/patients/register" component={Register} />
-          <Route path="/patients/login" component={Login} />
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />

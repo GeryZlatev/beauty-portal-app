@@ -7,7 +7,6 @@ import HomePatients from './components/HomePatients';
 import About from './components/About';
 import SearchBar from './components/SearchBar';
 import Register from './components/Auth/Register';
-import Login from './components/Auth/Login';
 import Advertising from './components/Advertising';
 import FindServices from './components/FindServices';
 import VerticalLine from './components/VerticalLine';
@@ -107,7 +106,6 @@ const App = () => {
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/patients/register" component={Register} />
-          <Route path="/patients/login" component={Login} />
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />
