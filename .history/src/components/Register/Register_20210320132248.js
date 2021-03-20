@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import {auth} from '../../services/firebase';
 import style from './Register.module.css';
 import Input from './Input';
-import Error from '../ErrorMessage';
+import ErrorMessage from '../ErrorMessage';
 
 
 function Register({ history }) {
@@ -16,9 +16,9 @@ function Register({ history }) {
         const { email, password, repeatPassword } = event.target.elements;
         if (password !== repeatPassword) {
             return (
-                <Error>
+                <ErrorMessage>
                     The password and confirm-password do not match!
-                </Error>
+                </ErrorMessage>
             )
         }
         auth.createUserWithEmailAndPassword(email.value, password.value)

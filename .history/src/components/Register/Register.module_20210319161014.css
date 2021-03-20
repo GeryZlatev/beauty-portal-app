@@ -41,7 +41,6 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
     font-size: x-large;
     font-weight: 200;
     display: flex;
-    flex-wrap: wrap;
 
 }
 
@@ -67,7 +66,7 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
 }
 
 
-.register-wrapper input[type=email],
+.register-wrapper input[type=text],
 .register-wrapper input[type=password],
 .register-wrapper input[type=submit],
 .loggin-button {
@@ -82,7 +81,6 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
     color: #6262A0;
     font-size: small;
     font-weight: 200;
-    cursor: pointer;
 }
 
 .register-wrapper input[type=submit] {

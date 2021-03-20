@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './ErrorMessage.module.css';
 
-const Error = ({children}) => {
+const Error = (props) => {
     return (
         <div className={style["error-wrapper"]}>
-            {{children}}
+            {props.children}
         </div>
 )
 }
