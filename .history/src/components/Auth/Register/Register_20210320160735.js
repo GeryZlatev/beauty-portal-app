@@ -17,7 +17,6 @@ handleSignup,
 hasAccount,
 setHasAccoun,
 emailErr,
-setEmailErr,
 passwordErr
     } = props
 
@@ -28,9 +27,10 @@ passwordErr
                     <Input
                         type="email"
                         name="email"
-                        value={email}
-                        onChange={(e) => {
-                            setEmail(e.target.value)
+                        placeholder="Email"
+                        onChange={e => {
+                            setEmail(e.target);
+                            console.log(email)
                         }}
                     >
                         Email
@@ -39,7 +39,7 @@ passwordErr
                     <Input
                         type="password"
                         name="password"
-                        value={password}
+                        placeholder="Password"
                         onChange={e => setPassword(e.target.value)}
                     >
                         Password
@@ -47,7 +47,7 @@ passwordErr
                     <Input
                         type="password"
                         name="repeatPassword"
-                        
+                        placeholder="Repeat Password"
                         // onChange={}
                     >
                         Repeat Password
@@ -58,8 +58,8 @@ passwordErr
                         value="Sign Up"
                         onClick={(e) => {
                             e.preventDefault();
+                            console.log(email, password)
                             handleSignup();
-                            props.history.push('/patients/login');
                         }}
                     />
                 </form>

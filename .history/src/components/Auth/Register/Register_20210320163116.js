@@ -30,7 +30,9 @@ passwordErr
                         name="email"
                         value={email}
                         onChange={(e) => {
-                            setEmail(e.target.value)
+                            setEmail()
+                            console.log(e.target.value);
+                            console.log(email);
                         }}
                     >
                         Email
@@ -38,7 +40,6 @@ passwordErr
                     {emailErr ? <Error>{ emailErr}</Error> : null}
                     <Input
                         type="password"
-                        name="password"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                     >
@@ -58,8 +59,8 @@ passwordErr
                         value="Sign Up"
                         onClick={(e) => {
                             e.preventDefault();
+                            console.log(email, password)
                             handleSignup();
-                            props.history.push('/patients/login');
                         }}
                     />
                 </form>

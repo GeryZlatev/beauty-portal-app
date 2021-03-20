@@ -126,8 +126,7 @@ const App = () => {
           />
           <Route
               path="/patients/login"
-              render={() => (
-              <Login
+              component={Login}
               email={email}
               setEmail={setEmail}
               password={password}
@@ -137,10 +136,7 @@ const App = () => {
               hasAccount={hasAccount}
               setHasAccount={setHasAccount}
               emailErr={emailErr}
-              passwordErr={ passwordErr}
-                />
-              )}
-          />
+              passwordErr={ passwordErr}/>
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />

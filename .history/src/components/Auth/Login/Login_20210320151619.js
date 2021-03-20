@@ -1,8 +1,7 @@
 import React from 'react';
 import Input from '../Input';
 import style from './Login.module.css';
-import Error from '../../ErrorMessage';
-import { withRouter } from 'react-router-dom';
+import Error from '../../ErrorMessage'
 
 const Login = (props) => {
     const { email,
@@ -23,37 +22,28 @@ const Login = (props) => {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    // value="email"
+                    value="email"
                     onChange={(e) => setEmail(e.target.value)}
                 >
                     Email
                 </Input>
-                {emailErr ? <Error>{ emailErr}</Error> : null}
+                <Error>{ emailErr}</Error>
                 <Input
                     type="password"
                     name="password"
                     placeholder="Password"
-                    // value="password"
+                    value="password"
                     onChange={(e) => setPassword(e.target.value)}
                 >
                     Password
                 </Input>
-                {passwordErr ? <Error>{ passwordErr }</Error> : null}
-                <input type="submit" value="Login" onClick={e => {
-                    e.preventDefault()
-                    handleLogin()
-                    
-                    props.history.push('/')
-                }}/>
+                <Error>{ [passwordErr] }</Error>
+                <input type="submit" value="Login" />
             </form>
             <p>You do not have an account..!?</p>
-            <button className={style["register-button"]}
-                onClick={()=> props.history.push('/patients/register')}
-            >
-                Register
-            </button>
+            <button className={style["register-button"]}>Register</button>
         </div>
     )
 }
 
-export default withRouter(Login);
+export default Login;

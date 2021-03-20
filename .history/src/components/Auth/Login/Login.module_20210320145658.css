@@ -84,7 +84,6 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
     color: #f2f2f2;
     outline: none;
     cursor: pointer;
-    opacity: 0.8;
 }
 
 .register-button:hover {

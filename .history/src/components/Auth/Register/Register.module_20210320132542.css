@@ -1,14 +1,24 @@
-.login-wrapper{ 
-border: 1px solid #f2f2f2;
-max-width: 40%;
-margin: 50px auto;
-background: rgb(241,241,246);
-background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,0.5) 83%);
+.register-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 
+/* .register-wrapper fieldset {
+    margin: 20px auto;
+} */
 
-.login-wrapper label p,
-.login-wrapper p{
+.register-wrapper {
+    border: 1px solid #f2f2f2;
+    max-width: 60%;
+    margin: 0 auto;
+background: rgb(241,241,246);
+background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,0.5) 83%);
+    
+}
+
+.register-wrapper label p,
+.register-wrapper p{
     max-width: 50%;
     display: block;
     justify-content: center;
@@ -19,30 +29,49 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
     
 }
 
-.login-wrapper p {
+.register-wrapper p {
     font-size: 16px;
     margin: 0 auto;
     text-align: center;
 }
 
-.login-wrapper h3 {
-    max-width: 20%;
+.register-wrapper h3 {
+    max-width: 30%;
     margin: 50px auto;
     font-size: x-large;
     font-weight: 200;
-    border: 1px solid #EC8AC4;
-    background: #EC8AC4;
-    padding: 10px 20px;
-    text-align: center;
-    color: #f2f2f2;
-    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
-.login-wrapper input[type=email],
-.login-wrapper input[type=password],
-.login-wrapper input[type=submit] {
-    width: 70%;
+.first-part,
+.second-part {
+    border: 1px solid;
+    padding: 5px 25px;
+}
+
+.first-part {
+    border: #6262A0;
+    background: #6262A0;
+    color: #f2f2f2;
+    margin-right: 0;
+    
+}
+
+.second-part {
+    border: #E6507D;
+    background: #E6507D;
+    color: #f2f2f2;
+    margin-right: 0;
+}
+
+
+.register-wrapper input[type=email],
+.register-wrapper input[type=password],
+.register-wrapper input[type=submit],
+.loggin-button {
+    width: 50%;
     padding: 12px 20px;
     margin: 20px auto;
     display: block;
@@ -53,40 +82,30 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
     color: #6262A0;
     font-size: small;
     font-weight: 200;
-    
+    cursor: pointer;
 }
 
-.login-wrapper input[type=submit] {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 30%;
+.register-wrapper input[type=submit] {
+    width: 20%;
     text-decoration: none;
     background: #6262A0;
     color: antiquewhite;
     opacity: 0.7;
     font-size: 18px;
     outline: none;
-    cursor: pointer;
 }
 
-.login-wrapper input[type=submit]:hover {
-    opacity: 1;
-}
-
-.register-button {
-    margin: 10px auto;
-    display: block;
-    width: 20%;
+.loggin-button {
+    width: 10%;
     padding: 8px 12px;
     background: #EC8AC4;
     border: 1px solid #EC8AC4;
-    border-radius: 5px;
     color: #f2f2f2;
     outline: none;
-    cursor: pointer;
-    opacity: 0.8;
 }
 
-.register-button:hover {
+.register-wrapper input[type=submit]:hover {
     opacity: 1;
 }
+
+

@@ -39,12 +39,7 @@ const Login = (props) => {
                     Password
                 </Input>
                 {passwordErr ? <Error>{ passwordErr }</Error> : null}
-                <input type="submit" value="Login" onClick={e => {
-                    e.preventDefault()
-                    handleLogin()
-                    
-                    props.history.push('/')
-                }}/>
+                <input type="submit" value="Login" onClick={ handleLogin}/>
             </form>
             <p>You do not have an account..!?</p>
             <button className={style["register-button"]}

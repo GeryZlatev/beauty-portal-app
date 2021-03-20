@@ -9,7 +9,7 @@ const Input = ({ type, children, name, placeholder, onChange, value}) => {
                 <input
                     type={type}
                     name={name}
-                    // placeholder={placeholder}
+                    placeholder={placeholder}
                     onChange={onChange}
                     value={value}
                 />

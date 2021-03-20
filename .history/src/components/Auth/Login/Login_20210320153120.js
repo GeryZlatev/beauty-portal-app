@@ -4,7 +4,7 @@ import style from './Login.module.css';
 import Error from '../../ErrorMessage';
 import { withRouter } from 'react-router-dom';
 
-const Login = (props) => {
+const Login = (props, {history}) => {
     const { email,
         setEmail,
         password,
@@ -39,16 +39,11 @@ const Login = (props) => {
                     Password
                 </Input>
                 {passwordErr ? <Error>{ passwordErr }</Error> : null}
-                <input type="submit" value="Login" onClick={e => {
-                    e.preventDefault()
-                    handleLogin()
-                    
-                    props.history.push('/')
-                }}/>
+                <input type="submit" value="Login" onClick={ handleLogin}/>
             </form>
             <p>You do not have an account..!?</p>
             <button className={style["register-button"]}
-                onClick={()=> props.history.push('/patients/register')}
+                onClick={()=> history.push('/patients/register')}
             >
                 Register
             </button>
@@ -56,4 +51,4 @@ const Login = (props) => {
     )
 }
 
-export default withRouter(Login);
+export default Login;

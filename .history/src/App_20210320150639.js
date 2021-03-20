@@ -69,8 +69,7 @@ const App = () => {
             setPasswordErr(err.message);
             break;
         }
-      })
-    return ('I am a function')
+    })
   }
 
   const handleLogout = () => {
@@ -81,7 +80,7 @@ const App = () => {
     auth
       .onAuthStateChanged(user => {
         if (user) {
-        clearInputs()
+          clearInputs()
         setUser(user)
         } else {
           setUser('')
@@ -107,27 +106,10 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
-          <Route
-              path="/patients/register"
-              render={() => (
-              <Register
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              handleLogin={handleLogin}
-              handleSignup={handleSignup}
-              hasAccount={hasAccount}
-              setHasAccount={setHasAccount}
-              emailErr={emailErr}
-              passwordErr={ passwordErr}
-                />
-              )}
-          />
+          <Route path="/patients/register" component={Register} />
           <Route
               path="/patients/login"
-              render={() => (
-              <Login
+              component={Login}
               email={email}
               setEmail={setEmail}
               password={password}
@@ -137,10 +119,7 @@ const App = () => {
               hasAccount={hasAccount}
               setHasAccount={setHasAccount}
               emailErr={emailErr}
-              passwordErr={ passwordErr}
-                />
-              )}
-          />
+              passwordErr={ passwordErr}/>
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />

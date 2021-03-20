@@ -31,6 +31,7 @@ passwordErr
                         value={email}
                         onChange={(e) => {
                             setEmail(e.target.value)
+                            console.log(email);
                         }}
                     >
                         Email

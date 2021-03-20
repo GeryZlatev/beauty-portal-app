@@ -42,7 +42,6 @@ const Login = (props) => {
                 <input type="submit" value="Login" onClick={e => {
                     e.preventDefault()
                     handleLogin()
-                    
                     props.history.push('/')
                 }}/>
             </form>

@@ -81,7 +81,7 @@ const App = () => {
     auth
       .onAuthStateChanged(user => {
         if (user) {
-        clearInputs()
+          clearInputs()
         setUser(user)
         } else {
           setUser('')
@@ -109,8 +109,7 @@ const App = () => {
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route
               path="/patients/register"
-              render={() => (
-              <Register
+              component={Register}
               email={email}
               setEmail={setEmail}
               password={password}
@@ -121,13 +120,10 @@ const App = () => {
               setHasAccount={setHasAccount}
               emailErr={emailErr}
               passwordErr={ passwordErr}
-                />
-              )}
           />
           <Route
               path="/patients/login"
-              render={() => (
-              <Login
+              component={Login}
               email={email}
               setEmail={setEmail}
               password={password}
@@ -137,10 +133,7 @@ const App = () => {
               hasAccount={hasAccount}
               setHasAccount={setHasAccount}
               emailErr={emailErr}
-              passwordErr={ passwordErr}
-                />
-              )}
-          />
+              passwordErr={ passwordErr}/>
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />

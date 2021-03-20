@@ -30,7 +30,8 @@ passwordErr
                         name="email"
                         value={email}
                         onChange={(e) => {
-                            setEmail(e.target.value)
+                            console.log(e.target.value);
+                            console.log(email);
                         }}
                     >
                         Email
@@ -47,7 +48,7 @@ passwordErr
                     <Input
                         type="password"
                         name="repeatPassword"
-                        
+                        placeholder="Repeat Password"
                         // onChange={}
                     >
                         Repeat Password
@@ -58,8 +59,8 @@ passwordErr
                         value="Sign Up"
                         onClick={(e) => {
                             e.preventDefault();
+                            console.log(email, password)
                             handleSignup();
-                            props.history.push('/patients/login');
                         }}
                     />
                 </form>

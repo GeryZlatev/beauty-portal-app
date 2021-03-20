@@ -17,21 +17,18 @@ handleSignup,
 hasAccount,
 setHasAccoun,
 emailErr,
-setEmailErr,
 passwordErr
     } = props
 
         return (
             <div className={style["register-wrapper"]}>
                 <h3><span className={style["first-part"]}>Join us!</span><span className={ style["second-part"]}>Register now</span></h3>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <Input
                         type="email"
                         name="email"
-                        value={email}
-                        onChange={(e) => {
-                            setEmail(e.target.value)
-                        }}
+                        placeholder="Email"
+                        onChange={e => setEmail(e.target.value)}
                     >
                         Email
                     </Input>
@@ -39,7 +36,7 @@ passwordErr
                     <Input
                         type="password"
                         name="password"
-                        value={password}
+                        placeholder="Password"
                         onChange={e => setPassword(e.target.value)}
                     >
                         Password
@@ -47,7 +44,7 @@ passwordErr
                     <Input
                         type="password"
                         name="repeatPassword"
-                        
+                        placeholder="Repeat Password"
                         // onChange={}
                     >
                         Repeat Password
@@ -56,11 +53,7 @@ passwordErr
                     <input
                         type="submit"
                         value="Sign Up"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            handleSignup();
-                            props.history.push('/patients/login');
-                        }}
+                        onClick={handleSignup, setHasAccoun}
                     />
                 </form>
                     <p>You already have an account..!?</p>
