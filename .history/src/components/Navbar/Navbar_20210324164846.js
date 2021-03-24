@@ -20,7 +20,6 @@ class Navbar extends Component {
     handleLogout = () => {
         auth.signOut();
         localStorage.clear();
-        this.props.history.push('/');
 
 }
 

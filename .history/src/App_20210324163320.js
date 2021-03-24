@@ -27,7 +27,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "LOGIN":
       localStorage.setItem("user", JSON.stringify(action.payload.user));
-      localStorage.setItem("token", JSON.stringify(action.payload.token));
+      // localStorage.setItem("token", JSON.stringify(action.payload.token));
       return {
         ...state,
         isAuthenticated: true,
@@ -111,7 +111,7 @@ const App = () => {
     >
       <div className={style.app}>
         
-        <Navbar  />
+        <Navbar />
         <SearchBar />
         <Switch>
           <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />
@@ -120,9 +120,9 @@ const App = () => {
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route
-              path="/register" component={Register}/>
+              path="/patients/register" component={Register}/>
           <Route
-              path="/login" component={Login}/>
+              path="/patients/login" component={Login}/>
           <Route component={PageNotFound} />
             
             {/* {routes.map((route) => {

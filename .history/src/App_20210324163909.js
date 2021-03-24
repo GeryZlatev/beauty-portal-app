@@ -111,7 +111,7 @@ const App = () => {
     >
       <div className={style.app}>
         
-        <Navbar  />
+        <Navbar />
         <SearchBar />
         <Switch>
           <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />

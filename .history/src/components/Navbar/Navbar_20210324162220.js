@@ -10,8 +10,7 @@ class Navbar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoggedIn: localStorage.getItem('user'),
-            token: localStorage.getItem('token')
+            isLoggedIn: true
         }
         this.renderLoginLinks = this.renderLoginLinks.bind(this);
         this.renderLogoutLink = this.renderLogoutLink.bind(this);
@@ -20,33 +19,32 @@ class Navbar extends Component {
     handleLogout = () => {
         auth.signOut();
         localStorage.clear();
-        this.props.history.push('/');
 
 }
 
     renderLogoutLink() {
         return (
-    <>
+    <Fragment>
             <li><Link to="/specialist">For Specialists</Link></li>
             <li><Link to="/patients">For Patients and Families</Link></li>
-            <li><Link to="/" onClick={this.handleLogout}>Logout</Link></li>        
-    </>
+            <li><Link to="/logout" onClick={this.handleLogout}>Logout</Link></li>        
+    </Fragment>
         )
     }
 
     renderLoginLinks() {
         return (
-                <>
-                    <li><Link to="/register">Register</Link></li>
-                    <li><Link to="/login">Login</Link></li>   
-                </>
+                <Fragment>
+                    <li><Link to="/specialist/register">Register</Link></li>
+                    <li><Link to="/patients/register">Login</Link></li>   
+                </Fragment>
         )
     }
 
     render() {
 
         return (
-            <>
+            <Fragment>
                 <nav className={style.navigationbar}>
                     <div className={style.logoWrapper}>
                         <img src={ logo} alt="Beauty Portal Logo"/>
@@ -59,7 +57,7 @@ class Navbar extends Component {
                         : this.renderLoginLinks()}
                 </ul>
                 </nav>
-            </>
+            </Fragment>
 
         )
     }

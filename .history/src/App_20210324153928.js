@@ -14,42 +14,14 @@ import VerticalLine from './components/VerticalLine';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
-// import { AuthProvider } from './components/contexts/AuthContext';
+import { AuthProvider } from './components/contexts/AuthContext';
 import { auth } from './services/firebase';
-export const AuthContext = React.createContext();
-const initialState = {
-  isAuthenticated: false,
-  user: null,
-  token: null
-}
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "LOGIN":
-      localStorage.setItem("user", JSON.stringify(action.payload.user));
-      localStorage.setItem("token", JSON.stringify(action.payload.token));
-      return {
-        ...state,
-        isAuthenticated: true,
-        user: action.payload.user,
-        token: action.payload.token
-      };
-    case "LOGOUT":
-      localStorage.clear();
-      return {
-        ...state,
-        isAuthenticated: false,
-        user: null
-      };
-    default:
-      return state;
-  }
-}
-
+import routes from './Config/routes';
 
 
 const App = () => {
-  const [state, dispatch] = React.useReducer(reducer, initialState);
+
+  const [hasAccount, setHasAccount] = useState(false);
 
 //   const clearInputs = () => {
 //     setEmail('');
@@ -86,9 +58,9 @@ const App = () => {
 //     })
 // }
 
-// const handleLogout = () => {
-//     auth.signOut()
-// }
+const handleLogout = () => {
+    auth.signOut()
+}
 
 // const authListener = () => {
 //     auth
@@ -102,44 +74,39 @@ const App = () => {
 //     })
 // }
   
-  return (
-    <AuthContext.Provider
-      value={{
-        state,
-        dispatch
-    }}
-    >
+    return (
       <div className={style.app}>
-        
-        <Navbar  />
+        <AuthProvider>
+        <Navbar />
         <SearchBar />
+        {/* <div className="image-wrapper">
+      <img src={slider}  alt="beauty woman"/>
+      </div> */}
         <Switch>
-          <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />
-          {/* <Route path="/patients"  exact component={HomePatients} /> */}
+          {/* <Route path="/" exact component={Home} />
+          <Route path="/patients"  exact component={HomePatients} />
           <Route path="/about" component={About} />
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route
-              path="/register" component={Register}/>
+              path="/patients/register" component={Register}/>
           <Route
-              path="/login" component={Login}/>
-          <Route component={PageNotFound} />
+              path="/patients/login" component={Login}/>
+          <Route component={PageNotFound} /> */}
             
-            {/* {routes.map((route) => {
-              return (
+            {routes.map((route) => {
               <Route
                 key={route.path}
                 path={route.path}
                 component={route.componen}
               />
-              )
-            })} */}
+            })}
         </Switch>
         <Advertising />
         <VerticalLine />
           <Footer />
+          </AuthProvider>
       </div>
-      </AuthContext.Provider>
     )
   
 }

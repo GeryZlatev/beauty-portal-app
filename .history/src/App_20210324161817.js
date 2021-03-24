@@ -86,9 +86,9 @@ const App = () => {
 //     })
 // }
 
-// const handleLogout = () => {
-//     auth.signOut()
-// }
+const handleLogout = () => {
+    auth.signOut()
+}
 
 // const authListener = () => {
 //     auth
@@ -111,18 +111,18 @@ const App = () => {
     >
       <div className={style.app}>
         
-        <Navbar  />
+        <Navbar />
         <SearchBar />
         <Switch>
           <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />
-          {/* <Route path="/patients"  exact component={HomePatients} /> */}
+          <Route path="/patients"  exact component={HomePatients} />
           <Route path="/about" component={About} />
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route
-              path="/register" component={Register}/>
+              path="/patients/register" component={Register}/>
           <Route
-              path="/login" component={Login}/>
+              path="/patients/login" component={Login}/>
           <Route component={PageNotFound} />
             
             {/* {routes.map((route) => {

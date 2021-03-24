@@ -10,8 +10,8 @@ class Navbar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoggedIn: localStorage.getItem('user'),
-            token: localStorage.getItem('token')
+            isLoggedIn: localStorage.getItem(user),
+            token: localStorage.getItem(token)
         }
         this.renderLoginLinks = this.renderLoginLinks.bind(this);
         this.renderLogoutLink = this.renderLogoutLink.bind(this);
@@ -20,7 +20,6 @@ class Navbar extends Component {
     handleLogout = () => {
         auth.signOut();
         localStorage.clear();
-        this.props.history.push('/');
 
 }
 

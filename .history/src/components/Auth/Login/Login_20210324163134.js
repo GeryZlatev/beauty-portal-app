@@ -24,12 +24,10 @@ const Login = (props) => {
         .signInWithEmailAndPassword(email, password)
         .then((res) => {
             setUser(res.user.uid);
+            console.log(res);
             dispatch({
                 type: 'LOGIN',
-                payload: {
-                    user: res.user.uid,
-                    token: res.user.refreshToken
-                }
+                // payload: res.json()
             })
             props.history.push('/')
         })
@@ -67,7 +65,7 @@ const Login = (props) => {
             </form>
             <p>You do not have an account..!?</p>
             <button className={style["register-button"]}
-                onClick={()=> props.history.push('/register')}
+                onClick={()=> props.history.push('/patients/register')}
             >
                 Register
             </button>

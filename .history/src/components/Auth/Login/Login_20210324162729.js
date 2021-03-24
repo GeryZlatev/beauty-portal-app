@@ -4,7 +4,6 @@ import style from './Login.module.css';
 import Error from '../../ErrorMessage';
 import { withRouter } from 'react-router-dom';
 import { auth } from '../../../services/firebase';
-import { AuthContext } from '../../../App';
 
 const Login = (props) => {
     const {dispatch} = React.useContext(AuthContext)
@@ -24,13 +23,6 @@ const Login = (props) => {
         .signInWithEmailAndPassword(email, password)
         .then((res) => {
             setUser(res.user.uid);
-            dispatch({
-                type: 'LOGIN',
-                payload: {
-                    user: res.user.uid,
-                    token: res.user.refreshToken
-                }
-            })
             props.history.push('/')
         })
         .catch(err => {
@@ -67,7 +59,7 @@ const Login = (props) => {
             </form>
             <p>You do not have an account..!?</p>
             <button className={style["register-button"]}
-                onClick={()=> props.history.push('/register')}
+                onClick={()=> props.history.push('/patients/register')}
             >
                 Register
             </button>

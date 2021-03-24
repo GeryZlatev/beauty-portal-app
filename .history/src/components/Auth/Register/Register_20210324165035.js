@@ -13,7 +13,7 @@ function Register(props) {
     const [emailErr, setEmailErr] = useState('');
     const [repeatPassword, setRepeatPassword] = useState('');
     const [passwordErr, setPasswordErr] = useState('');
-    // const [user, setUser] = useState('');
+    const [user, setUser] = useState('');
 
     const clearErrors = () => {
         setEmailErr('');
