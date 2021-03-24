@@ -7,11 +7,10 @@ const Input = ({ type, children, name, placeholder, onChange, value}) => {
         <>
         <label>
         <p>{children}:</p>   
-                <DebounceInput
-                    debounceTimeout={5000}
+                <input
                     type={type}
                     name={name}
-                    placeholder={placeholder}
+                    // placeholder={placeholder}
                     onChange={onChange}
                     value={value}
                 />
