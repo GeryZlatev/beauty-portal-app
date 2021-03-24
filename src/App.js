@@ -15,83 +15,63 @@ import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
 import { AuthProvider } from './components/contexts/AuthContext';
-import { auth } from './services/firebase';
-
-
+import {auth } from './services/firebase'
 
 
 const App = () => {
-  const [user, setUser] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [emailErr, setEmailErr] = useState('');
-  const [passwordErr, setPasswordErr] = useState('');
+
   const [hasAccount, setHasAccount] = useState(false);
 
-  const clearInputs = () => {
-    setEmail('');
-    setPassword('')
-  }
+//   const clearInputs = () => {
+//     setEmail('');
+//     setPassword('')
+//   }
 
-  const clearErrors = () => {
-    setEmailErr('');
-    setPasswordErr('');
-  }
-  const handleLogin = () => {
-    clearErrors();
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .catch(err => {
-        switch (err.code) {
-          case 'auth/invalid-email':
-          case 'auth/user-disabled':
-          case 'auth/user-not-found':
-            setEmailErr(err.message);
-            break;
-          case 'auth/wrong-password':
-            setPasswordErr(err.message);
-            break;
-      }
-    })
-  }
 
-  const handleSignup = () => {
-    clearErrors()
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .catch(err => {
-        switch (err.code) {
-          case 'auth/email-already-in-use':
-          case 'auth/invalid-email':
-            setEmailErr(err.message);
-            break;
-          case 'auth/weak-password':
-            setPasswordErr(err.message);
-            break;
-        }
-      })
-    return ('I am a function')
-  }
 
-  const handleLogout = () => {
+
+//   useEffect(() => {
+//     authListener();
+//   }, [])
+
+
+
+
+// const handleSignup = () => {
+//     clearErrors()
+//     auth
+//         .createUserWithEmailAndPassword(email, password)
+//         .then(res => {
+//         setUser(res.user.uid)
+//         })
+//     .catch(err => {
+//         switch (err.code) {
+//         case 'auth/email-already-in-use':
+//         case 'auth/invalid-email':
+//             setEmailErr(err.message);
+//             break;
+//         case 'auth/weak-password':
+//             setPasswordErr(err.message);
+//             break;
+//         }
+//     })
+// }
+
+const handleLogout = () => {
     auth.signOut()
-  }
+}
 
-  const authListener = () => {
-    auth
-      .onAuthStateChanged(user => {
-        if (user) {
-        clearInputs()
-        setUser(user)
-        } else {
-          setUser('')
-      }
-    })
-  }
-
-  useEffect(() => {
-    authListener();
-  }, [])
+// const authListener = () => {
+//     auth
+//     .onAuthStateChanged(user => {
+//         if (user) {
+//         clearInputs()
+//         setUser(user)
+//         } else {
+//         setUser('')
+//     }
+//     })
+// }
   
     return (
       <div className={style.app}>
@@ -108,39 +88,9 @@ const App = () => {
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route
-              path="/patients/register"
-              render={() => (
-              <Register
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              handleLogin={handleLogin}
-              handleSignup={handleSignup}
-              hasAccount={hasAccount}
-              setHasAccount={setHasAccount}
-              emailErr={emailErr}
-              passwordErr={ passwordErr}
-                />
-              )}
-          />
+              path="/patients/register" component={Register}/>
           <Route
-              path="/patients/login"
-              render={() => (
-              <Login
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              handleLogin={handleLogin}
-              handleSignup={handleSignup}
-              hasAccount={hasAccount}
-              setHasAccount={setHasAccount}
-              emailErr={emailErr}
-              passwordErr={ passwordErr}
-                />
-              )}
-          />
+              path="/patients/login" component={Login}/>
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />

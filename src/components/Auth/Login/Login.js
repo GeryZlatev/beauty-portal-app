@@ -1,20 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Input from '../Input';
 import style from './Login.module.css';
 import Error from '../../ErrorMessage';
 import { withRouter } from 'react-router-dom';
+import { auth } from '../../../services/firebase';
 
 const Login = (props) => {
-    const { email,
-        setEmail,
-        password,
-        setPassword,
-        handleLogin,
-        handleSignup,
-        hasAccount,
-        setHasAccount,
-        emailErr,
-        passwordErr } = props;
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('')
+    const [user, setUser] = useState('');
+    const [errorLogin, setErrorLogin] = useState('');
+
+    const clearErrors = () => {
+        setErrorLogin('');
+    }
+
+    const handleLogin = (e) => {
+    e.preventDefault();
+    clearErrors();
+    auth
+        .signInWithEmailAndPassword(email, password)
+        .then((res) => {
+            setUser(res.user.uid);
+            props.history.push('/')
+        })
+        .catch(err => {
+            setEmail('');
+            setPassword('');
+            setErrorLogin(err.message);
+    })
+}
     return (
         <div className={style["login-wrapper"]}>
             <form>
@@ -22,29 +38,24 @@ const Login = (props) => {
                 <Input
                     type="email"
                     name="email"
-                    placeholder="Email"
-                    // value="email"
+                    placeholder="example@email.com"
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 >
                     Email
                 </Input>
-                {emailErr ? <Error>{ emailErr}</Error> : null}
+                {/* {errorLogin ? <Error>{ errorLogin }</Error> : null} */}
                 <Input
                     type="password"
                     name="password"
-                    placeholder="Password"
-                    // value="password"
+                    placeholder="******"
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 >
                     Password
                 </Input>
-                {passwordErr ? <Error>{ passwordErr }</Error> : null}
-                <input type="submit" value="Login" onClick={e => {
-                    e.preventDefault()
-                    handleLogin()
-                    
-                    props.history.push('/')
-                }}/>
+                {errorLogin ? <Error>{ errorLogin }</Error> : null}
+                <input type="submit" value="Login" onClick={ handleLogin}/>
             </form>
             <p>You do not have an account..!?</p>
             <button className={style["register-button"]}
