@@ -1,18 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import FindServices from '../FindServices';
 import Favorite from './Favorite';
 import style from './HomePatients.module.css';
-import { AuthContext } from '../../App';
-
-import firebase from '../../services/firebase';
-// const DB = firebase.firestore();
 
 const HomePatients  = (props) => {
-    const { dispatch } = React.useContext(AuthContext);
 
-    const showLoggedUserUi = () => {
-    
+
+const showLoggedUserUi = ()  => {
         //fetch some data
         return (
             <>
@@ -30,11 +25,11 @@ const HomePatients  = (props) => {
 
     
         return (
-            <>
-                {localStorage.getItem('user')
-                    ? showLoggedUserUi()
-            : <Redirect to="/register"/>}
-            </>
+            <Fragment>
+                {this.state.isLoggedIn
+                    ? this.showLoggedUserUi()
+            : <Redirect to="/patients/register"/>}
+            </Fragment>
         )
     }
 

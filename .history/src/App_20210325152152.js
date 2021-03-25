@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import style from './App.module.css';
 import Navbar from './components/Navbar';
@@ -16,13 +16,11 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
 import { auth } from './services/firebase';
 export const AuthContext = React.createContext();
-
-
 const initialState = {
-  isAuthenticated: localStorage.getItem('isAuthenticated') || false,
-  user: localStorage.getItem('user') || null,
-  token: localStorage.getItem('token') || null,
-  email: localStorage.getItem('email') || null,
+  isAuthenticated: false,
+  user: null,
+  token: null,
+  email: null,
   favoriteProcedures: []
 }
 
@@ -31,8 +29,6 @@ const reducer = (state, action) => {
     case "LOGIN":
       localStorage.setItem("user", JSON.stringify(action.payload.user));
       localStorage.setItem("token", JSON.stringify(action.payload.token));
-      localStorage.setItem("email", JSON.stringify(action.payload.email));
-      localStorage.setItem("isAuthenticated", JSON.stringify(true));
       return {
         ...state,
         isAuthenticated: true,

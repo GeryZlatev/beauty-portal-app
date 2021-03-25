@@ -16,8 +16,6 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
 import { auth } from './services/firebase';
 export const AuthContext = React.createContext();
-
-
 const initialState = {
   isAuthenticated: localStorage.getItem('isAuthenticated') || false,
   user: localStorage.getItem('user') || null,
@@ -56,6 +54,14 @@ const reducer = (state, action) => {
 
 const App = (props) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('user');
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      
+    }
+  }, [])
   
   return (
     <AuthContext.Provider

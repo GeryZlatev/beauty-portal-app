@@ -16,8 +16,6 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
 import { auth } from './services/firebase';
 export const AuthContext = React.createContext();
-
-
 const initialState = {
   isAuthenticated: localStorage.getItem('isAuthenticated') || false,
   user: localStorage.getItem('user') || null,

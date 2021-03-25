@@ -33,7 +33,7 @@ const HomePatients  = (props) => {
             <>
                 {localStorage.getItem('user')
                     ? showLoggedUserUi()
-            : <Redirect to="/register"/>}
+            : <Redirect to="/patients/register"/>}
             </>
         )
     }

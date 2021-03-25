@@ -6,7 +6,7 @@ import style from './HomePatients.module.css';
 import { AuthContext } from '../../App';
 
 import firebase from '../../services/firebase';
-// const DB = firebase.firestore();
+const DB = firebase.firestore();
 
 const HomePatients  = (props) => {
     const { dispatch } = React.useContext(AuthContext);
@@ -33,7 +33,7 @@ const HomePatients  = (props) => {
             <>
                 {localStorage.getItem('user')
                     ? showLoggedUserUi()
-            : <Redirect to="/register"/>}
+            : <Redirect to="/patients/register"/>}
             </>
         )
     }
