@@ -18,6 +18,8 @@ const Navbar = (props) => {
                 })
             });
         localStorage.clear();
+        // this.setState({ isLoggedIn: false, token: null });
+        // this.props.history.push('/')
         
 }
 

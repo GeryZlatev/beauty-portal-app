@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import style from './App.module.css';
 import Navbar from './components/Navbar';
@@ -14,13 +14,13 @@ import VerticalLine from './components/VerticalLine';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
+// import { AuthProvider } from './components/contexts/AuthContext';
 import { auth } from './services/firebase';
 export const AuthContext = React.createContext();
 const initialState = {
   isAuthenticated: false,
   user: null,
-  token: null,
-  email: null
+  token: null
 }
 
 const reducer = (state, action) => {
@@ -32,8 +32,7 @@ const reducer = (state, action) => {
         ...state,
         isAuthenticated: true,
         user: action.payload.user,
-        token: action.payload.token,
-        email: action.payload.email
+        token: action.payload.token
       };
     case "LOGOUT":
       localStorage.clear();
@@ -49,8 +48,59 @@ const reducer = (state, action) => {
 
 
 
-const App = (props) => {
+const App = () => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
+
+//   const clearInputs = () => {
+//     setEmail('');
+//     setPassword('')
+//   }
+
+
+
+
+//   useEffect(() => {
+//     authListener();
+//   }, [])
+
+
+
+
+// const handleSignup = () => {
+//     clearErrors()
+//     auth
+//         .createUserWithEmailAndPassword(email, password)
+//         .then(res => {
+//         setUser(res.user.uid)
+//         })
+//     .catch(err => {
+//         switch (err.code) {
+//         case 'auth/email-already-in-use':
+//         case 'auth/invalid-email':
+//             setEmailErr(err.message);
+//             break;
+//         case 'auth/weak-password':
+//             setPasswordErr(err.message);
+//             break;
+//         }
+//     })
+// }
+
+// const handleLogout = () => {
+//     auth.signOut()
+// }
+
+// const authListener = () => {
+//     auth
+//     .onAuthStateChanged(user => {
+//         if (user) {
+//         clearInputs()
+//         setUser(user)
+//         } else {
+//         setUser('')
+//     }
+//     })
+// }
   
   return (
     <AuthContext.Provider
@@ -61,7 +111,7 @@ const App = (props) => {
     >
       <div className={style.app}>
         
-        <Navbar user={state.user} email={state.email} />
+        <Navbar state={...state} />
         <SearchBar />
         <Switch>
           <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />
@@ -74,7 +124,16 @@ const App = (props) => {
           <Route
               path="/login" component={Login}/>
           <Route component={PageNotFound} />
-          
+            
+            {/* {routes.map((route) => {
+              return (
+              <Route
+                key={route.path}
+                path={route.path}
+                component={route.componen}
+              />
+              )
+            })} */}
         </Switch>
         <Advertising />
         <VerticalLine />
