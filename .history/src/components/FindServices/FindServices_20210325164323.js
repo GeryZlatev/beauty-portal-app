@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Redirect } from 'react-router-dom';
 import style from './FindServices.module.css';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ class FindServices extends Component {
     render() {
         return (
             <>
-                
+                {localStorage.getItem('user')} ?
                 <div className={style.menuWrapper}>
                     <div className={style.aestheticDermatology}>
                         <Link to="aesthetic-dermatology">Aesthetic Dermatology</Link>
@@ -26,8 +26,8 @@ class FindServices extends Component {
                     <div className={style.cellulite}>
                         <Link to="anti-cellulite">Anti-cellulite</Link>
                         </div>
-                    </div> 
-                    
+                    </div> :
+                    <Redirect to="/register"/>
             </>
         )
     }

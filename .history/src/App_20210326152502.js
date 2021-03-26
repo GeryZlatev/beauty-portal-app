@@ -15,7 +15,6 @@ import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
 import { auth } from './services/firebase';
-import Specialist from './components/Specialist';
 export const AuthContext = React.createContext();
 
 
@@ -75,8 +74,7 @@ const App = (props) => {
           <Route path="/services" component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
-          <Route path="/specialist" component={ Specialist}/>
+          <Route path="/login" component={Login}/>
           <Route component={PageNotFound} />
           
         </Switch>

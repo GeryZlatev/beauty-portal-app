@@ -1,0 +1,8 @@
+.form-specialist form{
+border: 1px solid #f2f2f2;
+max-width: 40%;
+margin: 50px auto;
+background: rgb(241,241,246);
+background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rgba(213,227,238,0.5) 83%);
+    
+}
