@@ -5,14 +5,13 @@ const DB = firebase.firestore();
 const STORAGE = firebase.storage();
 
 export const addSpecialist = (specialist) => {
-    const { name, practice, city, phone, image } = specialist;
+    const { name, practice, city, phone } = specialist;
     return DB.collection('specialist')
             .add({
             name,
             practice,
             city,
-            phone,
-            image
+            phone
     })
 }
 

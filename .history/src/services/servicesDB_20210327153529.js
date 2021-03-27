@@ -5,20 +5,17 @@ const DB = firebase.firestore();
 const STORAGE = firebase.storage();
 
 export const addSpecialist = (specialist) => {
-    const { name, practice, city, phone, image } = specialist;
+    const { name, practice, city, phone } = specialist;
     return DB.collection('specialist')
             .add({
             name,
             practice,
             city,
-            phone,
-            image
+            phone
     })
 }
 
 export const addSpecialistImage = (image) => {
     const storageRef = STORAGE.ref();
-    const imageRef = storageRef.child('specialists');
-    return imageRef.put(image);
-    
+    const imageRef = storageRef.child('specialists')
 }

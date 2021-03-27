@@ -2,8 +2,8 @@
 display: flex;
 justify-content: space-between;
 margin: 50px auto;
-background: rgb(179,205,249);
-background: radial-gradient(circle, rgba(179,205,249,1) 0%, rgba(5,53,111,1) 100%);
+background: rgb(9,181,244);
+background: radial-gradient(circle, rgba(9,181,244,0.8365721288515406) 33%, rgba(10,246,237,1) 83%);
 }
 
 .form-specialist form{
@@ -31,7 +31,8 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
 }
 
 .form-specialist input[type="text"],
-.form-specialist input[type="submit"] {
+.form-specialist input[type="submit"],
+.form-specialist input[type="file"] {
     width: 70%;
     padding: 12px 20px;
     margin: 20px auto;

@@ -2,8 +2,8 @@
 display: flex;
 justify-content: space-between;
 margin: 50px auto;
-background: rgb(179,205,249);
-background: radial-gradient(circle, rgba(179,205,249,1) 0%, rgba(5,53,111,1) 100%);
+background: rgb(159,229,255);
+background: radial-gradient(circle, rgba(159,229,255,0.8365721288515406) 33%, rgba(201,254,252,1) 83%);
 }
 
 .form-specialist form{

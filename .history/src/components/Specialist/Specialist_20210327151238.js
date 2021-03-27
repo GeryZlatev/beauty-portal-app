@@ -11,7 +11,6 @@ const Specialist = (props) => {
     const [practice, setPractice] = useState('');
     const [city, setCity] = useState('');
     const [phone, setPhone] = useState('');
-    const [image, setImage] = useState('');
     const [errorName, setErrorName] = useState('');
     const [errorPractice, setErrorPractice] = useState('');
     const [errorCity, setErrorCity] = useState('');
@@ -23,8 +22,7 @@ const Specialist = (props) => {
         setName('');
         setPractice('');
         setCity('');
-        setPhone('');
-        setImage('');
+        setPhone('')
     }
 
     const clearErrors = () => {
@@ -38,13 +36,11 @@ const Specialist = (props) => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         const specialist = {
-            name,
-            practice,
-            city,
-            phone,
-            image
+            name: name,
+            practice: practice,
+            city: city,
+            phone: phone
         }
-        console.log(specialist);
         if (!name || !practice || !phone || !city) {
             setErrorApply('Something went wrong! We are so sorry! Please fill all inputs and try again');
             setSuccsses(false);
@@ -136,8 +132,8 @@ const Specialist = (props) => {
                     }}
                 />
                     {errorPhone ? <ErrorMessage>{errorPhone}</ErrorMessage> : null}
-            <label htmlFor="photo">Plese, add your photo <span>imageURL optional</span></label>
-                    <input type="text" id="photo" name="photo" value={image } placeholder="https://..." onChange={(e) => setImage(e.target.value)}/>
+            <label htmlFor="photo">Plese add your photo</label>
+            <input type="file" id="photo" name="photo"/>
             <input
                 type="submit"
                 value="Send"
