@@ -1,0 +1,12 @@
+.card-wrapper {
+    margin: 15px auto;
+    max-width: 60%;
+}
+
+.image-wrapper {
+    max-width: 50%;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+}

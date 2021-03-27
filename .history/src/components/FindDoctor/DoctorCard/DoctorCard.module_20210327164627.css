@@ -1,0 +1,17 @@
+.card-wrapper {
+    margin: 15px auto;
+    max-width: 25%;
+    border: 1px solid burlywood;
+    background: rgb(179,205,249);
+background: radial-gradient(circle, rgba(179,205,249,1) 0%, rgba(240,240,240,1) 100%);
+}
+
+.image-wrapper {
+    max-width: 80%;
+    margin: 15px auto;
+    border: 1px solid burlywood;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+}

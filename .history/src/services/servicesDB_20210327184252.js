@@ -26,8 +26,11 @@ export const addSpecialist = (specialist) => {
 export const getAllSpecialists = () => {
     return DB.collection('specialist')
         .get()
-
-}
+        .then((res) => {
+            res.docs.map((x) => {
+            return {id: x.id, ...x.data()}
+            })
+    })
     //     .then((res) => {
     //     res
     //     .docs
@@ -37,3 +40,4 @@ export const getAllSpecialists = () => {
             
     //     })
     // .catch((err) => console.log(err))
+}

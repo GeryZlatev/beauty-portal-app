@@ -24,16 +24,5 @@ export const addSpecialist = (specialist) => {
 // }
 
 export const getAllSpecialists = () => {
-    return DB.collection('specialist')
-        .get()
-
+    return DB.collection('specialist').get();
 }
-    //     .then((res) => {
-    //     res
-    //     .docs
-    //     .map((specialist) => {
-    //         return {id: specialist.id, ...specialist.data()}
-    //     })
-            
-    //     })
-    // .catch((err) => console.log(err))

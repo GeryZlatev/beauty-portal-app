@@ -1,0 +1,15 @@
+.card-wrapper {
+    margin: 15px auto;
+    max-width: 30%;
+    border: 1px solid #6262A0;
+}
+
+.image-wrapper {
+    max-width: 80%;
+    margin: 15px auto;
+    border: 1px solid burlywood;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+}
