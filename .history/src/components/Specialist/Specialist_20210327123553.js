@@ -2,7 +2,6 @@ import style from './Specialist.module.css';
 import * as ServicesDB from '../../services/servicesDB';
 import { useState } from 'react';
 import ErrorMessage from '../ErrorMessage';
-import Notification from '../Notification';
 const Specialist = (props) => {
 
     const [name, setName] = useState('');
@@ -12,24 +11,7 @@ const Specialist = (props) => {
     const [errorName, setErrorName] = useState('');
     const [errorPractice, setErrorPractice] = useState('');
     const [errorCity, setErrorCity] = useState('');
-    const [errorPhone, setErrorPhone] = useState('');
-    const [success, setSuccsses] = useState(Boolean);
-    const [errorApply, setErrorApply] = useState('');
-
-    const clearInputs = () => {
-        setName('');
-        setPractice('');
-        setCity('');
-        setPhone('')
-    }
-
-    const clearErrors = () => {
-        setErrorName('')
-        setErrorPractice('')
-        setErrorCity('')
-        setErrorPhone('')
-        setErrorApply('')
-    }
+    const [errorPhone, setErrorPhone] = useState('')
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -40,31 +22,14 @@ const Specialist = (props) => {
             phone: phone
         }
         console.log(specialist);
-        if (!name || !practice || !phone || !city) {
-            setErrorApply('Something went wrong! We are so sorry! Please fill all inputs and try again');
-            setSuccsses(false);
-            return null;
-        }
         ServicesDB.addSpecialist(specialist)
             .then((res) => {
                 console.log(res);
-                setSuccsses(true);
-                clearInputs();
-                clearErrors();
-                
-            })
-            .catch((error) => {
-                setSuccsses(false);
-                setErrorApply(error.message)
-            })
+        })
     }
-    // <ErrorMessage>Something went wrong! We're so sorry! Please, try again...</ErrorMessage>
 
     return (
-        <>
-            {success ? <Notification>You successfully sent your information! Thank you for applying!</Notification> : null}
-            {errorApply ? <ErrorMessage>{ errorApply}</ErrorMessage> : null}
-        <div className={style["form-specialist"]}>
+    <div className={style["form-specialist"]}>
         <form onSubmit= {onSubmitHandler}>
             <label htmlFor="name">Name</label>
             <input
@@ -75,7 +40,7 @@ const Specialist = (props) => {
                 placeholder="Your name"
                 onChange={(e) => setName(e.target.value)}
                     onBlur={(e) => {
-                        if (e.target.value.length < 3) {
+                        if (e.target.value.length <= 3) {
                         setErrorName('Name must be at least 3 characters long')
                         } else {
                             setErrorName('')
@@ -92,7 +57,7 @@ const Specialist = (props) => {
                     placeholder="Your practice"
                     onChange={(e) => setPractice(e.target.value)}
                     onBlur={(e) => {
-                        if (e.target.value.length < 3) {
+                        if (e.target.value.length <= 3) {
                             setErrorPractice('Invalid Practice')
                         } else {
                             setErrorPractice('')
@@ -143,11 +108,9 @@ const Specialist = (props) => {
 
             <div className={style["contain-wrapper"]}>
                 <h2>Request your profile</h2>
-                    <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
-                    {/* {success ? } */}
+                <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
             </div>
-            </div>
-    </>
+    </div>
     )
 
 }

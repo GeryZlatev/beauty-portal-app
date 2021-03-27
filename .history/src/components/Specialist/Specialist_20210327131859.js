@@ -143,8 +143,7 @@ const Specialist = (props) => {
 
             <div className={style["contain-wrapper"]}>
                 <h2>Request your profile</h2>
-                    <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
-                    {/* {success ? } */}
+                <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
             </div>
             </div>
     </>

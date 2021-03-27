@@ -1,0 +1,14 @@
+
+.notification-wrapper {
+    max-width: 50%;
+    margin: 10px auto;
+    padding: 15px auto;
+    background: darkseagreen;
+    color: darkslategrey;
+    font-size: larger;
+    font-weight: 300;
+    border: 1px solid darkseagreen;
+    border-radius: 8px;
+    text-align: center;
+
+}

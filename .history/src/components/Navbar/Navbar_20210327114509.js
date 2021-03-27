@@ -32,10 +32,10 @@ const Navbar = (props) => {
 
     const renderLoginLinks = () => {
         return (
-                <>
+            <>
                 <li><Link to="/specialist">For Specialists</Link></li>
-                <li><Link to="/register">Register</Link></li>
-                <li><Link to="/login">Login</Link></li>   
+                    <li><Link to="/register">Register</Link></li>
+                    <li><Link to="/login">Login</Link></li>   
                 </>
         )
     }

@@ -14,22 +14,7 @@ const Specialist = (props) => {
     const [errorCity, setErrorCity] = useState('');
     const [errorPhone, setErrorPhone] = useState('');
     const [success, setSuccsses] = useState(Boolean);
-    const [errorApply, setErrorApply] = useState('');
-
-    const clearInputs = () => {
-        setName('');
-        setPractice('');
-        setCity('');
-        setPhone('')
-    }
-
-    const clearErrors = () => {
-        setErrorName('')
-        setErrorPractice('')
-        setErrorCity('')
-        setErrorPhone('')
-        setErrorApply('')
-    }
+    const [errorApply, setErrorApply] = useState('')
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -49,9 +34,7 @@ const Specialist = (props) => {
             .then((res) => {
                 console.log(res);
                 setSuccsses(true);
-                clearInputs();
-                clearErrors();
-                
+                return null;
             })
             .catch((error) => {
                 setSuccsses(false);
@@ -143,8 +126,7 @@ const Specialist = (props) => {
 
             <div className={style["contain-wrapper"]}>
                 <h2>Request your profile</h2>
-                    <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
-                    {/* {success ? } */}
+                <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
             </div>
             </div>
     </>
