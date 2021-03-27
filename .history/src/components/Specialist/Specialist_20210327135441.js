@@ -1,7 +1,7 @@
 import style from './Specialist.module.css';
 import * as ServicesDB from '../../services/servicesDB';
 import { useState } from 'react';
-import {withRouter, Link } from 'react-router-dom';
+import {withRouter } from 'react-router-dom';
 import ErrorMessage from '../../Shared/ErrorMessage';
 import Notification from '../../Shared/Notification';
 import RedirectButton from '../../Shared/RedirectButton';
@@ -142,11 +142,7 @@ const Specialist = (props) => {
             <div className={style["contain-wrapper"]}>
                 <h2>Request your profile</h2>
                     <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
-                    {success
-                    ? <RedirectButton>
-                        <Link to="/services">All beauty procedures</Link>
-                    </RedirectButton>
-                    : null}
+                    {/* {success ? <RedirectButton redirect="/services">All beauty procedures</RedirectButton> : null} */}
             </div>
             </div>
     </>

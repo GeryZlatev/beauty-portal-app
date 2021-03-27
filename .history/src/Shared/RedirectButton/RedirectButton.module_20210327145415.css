@@ -1,0 +1,26 @@
+.redirect-button {
+    margin: 20px auto;
+    padding: 10px 15px;
+    background: #EC8AC4;
+    border: none;
+    border-top: 1px solid burlywood;
+    border-radius: 5px;
+    outline: none;
+}
+
+.redirect-button a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: 200;
+
+}
+
+.logo-wrapper {
+    max-width: 30%;
+    position: absolute;
+    top: 500px;
+}
+
+.logo-wrapper img {
+    max-width: 100%;
+}

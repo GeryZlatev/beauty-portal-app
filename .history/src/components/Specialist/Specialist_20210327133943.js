@@ -1,7 +1,7 @@
 import style from './Specialist.module.css';
 import * as ServicesDB from '../../services/servicesDB';
 import { useState } from 'react';
-import {withRouter, Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import ErrorMessage from '../../Shared/ErrorMessage';
 import Notification from '../../Shared/Notification';
 import RedirectButton from '../../Shared/RedirectButton';
@@ -41,17 +41,19 @@ const Specialist = (props) => {
             city: city,
             phone: phone
         }
+        console.log(specialist);
         if (!name || !practice || !phone || !city) {
             setErrorApply('Something went wrong! We are so sorry! Please fill all inputs and try again');
             setSuccsses(false);
             return null;
         }
-        
         ServicesDB.addSpecialist(specialist)
             .then((res) => {
+                console.log(res);
                 setSuccsses(true);
                 clearInputs();
                 clearErrors();
+                
             })
             .catch((error) => {
                 setSuccsses(false);
@@ -72,11 +74,11 @@ const Specialist = (props) => {
                 value={ name}
                 placeholder="Your name"
                 onChange={(e) => setName(e.target.value)}
-                onBlur={(e) => {
-                    if (e.target.value.length < 3) {
-                    setErrorName('Name must be at least 3 characters long')
-                    } else {
-                    setErrorName('')
+                    onBlur={(e) => {
+                        if (e.target.value.length < 3) {
+                        setErrorName('Name must be at least 3 characters long')
+                        } else {
+                            setErrorName('')
                     }
                 }}
                 />
@@ -142,11 +144,7 @@ const Specialist = (props) => {
             <div className={style["contain-wrapper"]}>
                 <h2>Request your profile</h2>
                     <p>Please, fill in the form. We'll contact you to tell you all the advantages of the <span>Beauty Portal</span> and how it can be usefull in your practice!</p>
-                    {success
-                    ? <RedirectButton>
-                        <Link to="/services">All beauty procedures</Link>
-                    </RedirectButton>
-                    : null}
+                    {success ? <RedirectButton onClick={(props) => console.log(props)}>All beauty procedures</RedirectButton> : null}
             </div>
             </div>
     </>
@@ -154,4 +152,4 @@ const Specialist = (props) => {
 
 }
 
-export default withRouter(Specialist);
+export default Specialist;
