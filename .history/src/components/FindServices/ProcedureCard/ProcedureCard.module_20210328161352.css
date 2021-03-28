@@ -1,5 +1,5 @@
 .procedure-wrapper {
-    max-width: 28%;
+    max-width: 35%;
     /* border: 1px solid; */
     margin: 15px auto;
     border-radius: 10px;
@@ -31,43 +31,31 @@
 
 .content-wrapper .procedure-name {
     text-align: center;
-    /* color: #777575; */
+    color: #777575;
     font-size: larger;
-    font-weight: 500;
+    font-weight: 200;
 }
 
 .info-wrapper {
     margin: 15px auto;
-    max-width: 60%;
+    max-width: 80%;
     color: #777575;
-    font-weight: 300;
-    text-align: justify;
-} 
-
-.read-more {
-    color: #5DBCA9;
-    display: block;
+    font-weight: 200;
+}
+.content-wrapper button {
     margin: 10px auto;
-}
-
-.read-more:hover {
-    border: 1px solid #5DBCA9;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    padding: 4px 6px;
-}
-
-.read-less:hover {
-    border: 1px solid #E6507D;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    padding: 4px 6px;
-}
-
-.read-less {
-    color: #E6507D;
     display: block;
-    margin: 10px auto;
+    /* background: #EC8AC4;
+    border: 1px solid #EC8AC4; */
+    border-radius: 3px;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 100;
+    cursor: pointer;
+    opacity: 0.8;
+    outline: none;
+}
+
+.content-wrapper button:hover {
+    opacity: 1;
 }
