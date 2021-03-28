@@ -18,7 +18,7 @@ class FindServices extends Component {
                         <Link to="/services/aesthetic-dermatology">Aesthetic Dermatology</Link>
                     </div>
                     <div className={style.laser}>
-                        <Link to="/services/laser-therapies">Laser Therapies</Link>
+                        <Link to="/laser-therapies">Laser Therapies</Link>
                     </div>
                     <div className={style.agnes}>
                         <Link to="/agnes">Agnes</Link>
@@ -32,7 +32,7 @@ class FindServices extends Component {
                 </div> 
                 <Switch>
                     <Route path="/services/aesthetic-dermatology" component={ AestheticDermatology}/>
-                    <Route path="/services/laser-therapies" component={ LaserTherapy}/>
+                    <Route path="/services/laser-therapies" component={ LaserTherapies}/>
                     {/* <Route path="/services/agnes" component={ Agnes}/>
                     <Route path="/services/femi-lift" component={ FemiLift}/>
                     <Route path="/services/anti-cellulite" component={ AntiCellulite}/> */}

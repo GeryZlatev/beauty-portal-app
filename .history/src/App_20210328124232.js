@@ -74,7 +74,7 @@ const App = (props) => {
           <Route path="/about"  component={About} />
           <Route path="/services" exact component={FindServices} />
           <Route path="/services/aesthetic-dermatology"  component={FindServices} />
-          <Route path="/services/laser-therapies"  component={FindServices} />
+          <Route path="/services/laser-therapy"  component={FindServices} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />

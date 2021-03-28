@@ -18,7 +18,7 @@ class FindServices extends Component {
                         <Link to="/services/aesthetic-dermatology">Aesthetic Dermatology</Link>
                     </div>
                     <div className={style.laser}>
-                        <Link to="/services/laser-therapies">Laser Therapies</Link>
+                        <Link to="/laser-therapies">Laser Therapies</Link>
                     </div>
                     <div className={style.agnes}>
                         <Link to="/agnes">Agnes</Link>

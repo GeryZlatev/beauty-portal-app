@@ -25,7 +25,7 @@ const AestheticDermatology = (props) => {
             <div className={style["dermatologies-wrapper"]}>
                 {procedures ? procedures.map((x) => {
                     return (
-                        <ProcedureCard key={ x.id} image={x.image} name={ x.name} style="aestheticDermatology"/>
+                        <ProcedureCard key={ x.id} image={x.image} name={ x.name}/>
                     )
                 }) : <Notification> There are no procedures on this page! We are so sorry ...</Notification>}
             </div>

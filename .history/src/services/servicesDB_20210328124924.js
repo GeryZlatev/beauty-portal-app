@@ -23,13 +23,13 @@ export const addSpecialist = (specialist) => {
     
 // }
 
-export const getAll = (catalogue) => {
-    return DB.collection(catalogue)
+export const getAll = (cataloque) => {
+    return DB.collection(catalog)
         .get()
 }
 
-// export const getAllAestheticProcedures = () => {
-//     return DB.collection('aestheticDermatology')
-//     .get()
-// }
+export const getAllAestheticProcedures = () => {
+    return DB.collection('aestheticDermatology')
+    .get()
+}
 

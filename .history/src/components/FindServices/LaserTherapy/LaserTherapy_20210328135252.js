@@ -1,15 +1,17 @@
-import style from './AestheticDermatology.module.css';
-import * as ServicesDB from '../../../services/servicesDB';
+import style from './LaserTherapy.module.css';
 import { useState, useEffect } from 'react';
+import * as ServicesDB from '../../../services/servicesDB';
 
 import ProcedureCard from '../ProcedureCard';
 import Notification from '../../../Shared/Notification';
 
+const currentStyle = {
+    border: '1px solid #9190C7'
+}
 
-const AestheticDermatology = (props) => {
-
+const LaserTherapy = () => {
     const [procedures, setProcedures] = useState([]);
-    const [catalogue, setCatalogue] = useState('aestheticDermatology')
+    const [catalogue, setCatalogue] = useState('laserTherapy');
 
     useEffect(() => {
         ServicesDB
@@ -20,12 +22,13 @@ const AestheticDermatology = (props) => {
                 }))
             })
     }, [])
-    return (
+
+return (
         <>
-            <div className={style["dermatologies-wrapper"]}>
+            <div className={style["laser-therapy-wrapper"]}>
                 {procedures ? procedures.map((x) => {
                     return (
-                        <ProcedureCard key={ x.id} image={x.image} name={ x.name} style="aestheticDermatology"/>
+                        <ProcedureCard key={x.id} image={x.image} name={x.name} style={ currentStyle}/>
                     )
                 }) : <Notification> There are no procedures on this page! We are so sorry ...</Notification>}
             </div>
@@ -33,4 +36,4 @@ const AestheticDermatology = (props) => {
     )
 }
 
-export default AestheticDermatology;
+export default LaserTherapy;

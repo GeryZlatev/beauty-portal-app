@@ -9,12 +9,6 @@ const currentStyle = {
     },
     agnes: {
         border: '1px solid #6262A0'
-    }, 
-    femilift: {
-        border: '1px solid #8568AF'
-    },
-    'anti-cellulit': {
-        border: '1px solid #E6507D'
     }
 }
 
@@ -30,14 +24,6 @@ const buttonStyle = {
     agnes: {
     background: '#6262A0',
     border: '1px solid #6262A0', 
-    },
-    femilift: {
-    background: '#8568AF',
-    border: '1px solid #8568AF',   
-    },
-    'anti-cellulit': {
-    background: '#E6507D',
-    border: '1px solid #E6507D',    
     }
 }
 

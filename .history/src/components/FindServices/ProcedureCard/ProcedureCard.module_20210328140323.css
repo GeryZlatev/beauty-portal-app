@@ -1,5 +1,5 @@
 .procedure-wrapper {
-    max-width: 35%;
+    max-width: 30%;
     /* border: 1px solid; */
     margin: 15px auto;
     border-radius: 10px;
@@ -8,7 +8,7 @@
 .image-wrapper {
     width: 250px;
     height: 250px;
-    margin: 10px auto;
+    margin: 10px;
     
 }
 
@@ -31,9 +31,11 @@
 
 .content-wrapper .procedure-name {
     text-align: center;
-    color: #777575;
+    color: #EC8AC4;
     font-size: larger;
     font-weight: 200;
+
+   
 }
 
 .content-wrapper button {
