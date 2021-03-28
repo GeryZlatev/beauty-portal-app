@@ -1,0 +1,39 @@
+.agnes-wrapper {
+    max-width: 70%;
+    margin: 50px auto;
+}
+
+.agnes-header {
+    color: #605F6C;
+    font-weight: 200;
+    text-align: center;
+    font-size: 45px;
+}
+
+.agnes-main-wrapper {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.agnes-intro {
+    display: block;
+
+}
+
+.agnes-intro li{
+    margin: 50px 20px;
+    list-style-image: url('https://www.google.com/url?sa=i&url=http%3A%2F%2Fcss-plus.com%2F2011%2F12%2Fcontrol-your-list-items%2F&psig=AOvVaw08MOIC00WkGY2eSbnyqI0D&ust=1617021105449000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJDzq5f_0u8CFQAAAAAdAAAAABAD');
+    font-size: larger;
+    font-weight: 200;
+}
+
+.player {
+    max-width: 50%;
+    display: flex;
+}
+
+.player ReactPlayer {
+    max-width: 100%;
+}

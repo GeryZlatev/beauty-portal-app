@@ -1,0 +1,29 @@
+.agnes-wrapper {
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+.agnes-header {
+    color: #605F6C;
+    font-weight: 200;
+    text-align: center;
+    font-size: 45px;
+}
+
+.agnes-main-wrapper {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.agnes-intro li{
+    list-style: none;
+    margin: 50px auto;
+    font-size: larger;
+    font-weight: 200;
+}
+
+.player {
+    max-width: 80%;
+}
