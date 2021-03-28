@@ -59,7 +59,7 @@ const reducer = (state, action) => {
 const App = (props) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
   const { containerProps, indicatorEl } = useLoading({
-    loading: true,
+    loading: true
   })
   
   return (

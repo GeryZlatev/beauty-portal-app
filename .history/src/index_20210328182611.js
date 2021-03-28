@@ -10,7 +10,7 @@ import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <LoaderProvider indicator={<Circles width="60" />}>
+      <LoaderProvider indicator={<Circles width="50" />}>
         <App />
         </LoaderProvider>
     </Router>

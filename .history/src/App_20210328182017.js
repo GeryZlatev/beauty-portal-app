@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { useLoading } from '@agney/react-loading';
+import {LoaderProvider, useLoading, }
 import style from './App.module.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -58,9 +58,6 @@ const reducer = (state, action) => {
 
 const App = (props) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
-  const { containerProps, indicatorEl } = useLoading({
-    loading: true,
-  })
   
   return (
     <AuthContext.Provider
@@ -73,7 +70,6 @@ const App = (props) => {
         
         <Navbar user={state.user} email={state.email} />
         <SearchBar />
-        <section {...containerProps}>{indicatorEl}</section>
         <Switch>
           <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />
           <Route path="/about"  component={About} />
