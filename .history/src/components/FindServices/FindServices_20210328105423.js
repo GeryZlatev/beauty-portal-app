@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import AestheticDermatology from './AestheticDermatology';
 
 import style from './FindServices.module.css';
 import { Link } from 'react-router-dom';
@@ -28,14 +26,7 @@ class FindServices extends Component {
                     <div className={style.cellulite}>
                         <Link to="anti-cellulite">Anti-cellulite</Link>
                         </div>
-                </div> 
-                <Switch>
-                    <Route path="/services/aesthetic-dermatology" component={ AestheticDermatology}/>
-                    {/* <Route path="/services/laser-therapies" component={ LaserTherapies}/>
-                    <Route path="/services/agnes" component={ Agnes}/>
-                    <Route path="/services/femi-lift" component={ FemiLift}/>
-                    <Route path="/services/anti-cellulite" component={ AntiCellulite}/> */}
-                    </Switch>
+                    </div> 
                     
             </>
         )

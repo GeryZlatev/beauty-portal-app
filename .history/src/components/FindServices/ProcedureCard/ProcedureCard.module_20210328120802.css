@@ -1,0 +1,48 @@
+.procedure-wrapper {
+    max-width: 30%;
+    border: 1px solid #EC8AC4;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.image-wrapper {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    
+}
+
+.image-wrapper img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.procedure-wrapper .content-wrapper {
+    margin: 20px auto;
+}
+
+.content-wrapper .procedure-name {
+    text-align: center;
+    color: #EC8AC4;
+    font-size: larger;
+    font-weight: 200;
+}
+
+.content-wrapper button {
+    margin: 10px auto;
+    display: block;
+    background: #EC8AC4;
+    border: 1px solid #EC8AC4;
+    border-radius: 3px;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 100;
+    cursor: pointer;
+    opacity: 0.8;
+    outline: none;
+}
+
+.content-wrapper button:hover {
+    opacity: 1;
+}

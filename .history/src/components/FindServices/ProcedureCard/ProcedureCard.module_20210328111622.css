@@ -1,0 +1,13 @@
+.procedure-wrapper {
+    max-width: 30%;
+    border: 1px solid #EC8AC4;
+}
+
+.image-wrapper {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+}
