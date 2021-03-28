@@ -27,7 +27,6 @@ const Specialist = (props) => {
         setCity('');
         setPhone('');
         setImage('');
-        setBio('')
     }
 
     const clearErrors = () => {
@@ -36,7 +35,6 @@ const Specialist = (props) => {
         setErrorCity('')
         setErrorPhone('')
         setErrorApply('')
-        setErrorBio('')
     }
 
     const onSubmitHandler = (e) => {
@@ -46,12 +44,10 @@ const Specialist = (props) => {
             practice,
             city,
             phone,
-            image,
-            bio
+            image
         }
         console.log(specialist);
-        if ((!name || !practice || !phone || !city || !bio) ||
-            (errorName || errorPractice || errorPhone || errorCity || errorBio)) {
+        if (!name || !practice || !phone || !city) {
             setErrorApply('Something went wrong! We are so sorry! Please fill all inputs and try again');
             setSuccsses(false);
             return null;
@@ -156,17 +152,10 @@ const Specialist = (props) => {
                 value={bio}
                 id="bio"
                 name="bio"
-                placeholder="Introduce yourself professionally..."
-                onChange={(e) => setBio(e.target.value)}
-                onBlur={(e) => {
-                if (e.target.value.length < 100) {
-                setErrorBio('Bio must be at least 100 characters long')
-                } else {
-                setErrorBio('')
-                }
-                }}
-                    />
-            {errorBio ? <ErrorMessage>{errorBio}</ErrorMessage> : null}
+                placeholder="Introduce yourself professionally"
+                onChange={(e) =>
+                            setBio(e.target.value)}
+            />
             <input
                 type="submit"
                 value="Send"

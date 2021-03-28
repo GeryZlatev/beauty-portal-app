@@ -50,8 +50,7 @@ const Specialist = (props) => {
             bio
         }
         console.log(specialist);
-        if ((!name || !practice || !phone || !city || !bio) ||
-            (errorName || errorPractice || errorPhone || errorCity || errorBio)) {
+        if ((!name || !practice || !phone || !city || !bio) || (errorName || errorPractice || errorPhone || errorCity || errorBio)) {
             setErrorApply('Something went wrong! We are so sorry! Please fill all inputs and try again');
             setSuccsses(false);
             return null;

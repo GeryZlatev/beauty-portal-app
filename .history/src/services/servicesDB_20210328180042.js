@@ -17,7 +17,20 @@ export const addSpecialist = (specialist) => {
     })
 }
 
+// export const addSpecialistImage = (image) => {
+//     const storageRef = STORAGE.ref();
+//     const imageRef = storageRef.child('specialists');
+//     return imageRef.put(image);
+    
+// }
+
 export const getAll = (catalogue) => {
     return DB.collection(catalogue)
         .get()
 }
+
+// export const getAllAestheticProcedures = () => {
+//     return DB.collection('aestheticDermatology')
+//     .get()
+// }
+

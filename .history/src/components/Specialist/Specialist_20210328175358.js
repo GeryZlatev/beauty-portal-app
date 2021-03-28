@@ -50,8 +50,7 @@ const Specialist = (props) => {
             bio
         }
         console.log(specialist);
-        if ((!name || !practice || !phone || !city || !bio) ||
-            (errorName || errorPractice || errorPhone || errorCity || errorBio)) {
+        if (!name || !practice || !phone || !city || !bio) {
             setErrorApply('Something went wrong! We are so sorry! Please fill all inputs and try again');
             setSuccsses(false);
             return null;
@@ -158,15 +157,15 @@ const Specialist = (props) => {
                 name="bio"
                 placeholder="Introduce yourself professionally..."
                 onChange={(e) => setBio(e.target.value)}
-                onBlur={(e) => {
+                        onBlur={(e) => {
+                    console.log(e.target.value)
                 if (e.target.value.length < 100) {
                 setErrorBio('Bio must be at least 100 characters long')
                 } else {
                 setErrorBio('')
-                }
+                    }
                 }}
-                    />
-            {errorBio ? <ErrorMessage>{errorBio}</ErrorMessage> : null}
+            />
             <input
                 type="submit"
                 value="Send"

@@ -44,12 +44,6 @@ textarea {
     color: #6262A0;
     font-size: small;
     font-weight: 200;
-    outline: none;
-}
-
-textarea {
-    font-size: large;
-    font-weight: 200;
 }
 
 .form-specialist input[type="submit"] {

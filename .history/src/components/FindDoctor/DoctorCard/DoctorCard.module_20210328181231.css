@@ -1,6 +1,12 @@
 .card-wrapper {
     margin: 25px auto;
     max-width: 25%;
+    /* border: 1px solid burlywood;
+    border-radius: 5px;
+background: rgb(204,218,244);
+background: radial-gradient(circle, rgba(204,218,244,1) 0%, rgba(240,240,240,1) 100%); */
+    /* -webkit-box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.37); 
+box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.37); */
 }
 
 .image-wrapper {
@@ -24,7 +30,7 @@
     max-width: 30%;
     position: relative;
     top: 10px;
-    left: 120px;
+    left: 90px;
 }
 
 .logo-wrapper img {
