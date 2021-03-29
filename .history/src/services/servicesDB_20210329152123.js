@@ -28,7 +28,6 @@ export const getProcedure = (procedureId, catalogue) => {
         .get()
         .then(res => {
             const procedure = { ...res.data() };
-            const userId = JSON.parse(localStorage.getItem('user'))
             procedure.likes.push(userId)   
             return DB.collection(catalogue)
                 .doc(procedureId)

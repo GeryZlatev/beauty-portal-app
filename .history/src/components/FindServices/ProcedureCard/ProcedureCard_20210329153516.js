@@ -24,13 +24,14 @@ const currentStyle = {
 const ProcedureCard = (props) => {
 
     const [likes, setLikes] = useState(props.likes)
+    console.log(likes);
 
     const onLikeHandler = (e) => {
         const procedureId = e.target.attributes.id.value;
         const category = props.category;
         ServicesDB.getProcedure(procedureId, category)
         e.target.setAttribute('disabled', true)
-        setLikes((like) => like + 1)
+        setLikes((like) => like++)
     }
     return (
         <div className={style["procedure-wrapper"] }

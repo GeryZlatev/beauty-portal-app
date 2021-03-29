@@ -1,7 +1,6 @@
 import style from './ProcedureCard.module.css';
 import ReactReadMoreReadLess from 'react-read-more-read-less';
-import { useState } from 'react';
-import * as ServicesDB from '../../../services/servicesDB';
+import { Link, useParams} from 'react-router-dom';
 
 const currentStyle = {
     aestheticDermatology: {
@@ -23,14 +22,8 @@ const currentStyle = {
 
 const ProcedureCard = (props) => {
 
-    const [likes, setLikes] = useState(props.likes)
-
     const onLikeHandler = (e) => {
-        const procedureId = e.target.attributes.id.value;
-        const category = props.category;
-        ServicesDB.getProcedure(procedureId, category)
-        e.target.setAttribute('disabled', true)
-        setLikes((like) => like + 1)
+        console.log(e.currentTarget);
     }
     return (
         <div className={style["procedure-wrapper"] }
@@ -56,12 +49,10 @@ const ProcedureCard = (props) => {
                         {props.info}
                 
                     </ReactReadMoreReadLess>
-                    <span className={style["likes-wrapper"]}>{likes} people like this</span>
                     <button
                         className={style.like}
                         onClick={onLikeHandler}
                         name={props.name}
-                        id={props.id}
                 >
                         Like
                     </button>

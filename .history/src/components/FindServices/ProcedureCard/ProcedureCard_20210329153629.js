@@ -24,6 +24,7 @@ const currentStyle = {
 const ProcedureCard = (props) => {
 
     const [likes, setLikes] = useState(props.likes)
+    console.log(likes);
 
     const onLikeHandler = (e) => {
         const procedureId = e.target.attributes.id.value;

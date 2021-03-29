@@ -30,12 +30,11 @@ return (
                     return (
                         <ProcedureCard
                             key={x.id}
-                            id={x.id}
                             image={x.image}
                             name={x.name}
                             info={x.info}
                             style={'laserTherapy'}
-                            category="laserTherapy"
+                            style="laserTherapy"
                             likes={x.likes.length}
                         />
                     )

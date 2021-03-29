@@ -30,7 +30,7 @@ const ProcedureCard = (props) => {
         const category = props.category;
         ServicesDB.getProcedure(procedureId, category)
         e.target.setAttribute('disabled', true)
-        setLikes((like) => like + 1)
+        setLikes((like) => like++)
     }
     return (
         <div className={style["procedure-wrapper"] }

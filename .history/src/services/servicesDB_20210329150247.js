@@ -25,15 +25,7 @@ export const getAll = (catalogue) => {
 export const getProcedure = (procedureId, catalogue) => {
     return DB.collection(catalogue)
         .doc(procedureId)
-        .get()
-        .then(res => {
-            const procedure = { ...res.data() };
-            const userId = JSON.parse(localStorage.getItem('user'))
-            procedure.likes.push(userId)   
-            return DB.collection(catalogue)
-                .doc(procedureId)
-                .set(procedure)    
-            })
+    .get()
 }
 
 
