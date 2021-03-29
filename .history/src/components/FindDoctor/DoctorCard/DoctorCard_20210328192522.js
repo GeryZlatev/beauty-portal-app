@@ -19,6 +19,14 @@ const DoctorCard = (props) => {
                     <p>City: <span>{props.city}</span> </p>
                     <p>Contacts: <span>{props.phone}</span></p>
                 </div>
+                <div className="rating-wrap">
+            <div className="rating">
+                {rating.toFixed(2)} / {votes} votes
+            </div>
+                {[0, 0, 0, 0, 0].map((_, idx) => (
+            <span key={`star-d-${idx}`}>{(idx < ratingRound ? StarFillIcon : StarIcon)({ size: 'small' })}</span>
+        ))}
+        </div>
                 <button>More...</button>
             </div>
         </>

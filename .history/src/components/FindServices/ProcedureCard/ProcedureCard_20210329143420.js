@@ -26,7 +26,7 @@ const ProcedureCard = (props) => {
         console.log(e.currentTarget);
     }
     return (
-        <div className={style["procedure-wrapper"] } onClick={(e) => console.log(e)}
+        <div className={style["procedure-wrapper"] } onclick={(e) => console.log(e)}
             // style={currentStyle[props.style]}
         >
             <div className={style["image-wrapper"]}>

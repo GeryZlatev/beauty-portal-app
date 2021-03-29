@@ -1,7 +1,6 @@
 import style from './DoctorCard.module.css';
 import logo from '../../../media/beautyportal_logo.png';
-import { StarFillIcon, StarIcon, LocationIcon } from '@primer/octicons-react';
-
+import RatingStars from '../../../Shared/RatingStars';
 const DoctorCard = (props) => {
 
     return (

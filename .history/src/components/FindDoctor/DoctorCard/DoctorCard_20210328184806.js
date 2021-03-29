@@ -1,7 +1,6 @@
 import style from './DoctorCard.module.css';
 import logo from '../../../media/beautyportal_logo.png';
-import { StarFillIcon, StarIcon, LocationIcon } from '@primer/octicons-react';
-
+import RatingStars from '../../../Shared/RatingStars';
 const DoctorCard = (props) => {
 
     return (
@@ -18,6 +17,7 @@ const DoctorCard = (props) => {
                     <p>Practice: <span>{props.practice}</span></p>
                     <p>City: <span>{props.city}</span> </p>
                     <p>Contacts: <span>{props.phone}</span></p>
+                    <RatingStars className={ style.rating}/>
                 </div>
                 <button>More...</button>
             </div>

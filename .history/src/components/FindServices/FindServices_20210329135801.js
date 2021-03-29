@@ -32,7 +32,7 @@ class FindServices extends Component {
                         </div>
                 </div> 
                 <Switch>
-                    <Route path="/services/aesthetic-dermatology/" component={ AestheticDermatology}/>
+                    <Route path="/services/aesthetic-dermatology" component={ AestheticDermatology}/>
                     <Route path="/services/laser-therapies" component={ LaserTherapy}/>
                     <Route path="/services/agnes" component={ Agnes}/>
                     {/* <Route path="/services/femi-lift" component={ FemiLift}/>

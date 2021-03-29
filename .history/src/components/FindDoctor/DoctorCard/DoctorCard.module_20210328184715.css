@@ -47,8 +47,8 @@
     font-weight: bold;
 }
 
-.rating {
-    margin: 10px auto;
+RatingStars {
+    margin: 10px ;
 }
 
 .card-wrapper button {

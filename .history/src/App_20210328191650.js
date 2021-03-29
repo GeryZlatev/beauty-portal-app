@@ -71,7 +71,7 @@ const App = (props) => {
         <Switch>
           <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />
           <Route path="/about"  component={About} />
-          <Route path="/services" exact component={!state.isAuthenticated ? Register : FindServices} />
+          <Route path="/services" exact component={FindServices} />
           <Route path="/services/aesthetic-dermatology"  component={FindServices} />
           <Route path="/services/laser-therapies"  component={FindServices} />
           <Route path="/services/agnes"  component={FindServices} />
@@ -79,7 +79,7 @@ const App = (props) => {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <Route path="/specialist" component={ Specialist}/>
-          <Route path="/doctors" component={!state.isAuthenticated ? Register : FindDoctor}/>
+          <Route path="/doctors" component={ FindDoctor}/>
           <Route component={PageNotFound} />
           
         </Switch>

@@ -26,7 +26,7 @@ const ProcedureCard = (props) => {
         console.log(e.currentTarget);
     }
     return (
-        <div className={style["procedure-wrapper"] } onClick={(e) => console.log(e)}
+        <div className={style["procedure-wrapper"]}
             // style={currentStyle[props.style]}
         >
             <div className={style["image-wrapper"]}>
@@ -44,7 +44,8 @@ const ProcedureCard = (props) => {
                     readMoreText={"Read more ▼"}
                     readLessText={"Read less ▲"}
                     readMoreClassName={style["read-more"]}
-                    readLessClassName={style["read-less"]} 
+                    readLessClassName={style["read-less"]}
+                    onChange={(e) => console.log(e)}    
                 >
                         {props.info}
                 

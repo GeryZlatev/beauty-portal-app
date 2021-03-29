@@ -16,7 +16,6 @@ const FindDoctor = (props) => {
 
 
     useEffect(() => {
-        {<section {...containerProps}>{indicatorEl}</section>}
         ServicesDB
             .getAll(catalogue)
             .then(res => {
@@ -24,7 +23,7 @@ const FindDoctor = (props) => {
                     return {id: x.id, ...x.data()}
                 }))
             })
-        
+        {<section {...containerProps}>{indicatorEl}</section>}
         }, []);
     console.log(specialists);
         return (

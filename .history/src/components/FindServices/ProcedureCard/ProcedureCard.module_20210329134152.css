@@ -73,19 +73,11 @@
 }
 
 .info-wrapper .like {
-    display: block;
     outline: none;
     cursor: pointer;
     padding: 5px 9px;
-    /* margin: 10px auto; */
-    margin-left: 143px;
+    margin: 10px auto;
     background: crimson;
     border: 1px solid crimson;
-    border-radius: 4px;
     color: floralwhite;
-    opacity: 0.7;
-}
-
-.info-wrapper .like:hover {
-    opacity: 1;
 }

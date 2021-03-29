@@ -32,9 +32,8 @@ export const addLikedProcedures = (userId) => {
 }
 
 export const getMoreDetails = (itemId, catalogue) => {
-    return DB.collection(catalogue)
+    DB.collection(catalogue)
         .doc(itemId)
         .get()
-        .then((res) => console.log(res))
     
 }
