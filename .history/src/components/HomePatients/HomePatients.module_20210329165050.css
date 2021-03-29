@@ -1,0 +1,17 @@
+.favorite-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/* .category-menu {
+    width: 10%;
+    float: left;
+} */
+
+.category-menu {
+    font-size: 30px;
+    cursor: pointer;
+}

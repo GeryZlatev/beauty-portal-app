@@ -30,35 +30,36 @@ const showLoggedUserUi = () => {
     return (
         <>
         <FindServices />
-        <div className={style['menu-buttons-wrapper']} ref={menuRef}>
-            <button
-            onClick={() => {
-                setCategory((oldState) => oldState = 'aestheticDermatology')
-                }}
-            >
-            Aesthetic Dermatology
-            </button>
-            <button
-            onClick={() => {
-                setCategory((oldState) => oldState = 'laserTherapy')
-            }} 
-            >
-            Laser Therapies
-            </button>
-            </div>
+
+            <div className={style['menu-buttons-wrapper']} ref={menuRef}>
+                    <button
+                    onClick={() => {
+                        setCategory((oldState) => oldState = 'aestheticDermatology')
+                        }}
+                    >
+                        Aesthetic Dermatology
+                    </button>
+                    <button
+                    onClick={() => {
+                        setCategory((oldState) => oldState = 'laserTherapy')
+                        }} 
+                    >
+                        Laser Therapies
+                    </button>
+                    </div>
             {/* </aside> */}
 
-            <div className={style["favorite-wrapper"]}>
-            {myProcedures
-            ? myProcedures
-                .filter((x) => x.likes.includes(JSON.parse(localStorage.getItem('user'))))
-                .map((x) => {
-                    return (
-                <Favorite key={x.id} title={x.name} description={x.info} image={ x.image}/>
-        )
-    })
-        : null}
-            </div>
+                <div className={style["favorite-wrapper"]}>
+                    {myProcedures
+                        ? myProcedures
+                            .filter((x) => x.likes.includes(JSON.parse(localStorage.getItem('user'))))
+                            .map((x) => {
+                                return (
+                                    <Favorite key={x.id} title={x.name} description={x.info} image={ x.image}/>
+                            )
+                        })
+                        : null}
+                </div>
                 
             </>
         )

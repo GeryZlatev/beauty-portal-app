@@ -1,0 +1,24 @@
+.favorite-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/* .category-menu {
+    width: 10%;
+    float: left;
+} */
+
+.menu-buttons-wrapper {
+height: 100%;
+width: 100px;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background: black;
+overflow-x: hidden;
+padding-top: 120px;
+}

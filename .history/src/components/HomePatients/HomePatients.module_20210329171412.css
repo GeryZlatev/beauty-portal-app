@@ -17,9 +17,16 @@
 }
 
 .menu-buttons-wrapper {
-
-width: 100px;
-
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px
 }
 
 .menu-buttons-wrapper button {
@@ -32,24 +39,9 @@ transition: 0.3s;
 }
 
 .menu-buttons-wrapper button:hover {
-color: #f1f1f1;    
+    
 }
 
 .open {
     width: 250px;
-}
-
-.close {
-    width: 0px;
-}
-
-.closeBtn {
-position: absolute;
-top: 0;
-right: 25px;
-font-size: 100px;
-margin-left: 50px;
-cursor: pointer;
-color: red;
-z-index: 4; 
 }
