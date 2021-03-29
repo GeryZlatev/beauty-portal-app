@@ -23,9 +23,8 @@ const AestheticDermatology = (props) => {
     return (
         <>
             <div className={style["dermatologies-wrapper"]}>
-                {procedures ? procedures
-                    .sort((a,b) => (b.likes.length - a.likes.length))
-                    .map((x) => {
+                {procedures ? procedures.map((x) => {
+                    console.log(procedures.likes)
                     return (
                         <ProcedureCard
                             key={x.id}

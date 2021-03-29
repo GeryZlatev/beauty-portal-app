@@ -16,6 +16,7 @@ const AestheticDermatology = (props) => {
             .getAll(catalogue)
             .then(res => {
                 setProcedures(res.docs.map((x) => {
+                    console.log(x.data().likes)
                     return {id: x.id, ...x.data()}
                 }))
             })

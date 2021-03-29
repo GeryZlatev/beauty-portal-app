@@ -16,16 +16,16 @@ const AestheticDermatology = (props) => {
             .getAll(catalogue)
             .then(res => {
                 setProcedures(res.docs.map((x) => {
+                    console.log(x.data().likes)
                     return {id: x.id, ...x.data()}
                 }))
             })
+        procedures ? setProcedures(procedures.sort((a, b) => b.likes.length - a.likes.length)) : null
     }, [])
     return (
         <>
             <div className={style["dermatologies-wrapper"]}>
-                {procedures ? procedures
-                    .sort((a,b) => (b.likes.length - a.likes.length))
-                    .map((x) => {
+                {procedures ? procedures.map((x) => {
                     return (
                         <ProcedureCard
                             key={x.id}
