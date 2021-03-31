@@ -32,12 +32,10 @@ export const getProcedureLikes = (procedureId, catalogue) => {
             const isLiked = procedure.likes.find(x => x === userId);
             if (!isLiked){
                 procedure.likes.push(userId) 
-                return DB.collection(catalogue)
-                .doc(procedureId)
-                .set(procedure)  
-            } else {
-                return {message: 'You liked it!'}
             }
+            return DB.collection(catalogue)
+                .doc(procedureId)
+                .set(procedure)    
             })
 }
 

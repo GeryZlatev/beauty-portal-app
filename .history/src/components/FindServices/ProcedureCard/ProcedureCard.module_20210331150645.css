@@ -37,9 +37,7 @@
 }
 
 .info-wrapper,
-.procedure-wrapper p,
-.you-liked-it,
-.likes-wrapper {
+.procedure-wrapper p {
     margin: 15px auto;
     max-width: 60%;
     color: #777575;
@@ -92,4 +90,3 @@
 .like:hover {
     opacity: 1;
 }
-

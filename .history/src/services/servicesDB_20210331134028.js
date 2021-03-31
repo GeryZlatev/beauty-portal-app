@@ -30,14 +30,10 @@ export const getProcedureLikes = (procedureId, catalogue) => {
             const procedure = { ...res.data() };
             const userId = JSON.parse(localStorage.getItem('user'));
             const isLiked = procedure.likes.find(x => x === userId);
-            if (!isLiked){
-                procedure.likes.push(userId) 
-                return DB.collection(catalogue)
+            (!isLiked) ? procedure.likes.push(userId) : null   
+            return DB.collection(catalogue)
                 .doc(procedureId)
-                .set(procedure)  
-            } else {
-                return {message: 'You liked it!'}
-            }
+                .set(procedure)    
             })
 }
 

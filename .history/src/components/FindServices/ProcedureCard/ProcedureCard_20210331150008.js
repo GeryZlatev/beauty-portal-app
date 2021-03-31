@@ -35,8 +35,8 @@ const ProcedureCard = (props) => {
         const category = props.category;
         ServicesDB.getProcedureLikes(procedureId, category)
             .then(res => {
-                if (!res) {
-        // e.target.setAttribute('disabled', true)
+                if (!res.message) {
+        e.target.setAttribute('disabled', true)
         setLikes((like) => like + 1)
                 } else {
                 setYouLiked(true)    
@@ -70,19 +70,19 @@ const ProcedureCard = (props) => {
                         {props.info}
                 
                     </ReactReadMoreReadLess>
-                </p>
-                <div className={style["likes-wrapper"]}>
-                    <span >{likes} people like this</span>
-                    {youLiked ? <p className={style["you-liked-it"]}>You liked it!</p> : null}
-                <button
-                    className={style.like}
-                    onClick={onLikeHandler}
-                    name={props.name}
-                    id={props.id}
+                    <span className={style["likes-wrapper"]}>{likes} people like this</span>
+                    {youLiked ? <span>You liked it!</span> : null}
+                    <button
+                        className={style.like}
+                        onClick={onLikeHandler}
+                        name={props.name}
+                        id={props.id}
                 >
-                    Like
+                        Like
                     </button>
-                </div>
+                </p>
+
+                {/* <button type="button" className={style.less} style={buttonStyle[props.style]}>Less</button> */}
             </div>
         </div>
     )

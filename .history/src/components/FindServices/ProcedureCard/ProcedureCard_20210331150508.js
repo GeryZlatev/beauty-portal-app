@@ -71,18 +71,19 @@ const ProcedureCard = (props) => {
                 
                     </ReactReadMoreReadLess>
                 </p>
-                <div className={style["likes-wrapper"]}>
-                    <span >{likes} people like this</span>
-                    {youLiked ? <p className={style["you-liked-it"]}>You liked it!</p> : null}
+                    <span className={style["likes-wrapper"]}>{likes} people like this</span>
+                    {youLiked ? <p>You liked it!</p> : null}
                 <button
-                    className={style.like}
-                    onClick={onLikeHandler}
-                    name={props.name}
-                    id={props.id}
+                        className={style.like}
+                        onClick={onLikeHandler}
+                        name={props.name}
+                        id={props.id}
                 >
-                    Like
+                        Like
                     </button>
-                </div>
+                
+
+                {/* <button type="button" className={style.less} style={buttonStyle[props.style]}>Less</button> */}
             </div>
         </div>
     )

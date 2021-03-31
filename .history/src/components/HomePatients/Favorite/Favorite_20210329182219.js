@@ -12,11 +12,8 @@ class Favorite extends Component {
                 <div className={style["image-wrapper"]}>
                     <img src={this.props.image} alt="image service"/>
                 </div>
-                {/* <button className={style.more} onClick={() => {
-                    return
-                }}>More</button > */}
                 <h3 className={style["header-service"]}>{this.props.title}</h3>
-                {/* <p className={style.description}>{this.props.description}</p> */}
+                <p className={style.description}>{this.props.description}</p>
                 <button className={style["dislike-button"]}>Dislike</button>
             </div>
         )

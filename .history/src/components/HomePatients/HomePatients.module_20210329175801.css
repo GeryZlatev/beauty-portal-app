@@ -6,6 +6,10 @@
     margin: 0 auto;
 }
 
+/* .category-menu {
+    width: 10%;
+    float: left;
+} */
 
 .category-menu {
     font-size: 20px;
@@ -13,23 +17,18 @@
 }
 
 .menu-buttons-wrapper {
-width: 200px;
+
+width: 100px;
 
 }
 
 .menu-buttons-wrapper button {
-padding: 8px;
+padding: 8px 8px 8px 32px;
 text-decoration: none;
 font-size: 20px;
 color: #818181;
 display: block;
 transition: 0.3s;
-cursor: pointer;
-width: 80%;
-border-radius: 5px;
-outline: none;
-margin-top: 10px;
-opacity: 0.9;
 }
 
 .menu-buttons-wrapper button:hover {

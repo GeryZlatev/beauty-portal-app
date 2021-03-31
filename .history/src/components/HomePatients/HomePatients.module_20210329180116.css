@@ -14,18 +14,19 @@
 
 .menu-buttons-wrapper {
 width: 200px;
+background: #EC8AC4;
 
 }
 
 .menu-buttons-wrapper button {
-padding: 8px;
+padding: 8px 8px 8px 32px;
 text-decoration: none;
 font-size: 20px;
 color: #818181;
 display: block;
 transition: 0.3s;
 cursor: pointer;
-width: 80%;
+width: 100%;
 border-radius: 5px;
 outline: none;
 margin-top: 10px;

@@ -71,8 +71,8 @@ const ProcedureCard = (props) => {
                 
                     </ReactReadMoreReadLess>
                 </p>
-                <div className={style["likes-wrapper"]}>
-                    <span >{likes} people like this</span>
+                <div>
+                    <span className={style["likes-wrapper"]}>{likes} people like this</span>
                     {youLiked ? <p className={style["you-liked-it"]}>You liked it!</p> : null}
                 <button
                     className={style.like}
