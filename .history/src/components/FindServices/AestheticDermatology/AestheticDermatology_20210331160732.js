@@ -1,10 +1,9 @@
 import style from './AestheticDermatology.module.css';
 import * as ServicesDB from '../../../services/servicesDB';
 import { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player';
 
 import ProcedureCard from '../ProcedureCard';
-import VerticalHeaderLine from '../../Advertising/VerticalHeaderLine';
+import Notification from '../../../Shared/Notification';
 
 
 const AestheticDermatology = (props) => {
@@ -39,18 +38,18 @@ const AestheticDermatology = (props) => {
                             likes={x.likes.length}
                         />
                     )
-                }) : null}
+                }) : <Notification> There are no procedures on this page! We are so sorry ...</Notification>}
             </div>
             <div className={style["advert-wrapper"]}>
                 <VerticalHeaderLine>SHR - The world's most advanced technology</VerticalHeaderLine>
             <div className={style["player-laser-soprano"]}>
                 <ReactPlayer
-                    url="https://www.youtube.com/watch?v=8ML8GT0oj9w"
+                    url="https://www.youtube.com/watch?v=ASGv0_iQ3n4"
                     playing={true}
-                    loop= {true}
+                    // loop= {true}
                     width="850px"
                     height="580px"
-                    style={{margin: "100px auto"}}
+                    style={{margin: "0 auto"}}
                 />
             </div>
         </div>

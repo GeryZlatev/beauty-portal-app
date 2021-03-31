@@ -47,10 +47,10 @@ const AestheticDermatology = (props) => {
                 <ReactPlayer
                     url="https://www.youtube.com/watch?v=8ML8GT0oj9w"
                     playing={true}
-                    loop= {true}
+                    // loop= {true}
                     width="850px"
                     height="580px"
-                    style={{margin: "100px auto"}}
+                    style={{margin: "0 auto"}}
                 />
             </div>
         </div>
