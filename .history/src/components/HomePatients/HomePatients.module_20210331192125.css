@@ -1,0 +1,26 @@
+.favorite-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+.category-menu {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.wrapper {
+    height: 80%;
+    width: 330px;
+    position: relative;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 270px;
+    background: #EC8AC4;
+}

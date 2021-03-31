@@ -79,9 +79,8 @@ input[type="checkbox"] {
     color: #493040;
     background: #ECD3E3;
     outline: none;
-    /* border: 1px solid #EC8AC4; */
-    border: none;
-    border-top: 1px solid #F8F8F8;
+    border: 1px solid #EC8AC4;
+    /* border-top: 1px solid #F8F8F8; */
     padding: 5px;
     margin-top: 20px;
     font-size: large;

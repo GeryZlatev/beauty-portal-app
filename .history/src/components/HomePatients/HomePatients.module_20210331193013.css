@@ -1,0 +1,49 @@
+.favorite-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+.category-menu {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.wrapper {
+    height: 90%;
+    width: 330px;
+    position: relative;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 270px;
+    background: #EC8AC4;
+}
+.sidebar .sidebar-title {
+    color: cornsilk;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 65px;
+    background: #493040;
+    text-align: center;
+}
+
+.sidebar .content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+.sidebar button {
+    display: block;
+    color: #493040;
+    background: #EC8AC4;
+    outline: none;
+    border: 1px solid #EC8AC4;
+}

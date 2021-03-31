@@ -19,7 +19,7 @@ input[type="checkbox"] {
 .wrapper .menu-btn
 {
     position: absolute;
-    top: 30px;
+    top: 15px;
     left: 15px;
     height: 45px;
     width: 45px;
@@ -35,6 +35,9 @@ input[type="checkbox"] {
 
 }
 
+.slider button:hover {
+    opacity: 1;
+}
 
 .btn:checked ~ .menu-btn {
     left: 160px;
@@ -48,7 +51,7 @@ input[type="checkbox"] {
     height: 30%;
     width: 150px;
     margin-top: 30px;
-    background: #ECD3E3;
+    background: #EC8AC4;
     opacity: 0.7;
     overflow: hidden;
     left: -150px;
@@ -77,20 +80,14 @@ input[type="checkbox"] {
 .sidebar button {
     display: block;
     color: #493040;
-    background: #ECD3E3;
+    background: #EC8AC4;
     outline: none;
-    /* border: 1px solid #EC8AC4; */
-    border: none;
-    border-top: 1px solid #F8F8F8;
+    border: 1px solid #EC8AC4;
+    /* border-top: 1px solid #F8F8F8; */
     padding: 5px;
     margin-top: 20px;
     font-size: large;
     font-weight: 200;
     cursor: pointer;
     text-transform: uppercase;
-    opacity: 0.6;
-}
-
-.sidebar button:hover {
-    opacity: 1;
 }

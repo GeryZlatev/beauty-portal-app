@@ -30,10 +30,7 @@ const showLoggedUserUi = () => {
         <>
         <FindServices />
             <div className={style.wrapper}>
-                <input type="checkbox" id="btn" className={style.btn}/>
-                <label htmlFor="btn" className={style["menu-btn"]}><span>&#9829;</span></label>
                 <nav className={style.sidebar}>
-                    <div className={style["sidebar-title"]}>Category Menu</div>
                     <div className={style.content}>
             <button
             onClick={() => {
