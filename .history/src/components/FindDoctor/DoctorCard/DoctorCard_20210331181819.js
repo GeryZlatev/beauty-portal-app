@@ -1,6 +1,6 @@
 import style from './DoctorCard.module.css';
 import logo from '../../../media/beautyportal_logo.png';
-import Viral from '../../../Shared/Viral';
+import {FacebookShareButton,  } from 'react-share';
 
 const DoctorCard = (props) => {
 
@@ -19,14 +19,11 @@ const DoctorCard = (props) => {
                     <p>City: <span>{props.city}</span> </p>
                     <p>Contacts: <span>{props.phone}</span></p>
                 </div>
-                <Viral />
                 <button>More...</button>
             </div>
         </>
     )
-//
-    //
-    //
+
 }
 
 export default DoctorCard;

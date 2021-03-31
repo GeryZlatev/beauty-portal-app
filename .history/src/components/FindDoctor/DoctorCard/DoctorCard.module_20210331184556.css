@@ -66,3 +66,13 @@
     outline: none;
 }
 
+.shared-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.shared-wrapper button {
+    margin: 10px;
+}

@@ -66,3 +66,6 @@
     outline: none;
 }
 
+.shared-wrapper {
+    display: flex;
+}

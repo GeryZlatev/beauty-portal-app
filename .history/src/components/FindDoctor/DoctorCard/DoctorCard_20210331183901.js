@@ -1,6 +1,6 @@
 import style from './DoctorCard.module.css';
 import logo from '../../../media/beautyportal_logo.png';
-import Viral from '../../../Shared/Viral';
+import {FacebookShareButton,  LinkedinShareButton, ViberShareButton, FacebookIcon, LinkedinIcon, ViberIcon} from 'react-share';
 
 const DoctorCard = (props) => {
 
@@ -19,14 +19,24 @@ const DoctorCard = (props) => {
                     <p>City: <span>{props.city}</span> </p>
                     <p>Contacts: <span>{props.phone}</span></p>
                 </div>
-                <Viral />
+                <div className={style["shared-wrapper"]}>
+                    <FacebookShareButton>
+                        <FacebookIcon size={32} round={true}/>
+                    </FacebookShareButton>
+                    <LinkedinShareButton>
+                        <LinkedinIcon size={32} round={true}/>
+                    </LinkedinShareButton>
+                    <ViberShareButton>
+                        <ViberIcon size={32} round={true} style={{color: 'red'}}/>
+                    </ViberShareButton>
+                </div>
                 <button>More...</button>
             </div>
         </>
     )
-//
-    //
-    //
+//url={'https://www.facebook.com/'}
+    //url={ 'https://www.linkedin.com/'}
+    //url={'https://www.viber.com/en/'}
 }
 
 export default DoctorCard;
