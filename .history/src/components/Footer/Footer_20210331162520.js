@@ -64,7 +64,7 @@ class Footer extends Component {
                                 <h5><Link to="/">My Patient Portal</Link></h5>
                             </li>
                             <li>
-                                <h5><Link to="/specialist">Doctor Login</Link></h5>
+                                <h5><Link to="/doctors">Doctor Login</Link></h5>
                             </li>
                             <li>
                                 <h5><Link to="">Staff information</Link></h5>

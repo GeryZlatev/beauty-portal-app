@@ -5,7 +5,6 @@ import Favorite from './Favorite';
 import style from './HomePatients.module.css';
 import { useState, useEffect, useRef } from 'react';
 import * as ServicesDB from '../../services/servicesDB';
-import Loader from '../../Shared/Loader';
 
 const HomePatients  = (props) => {
 const [myProcedures, setMyProcedures] = useState([]);
@@ -46,8 +45,8 @@ const showLoggedUserUi = () => {
             </button>
             </div>
             <div className={style["favorite-wrapper"]}>
-                {loading ? <Loader />
-                : myProcedures ? myProcedures
+            {myProcedures
+            ? myProcedures
                 .filter((x) => x.likes.includes(JSON.parse(localStorage.getItem('user'))))
                 .map((x) => {
                     return (
