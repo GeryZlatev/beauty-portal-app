@@ -27,6 +27,7 @@ const LaserTherapy = () => {
                 }))
                 
             })
+        return () => {isMounted = false}
     }, [])
 
 return (
