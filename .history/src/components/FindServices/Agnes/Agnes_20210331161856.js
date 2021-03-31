@@ -21,13 +21,13 @@ const Agnes = (props) => {
                     <div className={style.player}>
                         <ReactPlayer
                             playing={true}
-                            loop={true}
+                            loop= {true}
                             url="https://www.youtube.com/watch?v=0hQZ8HA7vnw"
                         />
                     </div>
                 </article>
                 <article className={style["content-wrapper"]}>
-                    <VerticalHeaderLine>INDICATIONS</VerticalHeaderLine>
+                    <VerticalHeaderLine className={style.newHeader}>INDICATIONS</VerticalHeaderLine>
                     <ul className={style.indications}>
                         <li>Face shaping - lifting, melting fat, contouring</li>
                         <li>Remove wrinkles around the eyes and lips</li>

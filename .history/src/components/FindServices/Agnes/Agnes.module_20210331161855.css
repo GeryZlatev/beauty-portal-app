@@ -37,6 +37,9 @@
     max-width: 100%;
 }
 
+.newHeader {
+    max-width: 100%;
+}
 .indications {
     display: flex;
     flex-wrap: wrap;

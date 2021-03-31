@@ -37,6 +37,18 @@
     max-width: 100%;
 }
 
+/* .content-wrapper .content-header {
+    max-width: 100%;
+    margin: 70px auto;
+    padding: 15px;
+    border: 1px solid #9190C7;
+    background: #9190C7;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+
+} */
 .indications {
     display: flex;
     flex-wrap: wrap;
