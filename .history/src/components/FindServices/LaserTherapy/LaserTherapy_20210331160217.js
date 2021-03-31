@@ -58,7 +58,7 @@ return (
                     // loop= {true}
                     width="850px"
                     height="580px"
-                    style={{margin: "0 auto"}}
+                    style={{margin: '0px, auto'}}
                 />
             </div>
         </div>

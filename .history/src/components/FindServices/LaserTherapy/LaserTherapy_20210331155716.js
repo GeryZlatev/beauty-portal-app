@@ -54,11 +54,9 @@ return (
             <div className={style["player-laser-soprano"]}>
                 <ReactPlayer
                     url="https://www.youtube.com/watch?v=ASGv0_iQ3n4"
-                    playing={true}
-                    // loop= {true}
-                    width="850px"
-                    height="580px"
-                    style={{margin: "0 auto"}}
+                    playing="true"
+                    loop="true"
+                    width="800px"
                 />
             </div>
         </div>

@@ -73,7 +73,7 @@ const ProcedureCard = (props) => {
                 </p>
                 <div className={style["likes-wrapper"]}>
                     <span >{likes} people like this</span>
-                    {youLiked ? <p className={style["you-liked-it"]}>You've already liked it!</p> : null}
+                    {youLiked ? <p className={style["you-liked-it"]}>You have already liked it!</p> : null}
                 <button
                     className={style.like}
                     onClick={onLikeHandler}

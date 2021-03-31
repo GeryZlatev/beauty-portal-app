@@ -38,7 +38,7 @@
 
 .info-wrapper,
 .procedure-wrapper p,
-/* .you-liked-it, */
+.you-liked-it,
 .likes-wrapper {
     margin: 15px auto;
     max-width: 60%;
@@ -50,7 +50,7 @@
 .you-liked-it {
     font-size: 10px;
     margin: 5px;
-    color: darkblue;
+    color: red;
 }
 
 .read-more {

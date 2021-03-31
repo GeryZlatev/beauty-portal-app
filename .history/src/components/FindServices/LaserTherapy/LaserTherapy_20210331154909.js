@@ -47,21 +47,11 @@ return (
                         />
                     )
                 }) : null}
-
-        </div>
-        <div className={style["advert-wrapper"]}>
-                <VerticalHeaderLine>SHR - The world's most advanced technology</VerticalHeaderLine>
-            <div className={style["player-laser-soprano"]}>
-                <ReactPlayer
-                    url="https://www.youtube.com/watch?v=ASGv0_iQ3n4"
-                    playing={true}
-                    // loop= {true}
-                    width="850px"
-                    height="580px"
-                    style={{margin: "0 auto"}}
-                />
+            <VerticalHeaderLine>SHR - The world's most advanced technology</VerticalHeaderLine>
+                <div className={style["player-laser-soprano"]}>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=ASGv0_iQ3n4" />
+                </div>
             </div>
-        </div>
         </>
     )
 }

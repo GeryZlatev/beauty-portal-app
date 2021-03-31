@@ -55,10 +55,10 @@ return (
                 <ReactPlayer
                     url="https://www.youtube.com/watch?v=ASGv0_iQ3n4"
                     playing={true}
-                    // loop= {true}
+                    loop= {true}
                     width="850px"
                     height="580px"
-                    style={{margin: "0 auto"}}
+                    style={{margin: '0px, auto'}}
                 />
             </div>
         </div>

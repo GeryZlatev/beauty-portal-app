@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import * as ServicesDB from '../../../services/servicesDB';
 
 import ProcedureCard from '../ProcedureCard';
-import VerticalHeaderLine from '../../Advertising/VerticalHeaderLine';
+import Notification from '../../../Shared/Notification';
 
 const currentStyle = {
     border: '1px solid #9190C7'
@@ -47,21 +47,10 @@ return (
                         />
                     )
                 }) : null}
-
-        </div>
-        <div className={style["advert-wrapper"]}>
-                <VerticalHeaderLine>SHR - The world's most advanced technology</VerticalHeaderLine>
-            <div className={style["player-laser-soprano"]}>
-                <ReactPlayer
-                    url="https://www.youtube.com/watch?v=ASGv0_iQ3n4"
-                    playing={true}
-                    // loop= {true}
-                    width="850px"
-                    height="580px"
-                    style={{margin: "0 auto"}}
-                />
+                <div className={style.player}>
+                        <ReactPlayer url="https://youtu.be/F7qOSdVlwzY" />
+                </div>
             </div>
-        </div>
         </>
     )
 }
