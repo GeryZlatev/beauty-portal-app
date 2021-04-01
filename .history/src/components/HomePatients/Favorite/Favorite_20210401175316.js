@@ -7,7 +7,7 @@ class Favorite extends Component {
         super(props)
 
         this.state = {
-            flag: false
+            flag = false
         }
     }
 
@@ -17,10 +17,6 @@ class Favorite extends Component {
         const { procedureId, catalogue } = this.props;
         ServicesDB.dislikeProcedure(procedureId, catalogue, userId)
         this.setState({flag: !this.state.flag})
-    }
-
-    componentDidUpdate() {
-        console.log('You disliked it')
     }
 // dislike change function - remove element from the page
     render() {

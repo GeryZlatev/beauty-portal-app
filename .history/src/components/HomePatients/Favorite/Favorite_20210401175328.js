@@ -18,10 +18,6 @@ class Favorite extends Component {
         ServicesDB.dislikeProcedure(procedureId, catalogue, userId)
         this.setState({flag: !this.state.flag})
     }
-
-    componentDidUpdate() {
-        console.log('You disliked it')
-    }
 // dislike change function - remove element from the page
     render() {
         return (

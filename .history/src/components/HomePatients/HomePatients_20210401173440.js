@@ -59,7 +59,7 @@ const showLoggedUserUi = () => {
                 .filter((x) => x.likes.includes(JSON.parse(localStorage.getItem('user'))))
                 .map((x) => {
                     return (
-                        <Favorite key={x.id} title={x.name} description={x.info} image={x.image} procedureId={x.id} catalogue={ category}/>
+                        <Favorite key={x.id} title={x.name} description={x.info} image={x.image} procedureId={ x.id}/>
                 )
     }): null}
             </div>

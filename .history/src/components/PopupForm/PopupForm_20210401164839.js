@@ -1,6 +1,6 @@
 import Popup from 'reactjs-popup';
 import style from './PopupForm.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as ServicesDB from '../../services/servicesDB';
 
 const PopupForm = (props) => {
