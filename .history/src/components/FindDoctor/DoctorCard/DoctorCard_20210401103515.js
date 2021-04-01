@@ -1,7 +1,6 @@
 import style from './DoctorCard.module.css';
 import logo from '../../../media/beautyportal_logo.png';
 import Viral from '../../../Shared/Viral';
-import PopupForm from '../../PopupForm';
 
 const DoctorCard = (props) => {
 
@@ -20,8 +19,8 @@ const DoctorCard = (props) => {
                     <p>City: <span>{props.city}</span> </p>
                     <p>Contacts: <span>{props.phone}</span></p>
                 </div>
-                <PopupForm/>
-                {/* <button>More...</button> */}
+                
+                <button>More...</button>
                 {/* <Viral /> */}
             </div>
             

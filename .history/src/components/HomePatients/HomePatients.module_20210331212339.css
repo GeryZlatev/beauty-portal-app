@@ -18,7 +18,7 @@ input[type="checkbox"] {
 
 .wrapper .menu-btn
 {
-    position: fixed;
+    position: absolute;
     top: 30px;
     left: 15px;
     height: 45px;
