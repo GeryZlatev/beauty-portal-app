@@ -10,21 +10,16 @@ const PopupForm = (props) => {
     const [quest, setQuest] = useState('');
     const [catalogue, setCatalogue] = useState('specialist');
 
-    const clearInputs = () => {
-        setName('');
-        setEmail('');
-        setQuest('');
-    }
-
     const onSendQuestHandler = () => {
         const data = {
             name,
             email,
             quest
         }
-        clearInputs();
         ServicesDB.askQuestion(catalogue, doctor, { ...data })
+        .then(res => console.log(res))
     }
+
 
     return (
         <Popup
@@ -67,8 +62,8 @@ const PopupForm = (props) => {
                     <Popup
                         trigger={<button className={style.button}>Send</button>}
                         position="top center"
-                        nested
-                        onOpen={onSendQuestHandler}
+                            nested
+                            onOpen={onSendQuestHandler}
                     >
                             <div className={style["successfull-send-message"]}>
                                 <p>You successfully sent your message!</p>

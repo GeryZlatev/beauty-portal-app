@@ -32,6 +32,7 @@ const PopupForm = (props) => {
         onOpen={() => setDoctor(props.doctor)}
         modal
         nested
+        repositionOnResize
     >
         {close => (
             <div className={style.modal}>

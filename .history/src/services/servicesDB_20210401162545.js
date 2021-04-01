@@ -22,20 +22,15 @@ export const getAll = (catalogue) => {
         .get()
 }
 
-export const askQuestion = (catalogue, id, data) => {
+export const askQuestion = (catalogue, id) => {
     return DB.collection(catalogue)
         .doc(id)
         .get()
         .then((res) => {
             const doctor = { ...res.data() };
             const userId = JSON.parse(localStorage.getItem('user'));
-            const questions = doctor.questions;
-            questions.push(data);
-            return DB.collection(catalogue)
-            .doc(id)
-            .set(doctor)
-        })
-    .catch (err => console.log(err))
+            const 
+    })
 }
 
 export const getProcedureLikes = (procedureId, catalogue) => {
@@ -54,8 +49,7 @@ export const getProcedureLikes = (procedureId, catalogue) => {
             } else {
                 return {message: "You have already liked it!"}
             }
-        })
-    .catch(err => console.log(err))
+            })
 }
 
 

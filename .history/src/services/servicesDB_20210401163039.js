@@ -34,8 +34,7 @@ export const askQuestion = (catalogue, id, data) => {
             return DB.collection(catalogue)
             .doc(id)
             .set(doctor)
-        })
-    .catch (err => console.log(err))
+    })
 }
 
 export const getProcedureLikes = (procedureId, catalogue) => {
@@ -54,8 +53,7 @@ export const getProcedureLikes = (procedureId, catalogue) => {
             } else {
                 return {message: "You have already liked it!"}
             }
-        })
-    .catch(err => console.log(err))
+            })
 }
 
 

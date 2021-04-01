@@ -1,5 +1,8 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+.my-gallery {
+    margin-top: 50px;
+}
 .introduction {
     max-width: 60%;
     margin: 30px auto;

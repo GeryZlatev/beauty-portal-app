@@ -1,0 +1,10 @@
+.app {
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWU_K1M0-zUPWCyehNq2IqAMZzwgvkjxzsxQ&usqp=CAU');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  /* height: 400px; */
+  
+}

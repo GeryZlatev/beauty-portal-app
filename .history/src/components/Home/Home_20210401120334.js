@@ -41,7 +41,7 @@ class Home extends Component {
                 <VerticalHeaderLine>
                     Welcome to the era of dynamic aesthetics
                 </VerticalHeaderLine>
-                <p className="introduction">
+                <p>
                     Beauty Portal is a place where united expert dermatologists and highly qualified laser therapists  provide there patients with professional solutions to achieve natural and long-lasting results!
                     Your health and beauty are the focus of our daily efforts!
                 </p>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ImageGallery from 'react-image-gallery';
 import './Home.css';
 import ReactPlayer from 'react-player';
-import VerticalHeaderLine from '../Advertising/VerticalHeaderLine';
 
 const images = [
     {
@@ -23,10 +22,10 @@ const images = [
         original: 'https://www.theaestheticguide.com/sites/aestheticchannel.com/files/styles/article_featured_retina/public/AdobeStock_georgerudy_mandermalfiller107800015.jpeg?itok=kUh8Y3rS',
         thumbnail: 'https://www.theaestheticguide.com/sites/aestheticchannel.com/files/styles/article_featured_retina/public/AdobeStock_georgerudy_mandermalfiller107800015.jpeg?itok=kUh8Y3rS'
     },
-    // {
-    //     original: 'https://zdravenportal.com/uploads/x2015/09/29/555_415-50499c46439a03a4700bd14522bb29a4.jpg',
-    //     thumbnail: 'https://zdravenportal.com/uploads/x2015/09/29/555_415-50499c46439a03a4700bd14522bb29a4.jpg'
-    // }
+    {
+        original: 'https://zdravenportal.com/uploads/x2015/09/29/555_415-50499c46439a03a4700bd14522bb29a4.jpg',
+        thumbnail: 'https://zdravenportal.com/uploads/x2015/09/29/555_415-50499c46439a03a4700bd14522bb29a4.jpg'
+    }
 ]
 
 class Home extends Component {
@@ -38,13 +37,8 @@ class Home extends Component {
         return (
         <>
                 <ImageGallery className="my-gallery" items={images} />
-                <VerticalHeaderLine>
-                    Welcome to the era of dynamic aesthetics
-                </VerticalHeaderLine>
-                <p className="introduction">
-                    Beauty Portal is a place where united expert dermatologists and highly qualified laser therapists  provide there patients with professional solutions to achieve natural and long-lasting results!
-                    Your health and beauty are the focus of our daily efforts!
-                </p>
+
+
                 
                 <div className="player-laser-soprano">
                 <ReactPlayer

@@ -1,10 +1,10 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 .introduction {
-    max-width: 60%;
+    max-width: 80%;
     margin: 30px auto;
-    font-size: larger;
-    font-weight: 300;
+    font-size: large;
+    font-weight: 200;
     color: #54546D;
     line-height: 2;
 }

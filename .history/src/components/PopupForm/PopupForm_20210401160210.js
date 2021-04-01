@@ -1,35 +1,10 @@
 import Popup from 'reactjs-popup';
 import style from './PopupForm.module.css';
-import { useEffect, useState } from 'react';
-import * as ServicesDB from '../../services/servicesDB';
 
 const PopupForm = (props) => {
-    const [doctor, setDoctor] = useState('');
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('');
-    const [quest, setQuest] = useState('');
-    const [catalogue, setCatalogue] = useState('specialist');
-
-    const clearInputs = () => {
-        setName('');
-        setEmail('');
-        setQuest('');
-    }
-
-    const onSendQuestHandler = () => {
-        const data = {
-            name,
-            email,
-            quest
-        }
-        clearInputs();
-        ServicesDB.askQuestion(catalogue, doctor, { ...data })
-    }
-
     return (
         <Popup
-        trigger={<button className={style.button} >Contact us</button>}
-        onOpen={() => setDoctor(props.doctor)}
+        trigger={<button onClick={() => console.log(props.doctor)} className={style.button}>Contact us</button>}
         modal
         nested
     >
@@ -41,26 +16,15 @@ const PopupForm = (props) => {
                 <div className={style.header}>Ask the doctor</div>
                 <div className={style.content}>
                     <label>
-                            Your name
-                    <input
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                    value={name}
-                    onChange={ (e) => setName(e.target.value)}/>
+                        Your name
+                        <input type="text" name="name" placeholder="Your name"/>
                     </label>
                     <label>
                         Your email
-                    <input
-                    type="text"
-                    name="email"
-                    placeholder="Your email"
-                    onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="text" name="email" placeholder="Your email"/>
                     </label>
                     <label>
-                    <textarea rows="8"
-                    placeholder="Enter the procedure and the questions that interest you"
-                    onChange={ (e) => setQuest(e.target.value)}/>
+                        <textarea rows="8" placeholder="Enter the procedure and the questions that interest you"/>
                     </label>
                 </div>
                 <div className={style.actions}>
@@ -68,7 +32,6 @@ const PopupForm = (props) => {
                         trigger={<button className={style.button}>Send</button>}
                         position="top center"
                         nested
-                        onOpen={onSendQuestHandler}
                     >
                             <div className={style["successfull-send-message"]}>
                                 <p>You successfully sent your message!</p>

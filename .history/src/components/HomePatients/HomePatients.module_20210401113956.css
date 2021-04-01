@@ -4,7 +4,6 @@
     max-width: 80%;
     flex-wrap: wrap;
     margin: 0 auto;
-
 }
 
 .wrapper {
@@ -19,12 +18,12 @@ input[type="checkbox"] {
 
 .wrapper .menu-btn
 {
-    position: absolute;
+    position: fixed;
     top: 30px;
     left: 15px;
     height: 45px;
     width: 45px;
-    z-index: 999;
+    z-index: 4;
     color: aliceblue;
     font-size: 30px;
     border: 1px solid #493040;

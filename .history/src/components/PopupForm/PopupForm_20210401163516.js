@@ -26,6 +26,7 @@ const PopupForm = (props) => {
         ServicesDB.askQuestion(catalogue, doctor, { ...data })
     }
 
+
     return (
         <Popup
         trigger={<button className={style.button} >Contact us</button>}
@@ -67,8 +68,8 @@ const PopupForm = (props) => {
                     <Popup
                         trigger={<button className={style.button}>Send</button>}
                         position="top center"
-                        nested
-                        onOpen={onSendQuestHandler}
+                            nested
+                            onOpen={onSendQuestHandler}
                     >
                             <div className={style["successfull-send-message"]}>
                                 <p>You successfully sent your message!</p>

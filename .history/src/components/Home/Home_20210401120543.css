@@ -1,0 +1,9 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.introduction {
+    max-width: 80%;
+    margin: 30px auto;
+    font-size: large;
+    font-weight: 200;
+    color: #;
+}
