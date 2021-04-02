@@ -11,7 +11,6 @@ import DoctorCard from '../FindDoctor/DoctorCard';
 import Loader from '../../Shared/Loader';
 import avatar from '../../media/avatar-placeholder.png';
 import Notification from '../../Shared/Notification';
-import DoctorInfo from '../FindDoctor/DoctorInfo';
 
 library.add(
 faSearchengin
@@ -70,7 +69,6 @@ class SearchBar extends Component {
 
                 {this.state.loading? <Loader/> : this.state.doctors.length ? this.state.doctors.map((x) => {
                     return (
-                    <div className={style["doctors-found"]}>
                         <DoctorCard
                             key={x.id}
                             name={x.name}
@@ -78,10 +76,7 @@ class SearchBar extends Component {
                             city={x.city}
                             phone={x.phone}
                             image={x.image || avatar}
-                            doctor={x.id}
-                            />
-                            <DoctorInfo>{ x.bio}</DoctorInfo>
-                    </div>
+                            doctor={x.id}/>
                     )
                 }) : null}
             </Fragment>

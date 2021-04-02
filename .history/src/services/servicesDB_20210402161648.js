@@ -87,6 +87,6 @@ export const getMoreDetails = (itemId, catalogue) => {
 
 export const sortSpecialists = (query, data) => {
     const specialistRef = DB.collection("specialist");
-    return specialistRef.where(data, "==", query)
+    return specialistRef.where(data, "<=", query)
     .get()
 }

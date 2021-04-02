@@ -54,12 +54,9 @@ box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
 }
 
 .doctors-found {
-    margin: 50px auto;
     max-width: 80%;
     display: flex;
     justify-content: center;
     align-content: center;
     border: 1px dotted burlywood;
-    border-radius: 20px;
-    background: #F0E4E4;
 }

@@ -9,13 +9,12 @@ faSearchengin
 import * as ServicesDB from '../../services/servicesDB';
 import DoctorCard from '../FindDoctor/DoctorCard';
 import Loader from '../../Shared/Loader';
-import avatar from '../../media/avatar-placeholder.png';
-import Notification from '../../Shared/Notification';
-import DoctorInfo from '../FindDoctor/DoctorInfo';
+import avatar from '../../media/avatar-placeholder.png'
 
 library.add(
 faSearchengin
 );
+
 
 class SearchBar extends Component {
     constructor(props) {
@@ -54,7 +53,7 @@ class SearchBar extends Component {
                 <form onSubmit={this.onSubmitFormHandler} className={style.searchForm}>
                         <input
                             type="text"
-                            placeholder="  Please, enter doctor's first and last name..."
+                            placeholder="   Enter doctor name..."
                             name="search"
                             value={this.state.query}
                             onChange={this.onSearchHandler}
@@ -68,9 +67,8 @@ class SearchBar extends Component {
 
                 </div>
 
-                {this.state.loading? <Loader/> : this.state.doctors.length ? this.state.doctors.map((x) => {
+                {this.state.loading? <Loader/> : this.state.doctors ? this.state.doctors.map((x) => {
                     return (
-                    <div className={style["doctors-found"]}>
                         <DoctorCard
                             key={x.id}
                             name={x.name}
@@ -78,10 +76,7 @@ class SearchBar extends Component {
                             city={x.city}
                             phone={x.phone}
                             image={x.image || avatar}
-                            doctor={x.id}
-                            />
-                            <DoctorInfo>{ x.bio}</DoctorInfo>
-                    </div>
+                            doctor={x.id}/>
                     )
                 }) : null}
             </Fragment>

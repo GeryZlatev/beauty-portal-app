@@ -1,0 +1,8 @@
+.doctor-info-wrapper {
+    max-width: 50%;
+    margin: 90px auto;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: large;
+    font-weight: 200;
+}
