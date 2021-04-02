@@ -65,7 +65,9 @@ const App = (props) => {
     }}
     >
       <div className={style.app}>
+        
         <Navbar user={state.user} email={state.email} />
+        <SearchBar />
         <Switch>
           <Route path="/" exact component={!state.isAuthenticated ? Home : HomePatients} />
           <Route path="/about"  component={About} />
@@ -80,6 +82,7 @@ const App = (props) => {
           <Route path="/doctors" component={!state.isAuthenticated ? Register : FindDoctor} />
           <Route path="/patients" component={SearchBar}/>
           <Route component={PageNotFound} />
+          
         </Switch>
         <Advertising />
         <VerticalLine />
