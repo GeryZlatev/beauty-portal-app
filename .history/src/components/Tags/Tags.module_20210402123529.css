@@ -1,0 +1,18 @@
+.tags-component-wrapper {
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+.tags-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.tags-list li button {
+    padding: 8px 16px;
+    border: 1px solid #A0A7D0;
+    background: #A0A7D0;
+    border-radius: 10px;
+    color: #202134;
+}

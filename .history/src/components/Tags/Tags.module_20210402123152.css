@@ -1,0 +1,9 @@
+.tags-component-wrapper {
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+.tags-list {
+    display: flex;
+    list-style: none;
+}

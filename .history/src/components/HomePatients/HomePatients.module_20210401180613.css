@@ -21,7 +21,7 @@ input[type="checkbox"] {
 {
     position: absolute;
     top: 30px;
-    left: 15px;
+    left: 10px;
     height: 45px;
     width: 45px;
     z-index: 999;
@@ -38,7 +38,7 @@ input[type="checkbox"] {
 
 
 .btn:checked ~ .menu-btn {
-    left: 130px;
+    left: 160px;
 }
 
 /* .btn:checked ~ .menu-btn span:before {
@@ -54,7 +54,6 @@ input[type="checkbox"] {
     overflow: hidden;
     left: -150px;
     transition: all 0.3s ease;
-    border-radius: 10px;
 }
 
 .btn:checked ~ .sidebar {
@@ -65,7 +64,7 @@ input[type="checkbox"] {
     font-size: 15px;
     font-weight: 300;
     line-height: 65px;
-    background: #8568AF;
+    background: #493040;
     text-align: center;
 }
 

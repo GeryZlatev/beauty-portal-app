@@ -30,7 +30,7 @@ const showLoggedUserUi = () => {
     return (
         <>
             <FindServices />
-            <VerticalHeaderLine>My procedures</VerticalHeaderLine>
+            <VerticalHeaderLine>My favorite procedures</VerticalHeaderLine>
             <div className={style.wrapper}>
                 <input type="checkbox" id="btn" className={style.btn}/>
                 <label htmlFor="btn" className={style["menu-btn"]}><span>&#9829;</span></label>

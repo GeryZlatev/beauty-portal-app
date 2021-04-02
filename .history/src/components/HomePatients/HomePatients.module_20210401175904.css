@@ -26,7 +26,7 @@ input[type="checkbox"] {
     width: 45px;
     z-index: 999;
     color: #EC8AC4;
-    font-size: 45px;
+    font-size: 30px;
     /* border: 1px solid #493040; */
     text-align: center;
     /* background: #EC8AC4; */
@@ -38,7 +38,7 @@ input[type="checkbox"] {
 
 
 .btn:checked ~ .menu-btn {
-    left: 130px;
+    left: 160px;
 }
 
 /* .btn:checked ~ .menu-btn span:before {
@@ -47,14 +47,13 @@ input[type="checkbox"] {
 .wrapper .sidebar {
     position: fixed;
     height: 30%;
-    width: 130px;
+    width: 150px;
     margin-top: 30px;
     background: #ECD3E3;
     opacity: 0.7;
     overflow: hidden;
     left: -150px;
     transition: all 0.3s ease;
-    border-radius: 10px;
 }
 
 .btn:checked ~ .sidebar {
@@ -62,10 +61,10 @@ input[type="checkbox"] {
 }
 .sidebar .sidebar-title {
     color: cornsilk;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 65px;
-    background: #8568AF;
+    background: #493040;
     text-align: center;
 }
 
@@ -86,7 +85,7 @@ input[type="checkbox"] {
     border-top: 1px solid #F8F8F8;
     padding: 5px;
     margin-top: 20px;
-    font-size: 15px;
+    font-size: large;
     font-weight: 200;
     cursor: pointer;
     text-transform: uppercase;
