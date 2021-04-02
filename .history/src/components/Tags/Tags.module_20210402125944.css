@@ -18,13 +18,14 @@
     font-size: large;
     font-weight: 100;
     cursor: pointer;
--webkit-box-shadow: 4px -1px 3px 0px rgba(0,0,0,0.24); 
-box-shadow: 4px -1px 3px 0px rgba(0,0,0,0.24);
+-webkit-box-shadow: 4px -2px 15px 1px rgba(0,0,0,0.35); 
+box-shadow: 4px -2px 15px 1px rgba(0,0,0,0.35);
+outline: none;
 }
 
 .tags-list li button:hover{
--webkit-box-shadow: 4px 3px 3px 0px rgba(0,0,0,0.24); 
-box-shadow: 4px 3px 3px 0px rgba(0,0,0,0.24);
+-webkit-box-shadow: 4px 2px 15px 1px rgba(0,0,0,0.35); 
+box-shadow: 4px 2px 15px 1px rgba(0,0,0,0.35);
 }
 
 .tags-list li:nth-child(1) button:hover {
