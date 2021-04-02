@@ -1,44 +1,32 @@
 import style from './Tags.module.css';
-import { Link } from 'react-router-dom'
-import * as ServicesDB from '../../services/servicesDB';
+import {Link} from 'react-router-dom'
 
 const Tags = (props) => {
-
-    // const onClickTagHandler = (e) => {
-    //     ServicesDB.sortSpecialists(e.target.innerText)
-    //     .then(res=> console.log(res))
-
-    // }
-
     return (
         <>
             <div className={style["tags-component-wrapper"]}>
                 <ul className={style["tags-list"]}>
                     <li>
                         <button
-                        onClick={props.event}
+                        value="dermatology"
+                        onClick={(e) => console.log(e.target.value)}
                     >
                         Dermatology
                     </button>
                     </li>
                     <li>
                         <button
-                            onClick={props.event}
-                        >
+                        value="aesthetic">
                             Aesthetic Surgery
                             </button>
                             </li>
                     <li>
-                        <button
-                            onClick={props.event}
-                        >
+                        <button>
                             UNG
                             </button>
                             </li>
                     <li>
-                        <button
-                            onClick={props.event}
-                        >
+                        <button>
                             Laser Therapist
                             </button>
                             </li>

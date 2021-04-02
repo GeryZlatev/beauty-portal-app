@@ -16,6 +16,7 @@ const Tags = (props) => {
                 <ul className={style["tags-list"]}>
                     <li>
                         <button
+                        value="dermatology"
                         onClick={props.event}
                     >
                         Dermatology
@@ -23,6 +24,7 @@ const Tags = (props) => {
                     </li>
                     <li>
                         <button
+                            value="aesthetic-surgery"
                             onClick={props.event}
                         >
                             Aesthetic Surgery
@@ -30,6 +32,7 @@ const Tags = (props) => {
                             </li>
                     <li>
                         <button
+                            value="ung"
                             onClick={props.event}
                         >
                             UNG
@@ -37,6 +40,7 @@ const Tags = (props) => {
                             </li>
                     <li>
                         <button
+                            value="laser-therapist"
                             onClick={props.event}
                         >
                             Laser Therapist

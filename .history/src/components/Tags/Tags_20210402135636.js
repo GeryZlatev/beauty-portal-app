@@ -16,28 +16,32 @@ const Tags = (props) => {
                 <ul className={style["tags-list"]}>
                     <li>
                         <button
-                        onClick={props.event}
+                        value="dermatology"
+                        onClick={props.onClickTagHandler}
                     >
                         Dermatology
                     </button>
                     </li>
                     <li>
                         <button
-                            onClick={props.event}
+                            value="aesthetic-surgery"
+                            onClick={(e) => console.log(e.target.value)}
                         >
                             Aesthetic Surgery
                             </button>
                             </li>
                     <li>
                         <button
-                            onClick={props.event}
+                            value="ung"
+                            onClick={(e) => console.log(e.target.value)}
                         >
                             UNG
                             </button>
                             </li>
                     <li>
                         <button
-                            onClick={props.event}
+                            value="laser-therapist"
+                            onClick={(e) => console.log(e.target.value)}
                         >
                             Laser Therapist
                             </button>

@@ -14,6 +14,19 @@ const FindDoctor = (props) => {
     const [catalogue, setCatalogue] = useState('specialist');
     const [loading, setIsLoading] = useState(false);
 
+    const onClickTagHandler = (e) => {
+    setIsLoading(true)
+ServicesDB.sortSpecialists(e.target.innerText)
+    .then(res => {
+        setIsLoading(false)
+            .setSpecialists(res.docs.map((x) => {
+            return {id: x.id, ...x.data()}
+        }))
+})
+
+    }
+
+
     useEffect(() => {
         setIsLoading(true)
         ServicesDB
@@ -25,19 +38,7 @@ const FindDoctor = (props) => {
                 }))
             })
         
-    }, []);
-    
-    const onClickTagHandler = (e) => {
-    setIsLoading(true)
-    ServicesDB.sortSpecialists(e.target.innerText)
-        .then(res => {
-        setIsLoading(false)
-        setSpecialists(res.docs.map((x) => {
-            return {id: x.id, ...x.data()}
-        }))
-    })
-    }
-
+        }, []);
         return (
             <>
                 <Tags event={ onClickTagHandler}/>

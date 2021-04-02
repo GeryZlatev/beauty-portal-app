@@ -30,12 +30,14 @@ const FindDoctor = (props) => {
     const onClickTagHandler = (e) => {
     setIsLoading(true)
     ServicesDB.sortSpecialists(e.target.innerText)
-        .then(res => {
+    .then(res => {
         setIsLoading(false)
         setSpecialists(res.docs.map((x) => {
+            console.log(x.data())
             return {id: x.id, ...x.data()}
         }))
     })
+        console.log(specialists)
     }
 
         return (

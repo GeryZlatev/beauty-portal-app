@@ -31,11 +31,14 @@ const FindDoctor = (props) => {
     setIsLoading(true)
     ServicesDB.sortSpecialists(e.target.innerText)
         .then(res => {
+        console.log(res)
         setIsLoading(false)
         setSpecialists(res.docs.map((x) => {
+            console.log(x.data())
             return {id: x.id, ...x.data()}
         }))
     })
+        // console.log(specialists)
     }
 
         return (

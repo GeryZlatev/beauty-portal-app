@@ -25,17 +25,18 @@ const FindDoctor = (props) => {
                 }))
             })
         
-    }, []);
+    }, [specialists]);
     
     const onClickTagHandler = (e) => {
     setIsLoading(true)
     ServicesDB.sortSpecialists(e.target.innerText)
-        .then(res => {
+    .then(res => {
         setIsLoading(false)
         setSpecialists(res.docs.map((x) => {
             return {id: x.id, ...x.data()}
         }))
     })
+        console.log(e)
     }
 
         return (

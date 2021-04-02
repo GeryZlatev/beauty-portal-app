@@ -11,14 +11,13 @@
 
 .tags-list li button {
     padding: 8px 16px;
-    border: 1px solid #F8F8F8;
-    background: #F8F8F8;
+    border: 1px solid #E6E6E6;
+    background: #E6E6E6;
     border-radius: 10px;
     color: #6262A0;
     font-size: large;
     font-weight: 100;
     cursor: pointer;
-    outline: none;
 /* -webkit-box-shadow: 4px -1px 3px 0px rgba(0,0,0,0.24); 
 box-shadow: 4px -1px 3px 0px rgba(0,0,0,0.24); */
 }
