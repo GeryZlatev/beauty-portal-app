@@ -14,6 +14,7 @@ const HomePatients  = (props) => {
     const [myProcedures, setMyProcedures] = useState([]);
     const [category, setCategory] = useState('aestheticDermatology');
     const [loading, setIsLoading] = useState(false);
+    const [flag, setFlag] = useState(false);
     const [userId, setUserId] = useState(JSON.parse(localStorage.getItem('user')));
 
     useEffect(() => {
@@ -34,13 +35,15 @@ const HomePatients  = (props) => {
         setIsLoading(true);
         ServicesDB.getAll(category)
             .then(res => {
+                setIsLoading(false)
                 const allProcedures = res.docs.map((x) => {
                     return { id: x.id, ...x.data() }
                 })
-            setIsLoading(false)
-            setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
+                setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)))
         })
     }
+
+    
     return (
     <>
         {userId ? 
@@ -71,7 +74,6 @@ const HomePatients  = (props) => {
                     </div>
                 </nav>
             </div>
-                    
             <div className={style["favorite-wrapper"]}>
                 {loading ? <Loader />
                     : myProcedures.length ? myProcedures.map((x) => {

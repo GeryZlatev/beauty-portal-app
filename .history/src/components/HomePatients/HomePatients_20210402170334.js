@@ -3,47 +3,40 @@ import { Redirect } from 'react-router-dom';
 import FindServices from '../FindServices';
 import Favorite from './Favorite';
 import style from './HomePatients.module.css';
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as ServicesDB from '../../services/servicesDB';
 import Loader from '../../Shared/Loader';
 import VerticalHeaderLine from '../Advertising/VerticalHeaderLine';
 import SearchBar from '../SearchBar';
-import Notification from '../../Shared/Notification';
 
 const HomePatients  = (props) => {
-    const [myProcedures, setMyProcedures] = useState([]);
+const [myProcedures, setMyProcedures] = useState([]);
     const [category, setCategory] = useState('aestheticDermatology');
     const [loading, setIsLoading] = useState(false);
-    const [userId, setUserId] = useState(JSON.parse(localStorage.getItem('user')));
 
     useEffect(() => {
         setIsLoading(true)
         ServicesDB.getAll(category)
             .then(res => {
                 setIsLoading(false)
-                const allProcedures = res.docs.map((x) => {
+                setMyProcedures(res.docs.map((x) => {
                     return { id: x.id, ...x.data() }
-                })
-                setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)))
-        })
+                }))
+            })
 
     }, [category]);
 
-    const onDislikeHandler = (procedureId, category) =>{
-        ServicesDB.dislikeProcedure(procedureId, category, userId);
-        setIsLoading(true);
-        ServicesDB.getAll(category)
-            .then(res => {
-                const allProcedures = res.docs.map((x) => {
-                    return { id: x.id, ...x.data() }
-                })
-            setIsLoading(false)
-            setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
-        })
-    }
+    // const onDislikeHandler = () =>{
+    // console.log(this.props.procedureId);
+    // const userId = JSON.parse(localStorage.getItem('user'))
+    // const { procedureId, catalogue } = this.props;
+    // ServicesDB.dislikeProcedure(procedureId, catalogue, userId)
+    // this.setState({flag: !this.state.flag})
+    // }
+
+const showLoggedUserUi = () => {
+        //fetch some data
     return (
-    <>
-        {userId ? 
         <>
             <SearchBar/>
             <FindServices />
@@ -71,19 +64,26 @@ const HomePatients  = (props) => {
                     </div>
                 </nav>
             </div>
-                    
             <div className={style["favorite-wrapper"]}>
                 {loading ? <Loader />
-                    : myProcedures.length ? myProcedures.map((x) => {
+                : myProcedures ? myProcedures
+                .filter((x) => x.likes.includes(JSON.parse(localStorage.getItem('user'))))
+                .map((x) => {
                     return (
-                    <Favorite key={x.id} title={x.name} description={x.info} image={x.image} event={() => { onDislikeHandler(x.id, category) }} /> 
-                    )
-                }) : <Notification>You have not selected procedures!</Notification>}
+                        <Favorite key={x.id} title={x.name} description={x.info} image={x.image} procedureId={x.id} catalogue={ category}/>
+                )
+    }): null}
             </div>
     </>
-        : <Redirect to="/"/>}
+        )
+    }
+        return (
+            <>
+                {localStorage.getItem('user')
+                    ? showLoggedUserUi()
+            : <Redirect to="/"/>}
             </>
         )
-}
+    }
 
 export default HomePatients;

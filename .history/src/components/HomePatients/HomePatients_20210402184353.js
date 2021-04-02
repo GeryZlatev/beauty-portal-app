@@ -14,9 +14,11 @@ const HomePatients  = (props) => {
     const [myProcedures, setMyProcedures] = useState([]);
     const [category, setCategory] = useState('aestheticDermatology');
     const [loading, setIsLoading] = useState(false);
+    const [flag, setFlag] = useState(false);
     const [userId, setUserId] = useState(JSON.parse(localStorage.getItem('user')));
 
     useEffect(() => {
+        setFlag(false)
         setIsLoading(true)
         ServicesDB.getAll(category)
             .then(res => {
@@ -31,15 +33,8 @@ const HomePatients  = (props) => {
 
     const onDislikeHandler = (procedureId, category) =>{
         ServicesDB.dislikeProcedure(procedureId, category, userId);
-        setIsLoading(true);
-        ServicesDB.getAll(category)
-            .then(res => {
-                const allProcedures = res.docs.map((x) => {
-                    return { id: x.id, ...x.data() }
-                })
-            setIsLoading(false)
-            setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
-        })
+        setFlag(true)
+        // setFlag(flag => !flag);
     }
     return (
     <>
@@ -71,12 +66,11 @@ const HomePatients  = (props) => {
                     </div>
                 </nav>
             </div>
-                    
             <div className={style["favorite-wrapper"]}>
                 {loading ? <Loader />
                     : myProcedures.length ? myProcedures.map((x) => {
-                    return (
-                    <Favorite key={x.id} title={x.name} description={x.info} image={x.image} event={() => { onDislikeHandler(x.id, category) }} /> 
+                        return (
+                                <Favorite key={x.id} title={x.name} description={x.info} image={x.image} event={() => { onDislikeHandler(x.id, category) }} /> 
                     )
                 }) : <Notification>You have not selected procedures!</Notification>}
             </div>

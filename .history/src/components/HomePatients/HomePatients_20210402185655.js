@@ -38,7 +38,7 @@ const HomePatients  = (props) => {
                     return { id: x.id, ...x.data() }
                 })
             setIsLoading(false)
-            setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
+            setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)))
         })
     }
     return (
@@ -71,7 +71,6 @@ const HomePatients  = (props) => {
                     </div>
                 </nav>
             </div>
-                    
             <div className={style["favorite-wrapper"]}>
                 {loading ? <Loader />
                     : myProcedures.length ? myProcedures.map((x) => {

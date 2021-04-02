@@ -38,7 +38,7 @@ const HomePatients  = (props) => {
                     return { id: x.id, ...x.data() }
                 })
             setIsLoading(false)
-            setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
+            setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)))
         })
     }
     return (

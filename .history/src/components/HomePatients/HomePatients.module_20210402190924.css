@@ -4,9 +4,6 @@
     max-width: 80%;
     flex-wrap: wrap;
     margin: 0 auto;
-    border: 1px dotted burlywood;
-    border-radius: 20px;
-    padding: 30px;
 
 }
 
@@ -22,8 +19,8 @@ input[type="checkbox"] {
 
 .wrapper .menu-btn
 {
-    position: fixed;
-    top: 700px;
+    position: absolute;
+    top: 30px;
     left: 15px;
     height: 45px;
     width: 45px;

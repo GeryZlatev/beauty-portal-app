@@ -14,37 +14,33 @@ const HomePatients  = (props) => {
     const [myProcedures, setMyProcedures] = useState([]);
     const [category, setCategory] = useState('aestheticDermatology');
     const [loading, setIsLoading] = useState(false);
+    const [flag, setFlag] = useState(false);
     const [userId, setUserId] = useState(JSON.parse(localStorage.getItem('user')));
 
     useEffect(() => {
+        console.log('hhh')
         setIsLoading(true)
         ServicesDB.getAll(category)
             .then(res => {
                 setIsLoading(false)
-                const allProcedures = res.docs.map((x) => {
+                setMyProcedures(res.docs.map((x) => {
                     return { id: x.id, ...x.data() }
-                })
-                setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)))
+                }))
+                
+                setMyProcedures(myProcedures => myProcedures.filter((x) => x.likes.includes(userId)))
         })
 
-    }, [category]);
+    }, [category, flag]);
 
     const onDislikeHandler = (procedureId, category) =>{
-        ServicesDB.dislikeProcedure(procedureId, category, userId);
-        setIsLoading(true);
-        ServicesDB.getAll(category)
-            .then(res => {
-                const allProcedures = res.docs.map((x) => {
-                    return { id: x.id, ...x.data() }
-                })
-            setIsLoading(false)
-            setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
-        })
+        ServicesDB.dislikeProcedure(procedureId, category, userId)
+        setFlag(flag => !flag);
     }
+
+const showLoggedUserUi = () => {
     return (
-    <>
-        {userId ? 
         <>
+            {console.log('re-render')}
             <SearchBar/>
             <FindServices />
             <VerticalHeaderLine>My procedures</VerticalHeaderLine>
@@ -71,19 +67,25 @@ const HomePatients  = (props) => {
                     </div>
                 </nav>
             </div>
-                    
             <div className={style["favorite-wrapper"]}>
                 {loading ? <Loader />
                     : myProcedures.length ? myProcedures.map((x) => {
-                    return (
-                    <Favorite key={x.id} title={x.name} description={x.info} image={x.image} event={() => { onDislikeHandler(x.id, category) }} /> 
+                        return (
+                        <Favorite key={x.id} title={x.name} description={x.info} image={x.image} event={() => {onDislikeHandler(x.id, category)}}/> 
                     )
                 }) : <Notification>You have not selected procedures!</Notification>}
             </div>
     </>
-        : <Redirect to="/"/>}
+    )
+}
+    
+        return (
+            <>
+                {localStorage.getItem('user')
+                    ? showLoggedUserUi()
+            : <Redirect to="/"/>}
             </>
         )
-}
+    }
 
 export default HomePatients;

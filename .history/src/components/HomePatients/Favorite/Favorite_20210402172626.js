@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import style from './Favorite.module.css';
+import * as ServicesDB from '../../../services/servicesDB';
 
 class Favorite extends Component {
     constructor(props) {

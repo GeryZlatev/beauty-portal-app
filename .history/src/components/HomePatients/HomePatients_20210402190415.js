@@ -38,7 +38,7 @@ const HomePatients  = (props) => {
                     return { id: x.id, ...x.data() }
                 })
             setIsLoading(false)
-            setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
+            setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)))
         })
     }
     return (
@@ -71,12 +71,11 @@ const HomePatients  = (props) => {
                     </div>
                 </nav>
             </div>
-                    
             <div className={style["favorite-wrapper"]}>
                 {loading ? <Loader />
                     : myProcedures.length ? myProcedures.map((x) => {
                     return (
-                    <Favorite key={x.id} title={x.name} description={x.info} image={x.image} event={() => { onDislikeHandler(x.id, category) }} /> 
+                    <Favorite key={x.id} title={x.name} description={x.info} image={x.image} event={ onDislikeHandler(x.id, category)} /> 
                     )
                 }) : <Notification>You have not selected procedures!</Notification>}
             </div>

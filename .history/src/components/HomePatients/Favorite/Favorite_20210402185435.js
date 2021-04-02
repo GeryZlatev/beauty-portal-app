@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import style from './Favorite.module.css';
+import * as ServicesDB from '../../../services/servicesDB';
 
 class Favorite extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class Favorite extends Component {
                 <button className={style["dislike-button"]}
                     onClick={this.props.event}
                 >Dislike</button>
+                {this.props.message ? <p>{ this.props.message}</p> : null}
             </div>
         )
     }
