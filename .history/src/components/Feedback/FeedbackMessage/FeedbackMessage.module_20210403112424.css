@@ -1,0 +1,51 @@
+.current-message-wrapper {
+    max-width: 100%;
+    background: #F8F8F8;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+    border-radius: 20px;
+
+}
+
+.author {
+    margin: 10px auto;
+    text-align: center;
+    border-bottom: 1px dotted burlywood;
+    padding-bottom: 10px;
+    font-size: large;
+    font-weight: 200;
+    color: #8568AF;
+}
+
+.fallback {
+    text-align: center;
+    border-bottom: 1px dotted #8568AF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: darkred;
+}
+
+.title {
+    text-align: center;
+    border-bottom: 1px dotted #8568AF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: darkred;
+    font-size: large;
+    font-weight: 300;
+}
+
+.text {
+    text-align: justify;
+    padding: 10px;
+    font-size: large;
+    font-weight: 200;
+    color: darkslateblue;
+    border-bottom: 1px dotted #8568AF;
+}
+
+.current-message-wrapper div:nth-child(odd) {
+    background: #E6E6E6;
+}

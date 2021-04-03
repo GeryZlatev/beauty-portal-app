@@ -1,0 +1,11 @@
+.current-message-wrapper {
+    max-width: 100%;
+
+}
+
+.author {
+    margin: 10px auto;
+    text-align: center;
+    border-bottom: 1px dotted burlywood;
+    padding-bottom: 10px;
+}

@@ -80,8 +80,7 @@ const App = (props) => {
           <Route path="/login" component={Login} />
           <Route path="/specialist" component={ Specialist}/>
           <Route path="/doctors" component={!state.isAuthenticated ? Register : FindDoctor} />
-          <Route path="/patients" component={SearchBar} />
-          <Route path="/feedback" component={FeedbackPage}/>
+          <Route path="/patients" component={SearchBar}/>
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />

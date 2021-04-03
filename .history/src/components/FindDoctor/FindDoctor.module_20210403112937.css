@@ -1,0 +1,12 @@
+.cards-wrapper {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    border: 1px dotted burlywood;
+    border-radius: 20px;
+    max-width: 80%;
+background: rgb(252,252,252);
+background: linear-gradient(148deg, rgba(252,252,252,1) 52%, rgba(222,224,255,1) 93%);
+}

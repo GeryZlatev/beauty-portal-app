@@ -67,7 +67,7 @@ class Footer extends Component {
                                 <h5><Link to="/specialist">Doctor Login</Link></h5>
                             </li>
                             <li>
-                                <h5><Link to="/feedback">Feedback</Link></h5>
+                                <h5><Link to="/Feedback">Feedback</Link></h5>
                             </li>
                         </ul>
                         <p className = {style.allRights}> &copy; 2021 All Rights Reserved | <Link to="/privacy-policy"> Privacy Policy</Link> </p>
