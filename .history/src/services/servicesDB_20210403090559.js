@@ -88,20 +88,6 @@ export const getMoreDetails = (itemId, catalogue) => {
 
 export const sortSpecialists = (query, data) => {
     const specialistRef = DB.collection("specialist");
-    return specialistRef.where(data, "==", query)
+    return specialistRef.where(data, "==", query).where(data, "<=", query)
     .get()
-}
-
-export const sendFeedback = (payload) => {
-    return DB.collection("feedback")
-        .doc('Kwj3suPOtrssBVGxMWBv')
-        .get()
-        .then(res => {
-            const collection = { ...res.data() }
-            collection.messages.push(payload);
-            // console.log(messages);
-            return DB.collection("feedback")
-                .doc('Kwj3suPOtrssBVGxMWBv')
-                .set(collection)
-    })
 }

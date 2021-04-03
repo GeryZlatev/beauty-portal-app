@@ -7,6 +7,9 @@ import Notification from '../../Shared/Notification';
 import Loader from '../../Shared/Loader';
 import Tags from '../Tags';
 import SearchBar from '../SearchBar';
+// import { render } from '@testing-library/react';
+// import Feedback from '../Feedback';
+
 
 const FindDoctor = (props) => {
 
@@ -52,6 +55,9 @@ const FindDoctor = (props) => {
                             phone={x.phone}
                             image={x.image || avatar}
                             doctor={x.id}
+                            // event={() => {
+                            //     render(<Feedback/>)
+                            // }}
                         />)
                     }) : <Notification> There are no doctors on this page! We are so sorry ...</Notification>}
                 </div>

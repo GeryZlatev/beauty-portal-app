@@ -8,6 +8,7 @@ const DoctorInfo = (props) => {
         >
             {props.children}
             </div>
+            {/* <Feedback/> */}
         </>
     )
 }

@@ -20,6 +20,10 @@ const DoctorCard = (props) => {
                     <p>Contacts: <span>{props.phone}</span></p>
                 </div>
                 <PopupForm doctor={props.doctor} />
+                {/* <button
+                    onClick={props.event}
+                >
+                    Feedback</button> */}
             </div>
             
         </>

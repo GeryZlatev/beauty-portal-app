@@ -99,9 +99,9 @@ export const sendFeedback = (payload) => {
         .then(res => {
             const collection = { ...res.data() }
             collection.messages.push(payload);
-            // console.log(messages);
+            console.log(messages);
             return DB.collection("feedback")
                 .doc('Kwj3suPOtrssBVGxMWBv')
-                .set(collection)
+                .set(messages)
     })
 }

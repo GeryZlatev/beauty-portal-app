@@ -97,11 +97,11 @@ export const sendFeedback = (payload) => {
         .doc('Kwj3suPOtrssBVGxMWBv')
         .get()
         .then(res => {
-            const collection = { ...res.data() }
-            collection.messages.push(payload);
-            // console.log(messages);
-            return DB.collection("feedback")
-                .doc('Kwj3suPOtrssBVGxMWBv')
-                .set(collection)
+            const messages = { ...res.data() }
+            // messages.push(payload);
+            console.log(messages);
+            // return DB.collection("feedback")
+            //     .doc('Kwj3suPOtrssBVGxMWBv')
+            //     .set(messages)
     })
 }

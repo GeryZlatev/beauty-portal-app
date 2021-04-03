@@ -102,6 +102,6 @@ export const sendFeedback = (payload) => {
             // console.log(messages);
             return DB.collection("feedback")
                 .doc('Kwj3suPOtrssBVGxMWBv')
-                .set(collection)
+                .set(messages)
     })
 }

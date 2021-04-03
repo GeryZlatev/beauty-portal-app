@@ -1,4 +1,5 @@
 import style from './DoctorInfo.module.css';
+import Feedback from '../../Feedback';
 
 const DoctorInfo = (props) => {
     return (
@@ -8,6 +9,7 @@ const DoctorInfo = (props) => {
         >
             {props.children}
             </div>
+            <Feedback/>
         </>
     )
 }

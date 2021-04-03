@@ -91,17 +91,3 @@ export const sortSpecialists = (query, data) => {
     return specialistRef.where(data, "==", query)
     .get()
 }
-
-export const sendFeedback = (payload) => {
-    return DB.collection("feedback")
-        .doc('Kwj3suPOtrssBVGxMWBv')
-        .get()
-        .then(res => {
-            const collection = { ...res.data() }
-            collection.messages.push(payload);
-            // console.log(messages);
-            return DB.collection("feedback")
-                .doc('Kwj3suPOtrssBVGxMWBv')
-                .set(collection)
-    })
-}
