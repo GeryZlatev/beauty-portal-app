@@ -9,7 +9,9 @@ import Loader from '../../Shared/Loader';
 import VerticalHeaderLine from '../Advertising/VerticalHeaderLine';
 import SearchBar from '../SearchBar';
 import Notification from '../../Shared/Notification';
-// const DB = firebase.firestore();
+import firebase from '../../services/firebase';
+import 'firebase/firestore';
+const DB = firebase.firestore();
 
 const HomePatients  = (props) => {
     const [myProcedures, setMyProcedures] = useState([]);
@@ -32,17 +34,21 @@ const HomePatients  = (props) => {
 
     const onDislikeHandler = (procedureId, category) => {
         setIsLoading(true);
-        ServicesDB.dislikeProcedure(procedureId, category, userId)
-            .then(() => {
-            ServicesDB.getAll(category)
-                .then(res => {
+        const procedure = ServicesDB.dislikeProcedure(procedureId, category, userId);
+        console.log(procedure)
+        // DB.collection(category)
+        //     .doc(procedureId)
+        //     .set(procedure)
+        
+        
+        ServicesDB.getAll(category)
+            .then(res => {
                 const allProcedures = res.docs.map((x) => {
                     return { id: x.id, ...x.data() }
-            })
+                })
             setIsLoading(false)
             setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
         })
-            });
     }
     return (
     <>

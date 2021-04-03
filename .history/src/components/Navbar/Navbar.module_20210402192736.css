@@ -3,7 +3,7 @@
     max-width: 100%;
     margin-top: 0px;
     margin-bottom: 100px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     position: -webkit-sticky;
     position: sticky;
     z-index: 10;

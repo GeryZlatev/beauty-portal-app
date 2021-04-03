@@ -32,17 +32,17 @@ const HomePatients  = (props) => {
 
     const onDislikeHandler = (procedureId, category) => {
         setIsLoading(true);
-        ServicesDB.dislikeProcedure(procedureId, category, userId)
-            .then(() => {
-            ServicesDB.getAll(category)
-                .then(res => {
+        const procedure = ServicesDB.dislikeProcedure(procedureId, category, userId);
+        
+        
+        ServicesDB.getAll(category)
+            .then(res => {
                 const allProcedures = res.docs.map((x) => {
                     return { id: x.id, ...x.data() }
-            })
+                })
             setIsLoading(false)
             setMyProcedures(() => allProcedures.filter((x) => x.likes.includes(userId)))
         })
-            });
     }
     return (
     <>

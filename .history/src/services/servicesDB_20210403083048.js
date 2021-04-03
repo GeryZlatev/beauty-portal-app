@@ -66,10 +66,11 @@ export const dislikeProcedure = (procedureId, catalogue, userId) => {
             const procedure = { ...res.data() };
             const currUserIndex = procedure.likes.indexOf(userId)
             procedure.likes.splice(currUserIndex, 1);
+            return procedure;
 
-            return DB.collection(catalogue)
-                .doc(procedureId)
-                .set(procedure)
+            // return DB.collection(catalogue)
+            //     .doc(procedureId)
+            //     .set(procedure)
     })
 }
 
