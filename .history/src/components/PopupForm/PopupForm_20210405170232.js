@@ -12,6 +12,12 @@ const PopupForm = (props) => {
     const [catalogue, setCatalogue] = useState('specialist');
     const [err, setErr] = useState('');
 
+    // const clearInputs = () => {
+    //     setName('');
+    //     setEmail('');
+    //     setQuest('');
+    // }
+
     const clearErrors = () => {
         setErr('')
     }
@@ -61,6 +67,13 @@ const PopupForm = (props) => {
                             setErr(' Oh no, something went wrong!')
                         }                
                     }}
+                    //             onBlur={() => {
+                    //                 if (errName) {
+                    //                     return (
+                    //                         <ErrorMessage>{ errName}</ErrorMessage>
+                    //         )
+                    //     }
+                    // }}
                     />
                     </label>
                     <label>

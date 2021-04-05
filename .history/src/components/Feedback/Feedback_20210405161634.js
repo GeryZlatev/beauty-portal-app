@@ -15,7 +15,7 @@ const Feedback = (props) => {
             channel="#general"
             theme={themes.dark}
             disabled={false}
-            user={JSON.parse(localStorage.getItem('email')) || 'Anonymous'}
+            user={JSON.parse(localStorage.getItem('email')) || }
             onSubmit={onFeedbackSubmitHandler}
             setTimeout={5 * 1000}
             // onClose={() => {console.log()}}

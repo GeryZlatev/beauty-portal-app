@@ -10,6 +10,7 @@ import * as ServicesDB from '../../services/servicesDB';
 import DoctorCard from '../FindDoctor/DoctorCard';
 import Loader from '../../Shared/Loader';
 import avatar from '../../media/avatar-placeholder.png';
+import Notification from '../../Shared/Notification';
 import DoctorInfo from '../FindDoctor/DoctorInfo';
 
 library.add(

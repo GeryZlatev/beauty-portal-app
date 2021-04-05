@@ -10,15 +10,25 @@ const PopupForm = (props) => {
     const [email, setEmail] = useState('');
     const [quest, setQuest] = useState('');
     const [catalogue, setCatalogue] = useState('specialist');
-    const [err, setErr] = useState('');
+    const [errName, setErrName] = useState('');
+    const [errEmail, setErrEmail] = useState('');
+    const [errQuest, setErrQuest] = useState('')
+
+    // const clearInputs = () => {
+    //     setName('');
+    //     setEmail('');
+    //     setQuest('');
+    // }
 
     const clearErrors = () => {
-        setErr('')
+        setErrQuest('');
+        setErrEmail('');
+        setErrName('');
     }
 
     const onSendQuestHandler = () => {
 
-        if (err) {
+        if (errName || errEmail || errQuest) {
             return;
         }
 
@@ -53,14 +63,20 @@ const PopupForm = (props) => {
                     name="name"
                     placeholder="Your name"
                     // value={name}
-                        onChange={(e) => {
-                            if (e.target.value.length >= 3) {
-                            clearErrors()
+                                onChange={(e) => {
+                        if (e.target.value.length >= 3) {
                             setName(e.target.value)
                         } else {
-                            setErr(' Oh no, something went wrong!')
+                            setErrName('The name must be at least 3 characters long!')
                         }                
                     }}
+                    //             onBlur={() => {
+                    //                 if (errName) {
+                    //                     return (
+                    //                         <ErrorMessage>{ errName}</ErrorMessage>
+                    //         )
+                    //     }
+                    // }}
                     />
                     </label>
                     <label>
@@ -71,10 +87,9 @@ const PopupForm = (props) => {
                     placeholder="Your email"
                                 onChange={(e) => {
                                     if (e.target.value.includes('@')) {
-                                    clearErrors()
                                     setEmail(e.target.value)    
                                     } else {
-                                        setErr('Oh no, something went wrong!')
+                                        setErrEmail('Wrong email format!')
                                     }
                                     
                                 }} />
@@ -84,10 +99,9 @@ const PopupForm = (props) => {
                     placeholder="Enter the procedure and the questions that interest you"
                                 onChange={(e) => {
                                     if (e.target.value.length >= 15) {
-                                    clearErrors()
                                     setQuest(e.target.value)
                                     } else {
-                                        setErr('Oh no, something went wrong!')
+                                        setErrQuest('Your question is too short! It must be at least 15 characters long!')
                                     }
                                     
                                 }} />
@@ -100,11 +114,11 @@ const PopupForm = (props) => {
                         nested
                         onOpen={onSendQuestHandler}
                         >
-                            {err
+                            {errName || errQuest || errEmail
                             ? <ErrorMessage>
-                                <p>{ err}</p>
-                                <p>Please fill all inputs corectly!</p>
-                                <p>The name must be at least 3 characters long! Your email must be corectly formated! Your question should consist at least 15 characters!</p>
+                                <p>{ errName}</p>
+                                <p>{ errEmail}</p>
+                                <p>{ errQuest}</p>
                                 </ErrorMessage>
                             :  <div className={style["successfull-send-message"]}>
                                 <p>You successfully sent your message!</p>

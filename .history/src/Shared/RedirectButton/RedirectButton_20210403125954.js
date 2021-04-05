@@ -1,7 +1,7 @@
 import style from './RedirectButton.module.css';
 import logo from '../../media/beautyportal_logo.png';
 import { withRouter } from 'react-router-dom';
-const RedirectButton = (props) => {
+const RedirectButton = () => {
     return (
         <>
         <button className={style["redirect-button"]}>

@@ -12,6 +12,12 @@ const PopupForm = (props) => {
     const [catalogue, setCatalogue] = useState('specialist');
     const [err, setErr] = useState('');
 
+    // const clearInputs = () => {
+    //     setName('');
+    //     setEmail('');
+    //     setQuest('');
+    // }
+
     const clearErrors = () => {
         setErr('')
     }
@@ -53,14 +59,20 @@ const PopupForm = (props) => {
                     name="name"
                     placeholder="Your name"
                     // value={name}
-                        onChange={(e) => {
-                            if (e.target.value.length >= 3) {
-                            clearErrors()
+                                onChange={(e) => {
+                        if (e.target.value.length >= 3) {
                             setName(e.target.value)
                         } else {
                             setErr(' Oh no, something went wrong!')
                         }                
                     }}
+                    //             onBlur={() => {
+                    //                 if (errName) {
+                    //                     return (
+                    //                         <ErrorMessage>{ errName}</ErrorMessage>
+                    //         )
+                    //     }
+                    // }}
                     />
                     </label>
                     <label>
@@ -71,7 +83,6 @@ const PopupForm = (props) => {
                     placeholder="Your email"
                                 onChange={(e) => {
                                     if (e.target.value.includes('@')) {
-                                    clearErrors()
                                     setEmail(e.target.value)    
                                     } else {
                                         setErr('Oh no, something went wrong!')
@@ -84,7 +95,6 @@ const PopupForm = (props) => {
                     placeholder="Enter the procedure and the questions that interest you"
                                 onChange={(e) => {
                                     if (e.target.value.length >= 15) {
-                                    clearErrors()
                                     setQuest(e.target.value)
                                     } else {
                                         setErr('Oh no, something went wrong!')

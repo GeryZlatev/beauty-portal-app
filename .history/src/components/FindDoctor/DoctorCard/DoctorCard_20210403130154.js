@@ -11,7 +11,7 @@ const DoctorCard = (props) => {
                     <img src={logo} alt="Beauty Portal Logo"/>
                 </div>
                 <div className={style["image-wrapper"]}>
-                    <img src={props.image} alt="Doctor"/>
+                    <img src={props.image} />
                 </div>
                 <div className={style["content-wrapper"]}>
                     <p>Doctor: <span>{props.name}</span></p>
