@@ -13,7 +13,7 @@ function Register(props) {
     const [emailErr, setEmailErr] = useState('');
     const [repeatPassword, setRepeatPassword] = useState('');
     const [passwordErr, setPasswordErr] = useState('');
-    const [amIaDoctor, setAmIaDoctor] = useState(false);
+    const [amIaDoctor, setamIaDoctor] = useState(false);
     // const [user, setUser] = useState('');
 
     const clearErrors = () => {
@@ -33,8 +33,7 @@ function Register(props) {
 
     auth
         .createUserWithEmailAndPassword(email, password)
-        .then(() => {
-            localStorage.setItem('doctor', JSON.stringify(amIaDoctor));
+        .then(()=> {
             props.history.push('/login')
         })
     .catch(err => {
@@ -74,17 +73,17 @@ function Register(props) {
                         placeholder="confirm password"
                         onChange={e => {
                             setRepeatPassword(e.target.value)
-                            // if (password !== repeatPassword) {
-                            //     setPasswordErr('Passwords mismatch!');
-                            // } else {
+                            if (password !== repeatPassword) {
+                                setPasswordErr('Passwords mismatch!');
+                            } else {
                                 setPasswordErr("");
-                            // }
+                            }
                         }}
                     >
                         Repeat Password
                     </Input>
                     {passwordErr ? <Error>{passwordErr}</Error> : null}
-                    <div className={style.radio} onChange={(e) => setAmIaDoctor(e.target.value)}>
+                    <div className={style.radio} onChange={(e) => console.log(e.target.value)}>
                         <label>
                             <input
                                 type="radio"
@@ -100,8 +99,8 @@ function Register(props) {
                             value="no"
                             name="doctor"
                             />
-                            I am NOT a doctor
-                        </label>
+                            I am not a doctor
+</label>
                     </div>
                     
                     <input

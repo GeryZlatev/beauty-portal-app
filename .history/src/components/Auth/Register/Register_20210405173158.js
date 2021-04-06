@@ -34,7 +34,7 @@ function Register(props) {
     auth
         .createUserWithEmailAndPassword(email, password)
         .then(() => {
-            localStorage.setItem('doctor', JSON.stringify(amIaDoctor));
+            JSON.stringify(localStorage.setItem('doctor', amIaDoctor));
             props.history.push('/login')
         })
     .catch(err => {
@@ -74,11 +74,11 @@ function Register(props) {
                         placeholder="confirm password"
                         onChange={e => {
                             setRepeatPassword(e.target.value)
-                            // if (password !== repeatPassword) {
-                            //     setPasswordErr('Passwords mismatch!');
-                            // } else {
+                            if (password !== repeatPassword) {
+                                setPasswordErr('Passwords mismatch!');
+                            } else {
                                 setPasswordErr("");
-                            // }
+                            }
                         }}
                     >
                         Repeat Password

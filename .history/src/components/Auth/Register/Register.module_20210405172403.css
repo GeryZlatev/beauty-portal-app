@@ -110,7 +110,7 @@ background: radial-gradient(circle, rgba(241,241,246,0.8365721288515406) 33%, rg
 }
 
 .radio {
-    max-width: 50%;
+    display: inline-block;
     margin: 10px auto;
 }
 

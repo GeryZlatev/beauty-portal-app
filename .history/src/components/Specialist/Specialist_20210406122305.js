@@ -182,9 +182,7 @@ const Specialist = (props) => {
                         : null}
                     
                     <h2>I don't want to have a doctor profile right now!</h2>
-                    <RedirectButton>
-                        <Link to="/">Maybe later</Link>
-                    </RedirectButton>
+                    <button>Maybe later</button>
             </div>
             </div>
     </>

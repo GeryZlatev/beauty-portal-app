@@ -34,7 +34,7 @@ function Register(props) {
     auth
         .createUserWithEmailAndPassword(email, password)
         .then(() => {
-            localStorage.setItem('doctor', JSON.stringify(amIaDoctor));
+            JSON.stringify(localStorage.setItem('doctor', amIaDoctor));
             props.history.push('/login')
         })
     .catch(err => {
