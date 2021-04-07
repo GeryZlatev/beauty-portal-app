@@ -84,7 +84,7 @@ function Register(props) {
                         Repeat Password
                     </Input>
                     {passwordErr ? <Error>{passwordErr}</Error> : null}
-                    <div aria-required={true} className={style.radio} onChange={(e) => setAmIaDoctor(e.target.value)}>
+                    <div aria-required className={style.radio} onChange={(e) => setAmIaDoctor(e.target.value)}>
                         <label>
                             <input
                                 type="radio"

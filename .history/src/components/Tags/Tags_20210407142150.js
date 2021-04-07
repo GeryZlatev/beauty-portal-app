@@ -8,9 +8,8 @@ const Tags = (props) => {
                 <ul className={style["tags-list"]}>
                     <li>
                         <button
-                            onClick={props.all}
                     >
-                    All
+                    <Link to="/doctors">All</Link>
                     </button>
                     </li>
                     <li>

@@ -40,15 +40,7 @@ const FindDoctor = (props) => {
 
     const showAllDoctors = (e) => {
         setIsLoading(true)
-        ServicesDB.getAll("specialist")
-            .then(res => {
-                setIsLoading(false);
-                setSpecialists(res.docs.map((x) => {
-                    return {id: x.id, ...x.data()}
-                }))
-            })
-        .catch(err => console.log(err.message))
-        
+        ServicesDB.getAll()
     }
 
         return (

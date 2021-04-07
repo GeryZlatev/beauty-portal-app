@@ -1,5 +1,5 @@
 import style from './Tags.module.css';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Tags = (props) => {
     return (
@@ -8,9 +8,8 @@ const Tags = (props) => {
                 <ul className={style["tags-list"]}>
                     <li>
                         <button
-                            onClick={props.all}
                     >
-                    All
+                    <Link to="/doctors">All</Link>
                     </button>
                     </li>
                     <li>

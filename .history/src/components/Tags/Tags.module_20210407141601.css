@@ -23,11 +23,6 @@
 box-shadow: 4px -1px 3px 0px rgba(0,0,0,0.24); */
 }
 
-.tags-list li button a {
-    text-decoration: none;
-    color: #6262A0;
-}
-
 .tags-list li button:hover{
 -webkit-box-shadow: 4px 3px 3px 0px rgba(0,0,0,0.24); 
 box-shadow: 4px 3px 3px 0px rgba(0,0,0,0.24);
@@ -58,7 +53,7 @@ box-shadow: 4px 3px 3px 0px rgba(0,0,0,0.24);
 }
 
 .tags-list li:nth-child(5) button:hover {
-    border: 1px solid #EC8AC4;
-    background: #EC8AC4;
+    border: 1px solid #8568AF;
+    background: #8568AF;
     color: aliceblue;
 }
