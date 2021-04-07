@@ -181,7 +181,7 @@ const Specialist = (props) => {
                         <Link to="/services">All beauty procedures</Link>
                         </RedirectButton>
                         <RedirectButton>
-                        <Link to="/create-procedure">Add your procedures</Link>
+                        <Link to="/create-procedue">Add your procedures</Link>
                         </RedirectButton>
                         </>
                         : <>
