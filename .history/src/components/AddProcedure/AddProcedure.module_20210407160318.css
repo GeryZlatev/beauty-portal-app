@@ -1,0 +1,10 @@
+.add-procedure-wrapper {
+    margin: 50px auto;
+    max-width: 50%;
+
+}
+
+.add-procedure-form {
+    display: flex;
+    /* flex-wrap: wrap; */
+}

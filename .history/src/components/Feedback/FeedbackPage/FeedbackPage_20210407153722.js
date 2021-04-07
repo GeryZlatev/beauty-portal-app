@@ -17,6 +17,7 @@ const FeedbackPage = (props) => {
             .then(res => {
                 setIsLoading(false)
                 setMessages(res.docs.map((x) => {
+                    console.log(x);
                     return { id: x.id, ...x.data() }
                 }))
                 

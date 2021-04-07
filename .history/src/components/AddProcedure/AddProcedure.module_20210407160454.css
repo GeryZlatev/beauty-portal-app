@@ -1,0 +1,16 @@
+.add-procedure-wrapper {
+    margin: 50px auto;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.add-procedure-form {
+    
+    /* flex-wrap: wrap; */
+}
+
+.add-procedure-form label {
+    max-width: 100%;
+}

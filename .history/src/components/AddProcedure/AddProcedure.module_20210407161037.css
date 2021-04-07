@@ -1,0 +1,37 @@
+.add-procedure-wrapper {
+    margin: 50px auto;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.add-procedure-form {
+border: 1px solid #f2f2f2;
+min-width: 500px;
+margin: 50px auto;
+}
+
+.add-procedure-form label {
+    margin: 15px auto;
+    display: block;
+    text-align: center;
+    font-size: large;
+    font-weight: 200;
+}
+
+.add-procedure-form input[type="text"],
+textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 20px auto;
+    display: block;
+    justify-content: center;
+    border: 1px solid #;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #6262A0;
+    font-size: small;
+    font-weight: 200;
+    outline: none;
+}

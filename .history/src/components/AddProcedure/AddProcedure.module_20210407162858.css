@@ -1,0 +1,62 @@
+.add-procedure-wrapper {
+    margin: 50px auto;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.add-procedure-form {
+border: 1px solid #f2f2f2;
+min-width: 500px;
+margin: 50px auto;
+background-image: url('https://ak.picdn.net/shutterstock/videos/26729380/thumb/10.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+-webkit-box-shadow: 4px -4px 16px -2px rgba(0,0,0,0.24); 
+box-shadow: 4px -4px 16px -2px rgba(0,0,0,0.24);
+}
+
+.add-procedure-form label {
+    margin: 15px auto;
+    display: block;
+    text-align: center;
+    font-size: large;
+    font-weight: 400;
+}
+
+.add-procedure-form input[type="text"],
+.add-procedure-form input[type="submit"],
+textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 20px auto;
+    display: block;
+    justify-content: center;
+    border: 1px solid #EC8AC4;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #E6507D;
+    font-size: small;
+    font-weight: 200;
+    outline: none;
+}
+
+.add-procedure-form input[type="submit"] {
+    max-width: 30%;
+    background: #ECD3E3;
+}
+
+.add-procedure-radio {
+    display: flex;
+    justify-content: center;
+    border: 1px dotted #ECD3E3;
+    max-width: 70%;
+    margin: 15px auto;
+}
+
+.add-procedure-radio label {
+    max-width: 50%;
+    margin: 10px;
+}

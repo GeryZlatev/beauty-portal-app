@@ -83,7 +83,7 @@ const App = (props) => {
           <Route path="/doctors" component={!state.isAuthenticated ? Register : FindDoctor} />
           <Route path="/patients" component={SearchBar} />
           <Route path="/feedback" component={FeedbackPage}/>
-          <Route path="/create-procedure" component={AddProcedure}/>
+          <Route path="/create-procedure" component={FeedbackPage}/>
           <Route component={PageNotFound} />
         </Switch>
         <Advertising />
