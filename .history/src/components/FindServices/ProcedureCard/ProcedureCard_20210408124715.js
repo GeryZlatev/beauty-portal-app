@@ -17,9 +17,12 @@ const currentStyle = {
     femilift: {
         color: '#8568AF'
     },
-    'antiCellulit': {
+    'anti-cellulit': {
         color: '#E6507D'
     },
+    antiCellulite: {
+        color: ''
+    }
 }
 
 const ProcedureCard = (props) => {

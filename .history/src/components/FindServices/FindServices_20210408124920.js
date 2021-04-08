@@ -9,6 +9,8 @@ import style from './FindServices.module.css';
 import { Link } from 'react-router-dom';
 
 class FindServices extends Component {
+
+
     render() {
         return (
             <>
@@ -27,7 +29,7 @@ class FindServices extends Component {
                         <Link to="/femi-lift">Femi Lift</Link>
                         </div>
                     <div className={style.cellulite}>
-                        <Link to="/services/anti-cellulite">Anti-cellulite</Link>
+                        <Link to="anti-cellulite">Anti-cellulite</Link>
                         </div>
                 </div> 
                 <Switch>
