@@ -20,8 +20,7 @@ const AddProcedure = (props) => {
     const clearInputs = () => {
     setName('');
     setCatalogue('');
-        setInformation('');
-        setImage('');
+    setInformation('');
     }
 
     const clearErrors = () => {
@@ -62,7 +61,7 @@ const AddProcedure = (props) => {
     return (
         <>
         <VerticalHeaderLine>Add your procedure</VerticalHeaderLine>
-            {success ? <Notification>You successfully sent your procedure! This procedure will be displayed on our catalogue page. Thank you!
+            {success ? <Notification>You successfully sent your information! Thank you for applying!
         </Notification> : null}
         {errAdd ? <ErrorMessage>{ errAdd}</ErrorMessage> : null}
         <div className={style["add-procedure-wrapper"]}>

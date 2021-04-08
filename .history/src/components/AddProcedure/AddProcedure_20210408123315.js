@@ -9,7 +9,6 @@ const AddProcedure = (props) => {
 
     const [name, setName] = useState('');
     const [catalogue, setCatalogue] = useState('');
-    const [image, setImage] = useState('');
     const [info, setInformation] = useState('');
     const [likes, setLikes] = useState([]);
     const [errName, setErrName] = useState('');
@@ -20,8 +19,7 @@ const AddProcedure = (props) => {
     const clearInputs = () => {
     setName('');
     setCatalogue('');
-        setInformation('');
-        setImage('');
+    setInformation('');
     }
 
     const clearErrors = () => {
@@ -54,7 +52,7 @@ const AddProcedure = (props) => {
             })
             .catch(err => {
                 setSuccess(false);
-                setErrAdd(err.message)
+                setErrAdd(error.message)
         })
 
     }
@@ -62,7 +60,7 @@ const AddProcedure = (props) => {
     return (
         <>
         <VerticalHeaderLine>Add your procedure</VerticalHeaderLine>
-            {success ? <Notification>You successfully sent your procedure! This procedure will be displayed on our catalogue page. Thank you!
+            {success ? <Notification>You successfully sent your information! Thank you for applying!
         </Notification> : null}
         {errAdd ? <ErrorMessage>{ errAdd}</ErrorMessage> : null}
         <div className={style["add-procedure-wrapper"]}>
@@ -90,9 +88,7 @@ const AddProcedure = (props) => {
                     Image URL
                     <input 
                     type="text"
-                            placeholder="https://"
-                            value={image}
-                            onChange={(e) => setImage(e.target.value)}
+                    placeholder="https://"
                     />
                     
                     </label>

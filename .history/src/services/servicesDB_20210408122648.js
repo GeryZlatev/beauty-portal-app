@@ -17,13 +17,13 @@ export const addSpecialist = (specialist) => {
 }
 
 export const addProcedure = (procedure) => {
-    const { name, image, catalogue, info, likes } = procedure;
+    const { name, imageURL, catalogue, information, likes } = procedure;
 
     return DB.collection(catalogue)
         .add({
             name,
-            image,
-            info,
+            imageURL,
+            information,
             likes
     })
 }

@@ -3,7 +3,6 @@
     max-width: 50%;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
 
 }
 
@@ -45,7 +44,6 @@ textarea {
     border: #ECD3E3;
     max-width: 30%;
     background: #ECD3E3;
-    cursor: pointer;
 }
 
 .add-procedure-radio {

@@ -1,75 +1,21 @@
 import style from './AddProcedure.module.css';
 import VerticalHeaderLine from '../Advertising/VerticalHeaderLine';
 import { useState } from 'react/cjs/react.development';
-import Notification from '../../Shared/Notification';
-import ErrorMessage from '../../Shared/ErrorMessage';
-import * as ServicesDB from '../../services/servicesDB';
 
 const AddProcedure = (props) => {
 
     const [name, setName] = useState('');
     const [catalogue, setCatalogue] = useState('');
-    const [image, setImage] = useState('');
-    const [info, setInformation] = useState('');
-    const [likes, setLikes] = useState([]);
+    const [information, setInformation] = useState('');
     const [errName, setErrName] = useState('');
     const [errInformation, setErrInformation] = useState('');
-    const [success, setSuccess] = useState(Boolean);
-    const [errAdd, setErrAdd] = useState('');
-
-    const clearInputs = () => {
-    setName('');
-    setCatalogue('');
-        setInformation('');
-        setImage('');
-    }
-
-    const clearErrors = () => {
-    setErrName('')
-    setErrInformation('')
-    }
-
-    const onAddProcedureHandler = (e) => {
-        e.preventDefault();
-        const procedure = {
-            name,
-            info,
-            image,
-            likes,
-            catalogue
-        }
-
-        if ((!name || !catalogue || !info) ||
-            (errName || errInformation)) {
-            setErrAdd('Something went wrong! We are so sorry! Please fill all inputs and try again');
-            setSuccess(false);
-            return null;
-        }
-
-        ServicesDB.addProcedure(procedure)
-            .then(res => {
-                setSuccess(true);
-                clearInputs();
-                clearErrors();
-            })
-            .catch(err => {
-                setSuccess(false);
-                setErrAdd(err.message)
-        })
-
-    }
+    const [success, setSuccess] = useState('');
 
     return (
         <>
         <VerticalHeaderLine>Add your procedure</VerticalHeaderLine>
-            {success ? <Notification>You successfully sent your procedure! This procedure will be displayed on our catalogue page. Thank you!
-        </Notification> : null}
-        {errAdd ? <ErrorMessage>{ errAdd}</ErrorMessage> : null}
         <div className={style["add-procedure-wrapper"]}>
-                <form
-                    className={style["add-procedure-form"]}
-                    onSubmit={onAddProcedureHandler}
-                >
+            <form className={style["add-procedure-form"]}>
                 <label>
                 Name
                 <input
@@ -90,9 +36,7 @@ const AddProcedure = (props) => {
                     Image URL
                     <input 
                     type="text"
-                            placeholder="https://"
-                            value={image}
-                            onChange={(e) => setImage(e.target.value)}
+                    placeholder="https://"
                     />
                     
                     </label>
@@ -132,7 +76,7 @@ const AddProcedure = (props) => {
                     <textarea 
                     placeholder="More information about the procedure..." 
                     rows="15"
-                    value={info}
+                    value={information}
                     name="information"
                     onChange={(e) => setInformation(e.target.value)}
                     onBlur={(e) => {
