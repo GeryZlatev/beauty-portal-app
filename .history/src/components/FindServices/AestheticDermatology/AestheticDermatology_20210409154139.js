@@ -49,15 +49,13 @@ const AestheticDermatology = (props) => {
                 <VerticalHeaderLine>SHR - The world's most advanced technology</VerticalHeaderLine>
             <div className={style["player-laser-soprano"]}>
                 <ReactPlayer
-                    url="https://www.youtube.com/watch?v=8ML8GT0oj9w"
-                    muted={true}
+                        url="https://www.youtube.com/watch?v=8ML8GT0oj9w"
+                        muted={true}
                     playing={true}
                     loop= {true}
                     width="850px"
                     height="580px"
-                        style={{ margin: "100px auto" }}
-                        
-                    
+                    style={{margin: "100px auto"}}
                 />
             </div>
         </div>

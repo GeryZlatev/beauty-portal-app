@@ -25,11 +25,7 @@ const HomePatients  = (props) => {
                 const allProcedures = res.docs.map((x) => {
                     return { id: x.id, ...x.data() }
                 })
-                setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)));
-                return () => {
-                    setCategory('');
-                    setUserId('');
-                }
+                setMyProcedures(allProcedures.filter((x) => x.likes.includes(userId)))
         })
 
     }, [category, userId]);

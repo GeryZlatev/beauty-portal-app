@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import { Link} from 'react-router-dom';
+import { Link, Redirect} from 'react-router-dom';
 import style from './SearchBar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -37,8 +37,8 @@ class SearchBar extends Component {
             .then(res => {
                 this.setState({query: ''})
                 this.setState({ loading: false })
-                this.setState({doctors: res.docs.map((x, i) => {
-            return {id: x.id, id2: i, ...x.data()}
+                this.setState({doctors: res.docs.map((x) => {
+            return {id: x.id, ...x.data()}
         })})
         })
     }
@@ -70,10 +70,9 @@ class SearchBar extends Component {
                 <div className={style["doctors-found"]}>
                 {this.state.loading? <Loader/> : this.state.doctors.length ? this.state.doctors.map((x) => {
                     return (
-                        <div
-                            key={x.id}
-                        >
+                        <>
                             <DoctorCard
+                            key={x.id}
                             name={x.name}
                             practice={x.practice}
                             city={x.city}
@@ -82,8 +81,9 @@ class SearchBar extends Component {
                             doctor={x.id}
                             />
                             <DoctorInfo
+                            key={x.id}
                             >{x.bio}</DoctorInfo>
-                        </div>
+                        </>
 
                     )
                 }) : null}

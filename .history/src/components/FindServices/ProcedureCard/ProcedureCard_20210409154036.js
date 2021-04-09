@@ -52,7 +52,7 @@ const ProcedureCard = (props) => {
             // style={currentStyle[props.style]}
         >
             <div className={style["image-wrapper"]}>
-                <img src={props.image} alt="Procedure"/>
+                <img src={props.image} alt="Procedure's image"/>
             </div>
             <div className={style["content-wrapper"]}>
                 <p className={style["procedure-name"]}

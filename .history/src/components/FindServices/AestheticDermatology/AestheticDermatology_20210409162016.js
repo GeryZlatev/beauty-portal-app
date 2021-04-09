@@ -55,8 +55,7 @@ const AestheticDermatology = (props) => {
                     loop= {true}
                     width="850px"
                     height="580px"
-                        style={{ margin: "100px auto" }}
-                        
+                    style={{ margin: "100px auto" }}
                     
                 />
             </div>
